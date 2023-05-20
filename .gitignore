@@ -1,9 +1,10 @@
 # editor
-.idea/
-.vscode/
+.idea
+.vscode
 
 # build output
 dist/
+
 # generated types
 .astro/
 
