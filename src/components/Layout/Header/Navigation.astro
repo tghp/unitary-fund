@@ -1,0 +1,31 @@
+---
+import NavigationMenu from '~/components/Layout/Header/NavigationMenu';
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+
+import { getEntry } from 'astro:content';
+import { navigationSchema } from '~/content/config';
+
+const navigationEntry = (await getEntry('navigation', 'main')) as unknown;
+const navigationParse = navigationSchema.safeParse(
+  navigationEntry &&
+    typeof navigationEntry === 'object' &&
+    'data' in navigationEntry
+    ? navigationEntry.data
+    : null
+);
+
+let navigation = navigationParse.success ? navigationParse.data : null;
+---
+
+<nav
+  id="main-navigation"
+  class="opacity-0 [&:has(ul)]:opacity-100 transition-opacity"
+  class:list={[className]}
+>
+  <NavigationMenu menu={navigation} client:only />
+</nav>

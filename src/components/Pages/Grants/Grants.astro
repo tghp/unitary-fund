@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import type { GrantFilterKey } from '~/hooks/useGrantsFilter';
+import Content from './Content';
+
+// Get the grants content collection, GrantsOutput will handle rendering via React
+const grants = await getCollection('grant');
+
+// Define filters, only a maximum of 4 will render
+export const filters: Array<GrantFilterKey> = ['year', 'tags'];
+---
+
+<Content filters={filters} grants={grants} client:load />

@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "link": "/"
+    },
+    {
+      "text": "About",
+      "link": "/about/"
+    },
+    {
+      "text": "Microgrants",
+      "link": "/grants/",
+      "children": [
+        {
+          "text": "Apply",
+          "link": "/grants/apply/"
+        },
+        {
+          "text": "Grants",
+          "link": "/grants/grants/"
+        }
+      ]
+    }
+  ]
+}

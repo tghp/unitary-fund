@@ -1,0 +1,28 @@
+---
+import Container from '~/components/Ui/Container.astro';
+import Svg from '~/components/Util/Svg.astro';
+import Navigation from './Header/Navigation.astro';
+---
+
+<Container className="sticky top-0 pr-0">
+  <div
+    class="grid grid-cols-header grid-rows-header grid-areas-header pt-[--header-pt]"
+  >
+    <div
+      class="col-start-1 col-span-full row-start-1 h-[--header-pt] bg-yellow-400 -mt-[--header-pt]"
+    >
+    </div>
+    <div
+      class="col-start-1 w-0 row-start-1 row-span-full bleed-bg-l bleed-yellow-400 -mt-[--header-pt]"
+    >
+    </div>
+    <div
+      class="col-start-3 w-0 row-start-1 row-span-full bleed-bg-r bleed-yellow-400 -mt-[--header-pt]"
+    >
+    </div>
+    <div class="h-[--logo-height] svg-child:svg-scale-v grid-in-logo -ml-8">
+      <Svg name="logo" />
+    </div>
+    <Navigation className="grid-in-nav h-full w-full" />
+  </div>
+</Container>

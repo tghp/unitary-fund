@@ -1,0 +1,12 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  grant: CollectionEntry<'grant'>;
+}
+
+const { grant } = Astro.props;
+const { Content } = await grant.render()
+---
+<div class="p-4">
+  <Content />
+</div>

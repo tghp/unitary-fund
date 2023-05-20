@@ -1,0 +1,25 @@
+---
+export interface Props {
+  button?: {
+    text: string;
+    url: string;
+    preText?: string;
+    postText?: string;
+  };
+}
+
+const { button } = Astro.props;
+---
+
+<div class="pt-44 pb-24 text-2xl [&_h1]:text-5xl [&_h1]:mb-6">
+  <slot />
+  {
+    button && (
+      <a class="uppercase flex flex-col gap-1 mt-6" href={button.url}>
+        {button.preText && <span class="text-sm">{button.preText}</span>}
+        {button.text}
+        {button.postText && <span class="text-sm">{button.postText}</span>}
+      </a>
+    )
+  }
+</div>

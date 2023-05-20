@@ -1,0 +1,26 @@
+---
+import Container from '~/components/Ui/Container.astro'
+import Header from '~/components/Layout/Header.astro'
+const {title} = Astro.props.frontmatter || Astro.props
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>{title}</title>
+</head>
+<body>
+<Header/>
+<Container>
+  <slot />
+</Container>
+</body>
+</html>
+<style is:global>
+  :root {
+    --header-pt: theme('spacing.4');
+    --logo-height: 80px;
+    --header-height: calc(var(--logo-height) + var(--header-pt));
+  }
+</style>
