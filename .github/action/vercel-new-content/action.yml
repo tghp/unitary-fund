@@ -1,0 +1,12 @@
+name: 'Vercel Check for New Content'
+description: 'Checks for a PR comment by the Vercel bot, notifying the user of any new content and where it can be found'
+inputs:
+  pull-request-number:
+    description: 'PR number'
+    required: true
+  comment-id:
+    description: 'ID of added comment'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
