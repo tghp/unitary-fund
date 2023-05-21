@@ -17,7 +17,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Analyze comment for Vercel Deployment
-        uses: ./.github/action/vercel-new-comment/action.yml
+        uses: ./.github/action/vercel-new-content/action.yml
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ github.event.pull_request.number }}
