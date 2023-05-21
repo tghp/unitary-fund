@@ -1,0 +1,24 @@
+:root {
+  --header-pt: theme('spacing.4');
+  --logo-height: 80px;
+  --header-height: calc(var(--logo-height) + var(--header-pt));
+}
+
+p {
+  &.only-strong {
+    strong {
+      @apply font-inherit text-2xl;
+    }
+  }
+}
+
+.remark-oembed {
+  &-you-tube,
+  &-vimeo {
+    @apply w-full aspect-video;
+
+    iframe {
+      @apply w-full h-full;
+    }
+  }
+}

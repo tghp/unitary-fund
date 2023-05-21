@@ -1,13 +1,14 @@
 ---
 layout: '~/layouts/Layout.astro'
+title: Donate
 ---
 
-import PageIntro from '~/components/Ui/Content/PageIntro.astro';
+import { ContentPageIntro } from '~/components/Ui';
 
-<PageIntro button={{ url: '#', text: 'Donate', postText: 'Via PayPal' }}>
+<ContentPageIntro button={{ url: '#', text: 'Donate', postText: 'Via PayPal' }}>
 # Help support open source quantum software with the Unitary Fund
 
 Unitary Fund is a 501(c)(3) non-profit working to create a quantum technology ecosystem that benefits the most people.
 Help to strengthen the open source tools that will enable quantum copmuting by becoming a chapmion today!
 
-</PageIntro>
+</ContentPageIntro>

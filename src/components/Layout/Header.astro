@@ -4,7 +4,7 @@ import Svg from '~/components/Util/Svg.astro';
 import Navigation from './Header/Navigation.astro';
 ---
 
-<Container className="sticky top-0 pr-0">
+<Container className="sticky top-0 pr-0 mb-8">
   <div
     class="grid grid-cols-header grid-rows-header grid-areas-header pt-[--header-pt]"
   >
@@ -20,9 +20,12 @@ import Navigation from './Header/Navigation.astro';
       class="col-start-3 w-0 row-start-1 row-span-full bleed-bg-r bleed-yellow-400 -mt-[--header-pt]"
     >
     </div>
-    <div class="h-[--logo-height] svg-child:svg-scale-v grid-in-logo -ml-8">
+    <a
+      href="/"
+      class="h-[--logo-height] svg-child:svg-scale-v grid-in-logo -ml-8"
+    >
       <Svg name="logo" />
-    </div>
+    </a>
     <Navigation className="grid-in-nav h-full w-full" />
   </div>
 </Container>

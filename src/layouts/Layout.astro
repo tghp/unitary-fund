@@ -1,26 +1,57 @@
 ---
-import Container from '~/components/Ui/Container.astro'
-import Header from '~/components/Layout/Header.astro'
-const {title} = Astro.props.frontmatter || Astro.props
+import '~/styles/main.scss';
+import Container from '~/components/Ui/Container.astro';
+import Header from '~/components/Layout/Header.astro';
+const { title, generic } = Astro.props.frontmatter || Astro.props;
+
+const titleSeparator = '-';
 ---
+
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-  <meta name="viewport" content="width=device-width"/>
-  <title>{title}</title>
-</head>
-<body>
-<Header/>
-<Container>
-  <slot />
-</Container>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <meta name="viewport" content="width=device-width" />
+    {title === 'Unitary Fund' && <title>{title}</title>}
+    {
+      title !== 'Unitary Fund' && (
+        <title>
+          {title} {titleSeparator} Unitary Fund
+        </title>
+      )
+    }
+  </head>
+  <body>
+    <Header />
+    {
+      generic && (
+        <Container className="prose" reducedWidth>
+          <slot />
+        </Container>
+      )
+    }
+    {
+      !generic && (
+        <Container>
+          <slot />
+        </Container>
+      )
+    }
+  </body>
 </html>
-<style is:global>
-  :root {
-    --header-pt: theme('spacing.4');
-    --logo-height: 80px;
-    --header-height: calc(var(--logo-height) + var(--header-pt));
-  }
-</style>

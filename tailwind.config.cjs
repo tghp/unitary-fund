@@ -16,36 +16,36 @@ module.exports = {
           700: '#6b6402',
           800: '#3a3501',
           900: '#282601',
-        }
+        },
+      },
+      fontWeight: {
+        inherit: 'inherit',
       },
       gridTemplateAreas: {
-        'header': [
-          'logo nav',
-          '.    nav',
-        ],
+        header: ['logo nav', '.    nav'],
       },
       gridTemplateRows: {
-        'header': 'auto auto'
+        header: 'auto auto',
       },
       gridTemplateColumns: {
-        'header': 'auto 1fr'
+        header: 'auto 1fr',
       },
     },
   },
   plugins: [
-    plugin(function ({addVariant, addUtilities}) {
+    plugin(function ({ addVariant, addUtilities }) {
       addVariant('svg-child', '& > svg');
 
       addUtilities({
         '.svg-scale-h': {
-          'width': '100%',
-          'height': 'auto',
+          width: '100%',
+          height: 'auto',
         },
         '.svg-scale-v': {
-          'width': 'auto',
-          'height': '100%',
-        }
-      })
+          width: 'auto',
+          height: '100%',
+        },
+      });
     }),
     require('@tailwindcss/typography'),
     require('@savvywombat/tailwindcss-grid-areas'),
