@@ -1,33 +1,27 @@
-import type { navigationSchema } from '~/content/config';
+import { useStore } from '@nanostores/react';
 import type { z } from 'astro:content';
-import { useState } from 'react';
+import type { navigationSchema } from '~/content/config';
 import { cn } from '~/util/cn';
+import { navigationOpenAtom } from '~/util/store';
 
 type NavigationProps = {
   menu: z.infer<typeof navigationSchema> | null;
 };
 
 export default function NavigationMenu({ menu }: NavigationProps) {
-  const [open, setOpen] = useState(false);
+  const isOpen = useStore(navigationOpenAtom);
 
   if (!menu) {
     console.error('Problem with menu format');
     return null;
   }
 
-  const handleToggleClick = () => {
-    setOpen((open) => !open);
-  };
-
   return (
     <>
-      <button onClick={handleToggleClick} className="flex items-center gap-2">
-        Menu
-      </button>
       <ul
         className={cn([
           'flex gap-[1px] [&_a]:py-1 [&_a]:px-2',
-          !open && 'hidden',
+          !isOpen && 'hidden',
         ])}
       >
         {menu.items.map(({ link, text, children }) => (

@@ -2,6 +2,7 @@ import { useStore } from '@nanostores/react';
 import { useContext, useMemo } from 'react';
 import { GrantsContext } from '~/components/Pages/Grants/Content/GrantContextProvider';
 import type { GrantFilterKey } from '~/hooks/useGrantsFilter';
+import { cn } from '~/util/cn';
 import { grantsFilterMap } from '~/util/store';
 
 type FilterProps = {
@@ -42,14 +43,30 @@ export function Filter({ filterKey }: FilterProps) {
     return Array.from(values);
   }, [grants]);
 
-  const handleClick = () => {
-    grantsFilterMap.setKey('foo', 'bar');
+  const handleClick = (value: string) => {
+    return () => {
+      grantsFilterMap.setKey(filterKey, value);
+    };
   };
 
   return (
     <div>
       <div>{filterKey}</div>
-      <div>{JSON.stringify(filterValues, null, 2)}</div>
+      <div>
+        {filterValues.map((value) => (
+          <div
+            key={value}
+            className={cn([
+              filterKey in grantsFilter &&
+                grantsFilter[filterKey] === value &&
+                'bg-red-500',
+            ])}
+            onClick={handleClick(value)}
+          >
+            {value}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

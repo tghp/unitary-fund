@@ -2,9 +2,30 @@
 import '~/styles/main.scss';
 import Container from '~/components/Ui/Container.astro';
 import Header from '~/components/Layout/Header.astro';
+
+interface LayoutProps {
+  title?: string;
+  generic?: boolean;
+}
+
+export interface Props extends LayoutProps {
+  frontmatter?: LayoutProps;
+}
+
 const { title, generic } = Astro.props.frontmatter || Astro.props;
 
 const titleSeparator = '-';
+const titleName = 'Unitary Fund';
+
+let metaTitle = titleName;
+
+if (title) {
+  if (title === titleName) {
+    metaTitle = title;
+  } else {
+    metaTitle = `${title} ${titleSeparator} ${titleName}`;
+  }
+}
 ---
 
 <html lang="en">
@@ -28,14 +49,7 @@ const titleSeparator = '-';
       href="/favicon/favicon-16x16.png"
     />
     <meta name="viewport" content="width=device-width" />
-    {title === 'Unitary Fund' && <title>{title}</title>}
-    {
-      title !== 'Unitary Fund' && (
-        <title>
-          {title} {titleSeparator} Unitary Fund
-        </title>
-      )
-    }
+    <title>{metaTitle}</title>
   </head>
   <body>
     <Header />
