@@ -29,7 +29,7 @@ export function Filter({ filterKey }: FilterProps) {
       if (grantDataForKey) {
         if (
           typeof grantDataForKey === 'number' ||
-          grantDataForKey === 'string'
+          typeof grantDataForKey === 'string'
         ) {
           values.add(grantDataForKey.toString());
         } else if (Array.isArray(grantDataForKey)) {
