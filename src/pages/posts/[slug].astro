@@ -1,10 +1,11 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import Layout from '~/layouts/Layout.astro';
 import { getCollection, getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
+
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { slug: entry.slug },
@@ -18,11 +19,15 @@ export interface Props {
 const { slug } = Astro.props;
 
 const entry = await getEntry('blog', slug);
+
 const { Content } = await entry.render();
+
+const { title, publishDay, publishMonth, publishYear } = entry.data;
 ---
 
 <Layout title={entry.data.title}>
   <h1 class="text-2xl mb-6">{entry.data.title}</h1>
+  <date>{publishYear} - {publishMonth} - {publishDay}</date>
   <div class="prose">
     <Content />
   </div>
