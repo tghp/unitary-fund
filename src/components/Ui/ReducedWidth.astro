@@ -1,12 +1,11 @@
 ---
 export interface Props {
-  className?: string;
   center?: boolean;
 }
 
-const { className, center = false } = Astro.props;
+const { center = false } = Astro.props;
 ---
 
-<div class:list={['max-w-2xl', center && 'mx-auto', className]}>
+<div class:list={['max-w-2xl', center && 'mx-auto']}>
   <slot />
 </div>
