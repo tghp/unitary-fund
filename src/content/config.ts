@@ -6,6 +6,10 @@ const linkSchemaPart = {
   link: z.string(),
 };
 
+/**
+ * Navigation
+ */
+
 export const navigationSchema = z.object({
   items: z.array(
     z.object({
@@ -20,16 +24,26 @@ const navigationCollection = defineCollection({
   schema: navigationSchema,
 });
 
+/**
+ * Blog (aka posts)
+ */
+
 export const blogSchema = z.object({
   title: z.string(),
   author: z.string(),
-  publishDate: z.date(),
+  publishDay: z.number().or(z.string()),
+  publishMonth: z.number(),
+  publishYear: z.number(),
 });
 
 const blogCollection = defineCollection({
   type: 'content',
   schema: blogSchema,
 });
+
+/**
+ * Grants
+ */
 
 export const grantSchema = z.object({
   name: z.string(),
