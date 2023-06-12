@@ -14,9 +14,9 @@ module.exports = {
       colors: {
         yellow: {
           100: '#fafacc',
-          200: '#FFFF99',
+          200: '#FFFF99', // Main Faded Yellow
           300: '#FFFF4D',
-          400: '#FFFF00',
+          400: '#FFFF00', // Main Brand Yellow
           500: '#d2d204',
           600: '#918802',
           700: '#6b6402',
