@@ -3,12 +3,18 @@ layout: '~/layouts/Layout.astro'
 title: Donate
 ---
 
-import { ContentPageIntro } from '~/components/Ui';
+import { PageIntro, ButtonLink, ButtonLinkSubtext } from '~/components/Ui';
 
-<ContentPageIntro button={{ url: '#', text: 'Donate', postText: 'Via PayPal' }}>
+<PageIntro>
 # Help support open source quantum software with the Unitary Fund
 
-Unitary Fund is a 501(c)(3) non-profit working to create a quantum technology ecosystem that benefits the most people.
-Help to strengthen the open source tools that will enable quantum copmuting by becoming a chapmion today!
+**Unitary Fund is a 501(c)(3) non-profit working to create a quantum technology ecosystem that benefits the most people. Help to strengthen the open source tools that will enable quantum computing by becoming a champion today!**
 
-</ContentPageIntro>
+You can also represent the Unitary Fund by buying some of our [shop](https://unitaryfund.myspreadshop.com/)!
+
+<ButtonLink url="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NYN7D2ADDYQ78&source=url">
+  Donate
+</ButtonLink>
+<ButtonLinkSubtext>via PayPal</ButtonLinkSubtext>
+
+</PageIntro>

@@ -72,6 +72,9 @@ module.exports = {
   },
   plugins: [
     plugin(function ({ addVariant, addUtilities, addBase, config, theme }) {
+      addVariant('has-only-strong', '&:has(.only-strong)');
+      addVariant('no-only-strong', '&:not(:has(.only-strong))');
+
       addVariant('svg-child', '& > svg');
       addVariant('svg-path-child', '& > svg path');
 

@@ -11,6 +11,7 @@ export interface Props {
 const { url, className, arrow = true, underline = true } = Astro.props;
 ---
 
+<slot name="before" />
 <a
   class:list={[
     'grid-in-button font-bold relative self-center text-lg md:text-xl flex max-w-fit',
@@ -41,3 +42,4 @@ const { url, className, arrow = true, underline = true } = Astro.props;
     <slot />
   </span>
 </a>
+<slot name="after" />

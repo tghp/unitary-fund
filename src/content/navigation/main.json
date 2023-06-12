@@ -1,16 +1,8 @@
 {
   "items": [
     {
-      "text": "Home",
-      "link": "/"
-    },
-    {
-      "text": "About",
-      "link": "/about/"
-    },
-    {
       "text": "Microgrants",
-      "link": "/grants/",
+      "link": "#",
       "children": [
         {
           "text": "Apply",
@@ -21,6 +13,36 @@
           "link": "/grants/grants/"
         }
       ]
+    },
+    {
+      "text": "Research",
+      "link": "#",
+      "children": [
+        {
+          "text": "Mitiq",
+          "link": "/research/mitiq/"
+        },
+        {
+          "text": "Metriq",
+          "link": "/research/metriq/"
+        },
+        {
+          "text": "Publications",
+          "link": "/research/publications/"
+        }
+      ]
+    },
+    {
+      "text": "Community",
+      "link": "/community/"
+    },
+    {
+      "text": "Blog",
+      "link": "/blog/"
+    },
+    {
+      "text": "Donate",
+      "link": "/donate/"
     }
   ]
 }

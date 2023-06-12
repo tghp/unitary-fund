@@ -1,6 +1,6 @@
 export { default as Container } from './Container.astro';
 export { default as ReducedWidth } from './ReducedWidth.astro';
-export { default as ContentPageIntro } from './Content/PageIntro.astro';
+export { default as PageIntro } from './Content/PageIntro.astro';
 export { default as AboveTheFold } from './Content/AboveTheFold.astro';
 export { default as NumberPoints } from './Content/NumberPoints.astro';
 export { default as NumberPointsLink } from './Content/NumberPointsLink.astro';
@@ -17,3 +17,4 @@ export { default as Text } from './Content/Text.astro';
 export { default as BlogSlider } from './Content/Slider/BlogSlider.astro';
 export { default as Title } from './Content/Title.astro';
 export { default as ButtonLink } from './Content/ButtonLink.astro';
+export { default as ButtonLinkSubtext } from './Content/ButtonLinkSubtext.astro';

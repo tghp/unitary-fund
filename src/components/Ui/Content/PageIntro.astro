@@ -4,40 +4,23 @@ import ReducedWidth from '~/components/Ui/ReducedWidth.astro';
 export interface Props {
   onlyTitle?: boolean;
   reducedSpacingBelow?: boolean;
-  button?: {
-    text: string;
-    url: string;
-    preText?: string;
-    postText?: string;
-  };
 }
 
-const { button, onlyTitle = false, reducedSpacingBelow = false } = Astro.props;
+const { onlyTitle = false, reducedSpacingBelow = false } = Astro.props;
 ---
 
-<div
-  class:list={[
-    'pt-44 text-2xl [&_h1]:text-5xl [&_h1]:mb-6 [&_p]:my-14',
+<ReducedWidth
+  className={[
+    'pt-44 no-only-strong:text-2xl [&_h1]:text-5xl [&_h1]:mb-6 [&_>_p]:my-14',
     !reducedSpacingBelow && 'pb-24',
   ]}
 >
-  <ReducedWidth>
-    {!onlyTitle && <slot />}
-    {
-      onlyTitle && (
-        <h1>
-          <slot />
-        </h1>
-      )
-    }
-    {
-      button && (
-        <a class="uppercase flex flex-col gap-1 mt-6" href={button.url}>
-          {button.preText && <span class="text-sm">{button.preText}</span>}
-          {button.text}
-          {button.postText && <span class="text-sm">{button.postText}</span>}
-        </a>
-      )
-    }
-  </ReducedWidth>
-</div>
+  {!onlyTitle && <slot />}
+  {
+    onlyTitle && (
+      <h1>
+        <slot />
+      </h1>
+    )
+  }
+</ReducedWidth>
