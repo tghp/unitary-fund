@@ -1,0 +1,16 @@
+---
+export interface Props {
+  style: 'one' | 'two' | 'three';
+}
+
+const { style } = Astro.props;
+---
+
+<div
+  class:list={[
+    style === 'one' && 'text-xl md:text-3xl',
+    style === 'two' && 'font-bold text-2xl md:text-4xl',
+  ]}
+>
+  <slot />
+</div>

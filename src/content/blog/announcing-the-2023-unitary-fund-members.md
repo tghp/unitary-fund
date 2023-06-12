@@ -1,9 +1,9 @@
 ---
-title: "Unitary Fund Q2 2022 Update: Metriq, unitaryHACK and new projects!"
-author: "Will Zeng"
-publishYear: 2022
-publishMonth: 7
-publishDay: 11
+title: "Announcing the 2023 Unitary Fund Members"
+author: "Unitary Fund Team"
+publishYear: 2023
+publishMonth: 02
+publishDay: 07
 ---
 Dear Unitary Fund community,
 

@@ -4,6 +4,8 @@ import { GrantsContext } from '~/components/Pages/Grants/Content/GrantContextPro
 import useGrantsByYear from '~/hooks/useGrantsByYear';
 import useGrantsFilter from '~/hooks/useGrantsFilter';
 import { grantsFilterMap } from '~/util/store';
+import GrantItem from './GrantItem';
+import { cn } from '~/util/cn';
 
 export default function GrantsOutput() {
   const grantsContext = useContext(GrantsContext);
@@ -20,13 +22,19 @@ export default function GrantsOutput() {
 
   return (
     <div>
-      <pre>{JSON.stringify(grantsFilter, null, 2)}</pre>
       {Array.from(grantsByYear).map(([year, grants]) => (
         <div key={year}>
-          <h2 className="bg-yellow-400">{year}</h2>
-          <ul>
-            {grants?.map(({ slug, data: { name } }) => (
-              <li key={slug}>{name}</li>
+          <h2
+            className={cn(
+              'bg-yellow-400 inline-block relative font-mono text-xl pr-4 bleed-bg-l bleed-yellow-400',
+              'before:block before:absolute before:w-screen before:left-[100%] before:translate-x-0 before:top-0 before:-z-10 before:box-border before:content-[""] before:border-solid before:border-b before:border-b-black'
+            )}
+          >
+            {year}
+          </h2>
+          <ul className="flex flex-wrap gap-4 py-20">
+            {grants?.map((grant) => (
+              <GrantItem key={grant.slug} grant={grant} />
             ))}
           </ul>
         </div>

@@ -1,0 +1,40 @@
+{
+  "team": [
+    {
+      "title": "Ben Castanon",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Andrea Mari",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Frances Poblete",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Vincent Russo",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Nathan Shammah",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Nate Stemen",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Daniel Strano",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Misty Wahl",
+      "url": "https://www.ibm.com/quantum"
+    },
+    {
+      "title": "Will Zeng",
+      "url": "https://www.ibm.com/quantum"
+    }
+  ]
+}

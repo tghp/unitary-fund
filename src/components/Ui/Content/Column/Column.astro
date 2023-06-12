@@ -1,0 +1,22 @@
+---
+import Column from '~/components/Ui/Content/Column/Column';
+
+export interface Props {
+  title?: string;
+  isCollapsible?: boolean;
+  titleStyle?: 'simple' | 'marked' | 'strike';
+}
+
+const { title, isCollapsible = false, titleStyle = 'simple' } = Astro.props;
+---
+
+<div class="mb-5">
+  <Column
+    title={title}
+    isCollapsible={isCollapsible}
+    titleStyle={titleStyle}
+    client:only
+  >
+    <slot />
+  </Column>
+</div>

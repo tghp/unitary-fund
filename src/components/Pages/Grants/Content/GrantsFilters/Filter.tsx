@@ -1,12 +1,19 @@
 import { useStore } from '@nanostores/react';
 import { useContext, useMemo } from 'react';
 import { GrantsContext } from '~/components/Pages/Grants/Content/GrantContextProvider';
+import MultiSelectFilter from '~/components/Pages/Grants/Content/GrantsFilters/MultiSelectFilter';
+import SelectFilter from '~/components/Pages/Grants/Content/GrantsFilters/SelectFilter';
 import type { GrantFilterKey } from '~/hooks/useGrantsFilter';
-import { cn } from '~/util/cn';
 import { grantsFilterMap } from '~/util/store';
 
 type FilterProps = {
   filterKey: GrantFilterKey;
+};
+
+export const filterHandleClick = (filterKey: string, value: string) => {
+  return () => {
+    grantsFilterMap.setKey(filterKey, value);
+  };
 };
 
 export function Filter({ filterKey }: FilterProps) {
@@ -43,30 +50,9 @@ export function Filter({ filterKey }: FilterProps) {
     return Array.from(values);
   }, [grants]);
 
-  const handleClick = (value: string) => {
-    return () => {
-      grantsFilterMap.setKey(filterKey, value);
-    };
-  };
-
-  return (
-    <div>
-      <div>{filterKey}</div>
-      <div>
-        {filterValues.map((value) => (
-          <div
-            key={value}
-            className={cn([
-              filterKey in grantsFilter &&
-                grantsFilter[filterKey] === value &&
-                'bg-red-500',
-            ])}
-            onClick={handleClick(value)}
-          >
-            {value}
-          </div>
-        ))}
-      </div>
-    </div>
+  return filterKey === 'tags' ? (
+    <MultiSelectFilter filterKey={filterKey} filterValues={filterValues} />
+  ) : (
+    <SelectFilter filterKey={filterKey} filterValues={filterValues} />
   );
 }

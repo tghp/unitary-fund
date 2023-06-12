@@ -59,8 +59,66 @@ const grantCollection = defineCollection({
   schema: grantSchema,
 });
 
+/**
+ * Supporters
+ */
+
+export const supporterSchema = z.object({
+  supporters: z.array(
+    z.object({
+      title: z.string(),
+      url: z.string().url(),
+      imageId: z.string().optional(),
+    })
+  ),
+});
+
+const supporterCollection = defineCollection({
+  type: 'data',
+  schema: supporterSchema,
+});
+
+/**
+ * Advisors
+ */
+
+export const advisorSchema = z.object({
+  advisors: z.array(
+    z.object({
+      title: z.string(),
+      url: z.string().url(),
+    })
+  ),
+});
+
+const advisorCollection = defineCollection({
+  type: 'data',
+  schema: advisorSchema,
+});
+
+/**
+ * Team
+ */
+
+export const teamSchema = z.object({
+  team: z.array(
+    z.object({
+      title: z.string(),
+      url: z.string().url(),
+    })
+  ),
+});
+
+const teamCollection = defineCollection({
+  type: 'data',
+  schema: teamSchema,
+});
+
 export const collections = {
   navigation: navigationCollection,
   blog: blogCollection,
   grant: grantCollection,
+  supporter: supporterCollection,
+  advisor: advisorCollection,
+  team: teamCollection,
 };

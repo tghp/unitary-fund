@@ -4,9 +4,9 @@ import Svg from '~/components/Util/Svg.astro';
 import Navigation from './Header/Navigation.astro';
 ---
 
-<Container className="sticky top-0 pr-0 mb-8">
+<Container className="sticky top-0 pr-0 mb-6 z-10">
   <div
-    class="grid grid-cols-header grid-rows-header grid-areas-header pt-[--header-pt]"
+    class="grid grid-cols-header grid-rows-header grid-areas-header md:pt-[--header-pt]"
   >
     <div
       class="col-start-1 col-span-full row-start-1 h-[--header-pt] bg-yellow-400 -mt-[--header-pt]"
@@ -22,7 +22,7 @@ import Navigation from './Header/Navigation.astro';
     </div>
     <a
       href="/"
-      class="h-[--logo-height] svg-child:svg-scale-v grid-in-logo -ml-8"
+      class="md:h-[--logo-height] h-14 svg-child:svg-scale-v grid-in-logo -ml-6"
     >
       <Svg name="logo" />
     </a>

@@ -8,6 +8,7 @@ import remarkGfm from 'remark-gfm';
 import remarkOembed from 'remark-oembed';
 import { gistDirective, imageDirective } from './src/remark/directives';
 import remarkOnlyBold from './src/remark/only-bold';
+import svgr from 'vite-plugin-svgr';
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,5 +28,8 @@ export default defineConfig({
       imageDirective,
       gistDirective,
     ],
+  },
+  vite: {
+    plugins: [svgr()],
   },
 });

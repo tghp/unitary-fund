@@ -9,7 +9,7 @@ export interface Props {
 const { className, reducedWidth = false } = Astro.props;
 ---
 
-<div class:list={['2xl:container mx-auto px-10', className]}>
+<div class:list={['2xl:container mx-auto md:px-10 px-6', className]}>
   {!reducedWidth && <slot />}
   {
     reducedWidth && (

@@ -1,29 +1,20 @@
-import "remark-directive";
-import type { Plugin } from "unified";
-import type { Root } from "mdast";
-import { visit } from "unist-util-visit";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { Resize } from "@cloudinary/url-gen/actions/resize";
-
-const cld = new Cloudinary({
-  cloud: {
-    // TODO: Change to env variable
-    cloudName: "de4xlna6t",
-  },
-  url: {
-    secure: true,
-  },
-});
+import 'remark-directive';
+import type { Plugin } from 'unified';
+import type { Root } from 'mdast';
+import { visit } from 'unist-util-visit';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { Resize } from '@cloudinary/url-gen/actions/resize';
+import { cld } from './src/util/cloudinary';
 
 export const imageDirective: Plugin<[], Root> = () => {
   return (tree, file) => {
     visit(tree, (node) => {
       if (
-        node.type === "textDirective" ||
-        node.type === "leafDirective" ||
-        node.type === "containerDirective"
+        node.type === 'textDirective' ||
+        node.type === 'leafDirective' ||
+        node.type === 'containerDirective'
       ) {
-        if (node.name !== "image") return;
+        if (node.name !== 'image') return;
 
         const data = node.data || (node.data = {});
         // const attributes = node.attributes || {};
@@ -33,12 +24,12 @@ export const imageDirective: Plugin<[], Root> = () => {
 
         // if (!id) file.fail("Missing video id", node);
 
-        if (node.children?.length === 1 && node.children[0].type === "text") {
+        if (node.children?.length === 1 && node.children[0].type === 'text') {
           const imageId = node.children[0].value?.trim();
           const image = cld.image(imageId);
           image.resize(Resize.scale().width(800));
 
-          data.hName = "img";
+          data.hName = 'img';
           data.hProperties = {
             src: image.toURL(),
           };
@@ -55,31 +46,31 @@ export const gistDirective: Plugin<[], Root> = () => {
   return (tree, file) => {
     visit(tree, (node) => {
       if (
-        node.type === "textDirective" ||
-        node.type === "leafDirective" ||
-        node.type === "containerDirective"
+        node.type === 'textDirective' ||
+        node.type === 'leafDirective' ||
+        node.type === 'containerDirective'
       ) {
-        if (node.name !== "gist") return;
+        if (node.name !== 'gist') return;
 
         const data = node.data || (node.data = {});
         // const attributes = node.attributes || {};
 
-        if (node.type === "textDirective")
-          file.fail("Text directives for `gist` not supported", node);
+        if (node.type === 'textDirective')
+          file.fail('Text directives for `gist` not supported', node);
 
         // if (!id) file.fail("Missing video id", node);
 
-        if (node.children?.length === 1 && node.children[0].type === "text") {
+        if (node.children?.length === 1 && node.children[0].type === 'text') {
           const gistPath = node.children[0].value
             ?.trim()
-            .replace(/^\/*/, "")
-            .replace(/\/*$/, "");
+            .replace(/^\/*/, '')
+            .replace(/\/*$/, '');
 
           // TODO: Validate path
 
           // if (gistPath.match)
 
-          data.hName = "script";
+          data.hName = 'script';
           data.hProperties = {
             src: `https://gist.github.com/${gistPath}.js`,
           };
