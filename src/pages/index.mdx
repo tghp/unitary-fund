@@ -7,6 +7,8 @@ import {
   ReducedWidth,
   AboveTheFold,
   NumberPoints,
+  NumberPointsLink,
+  PreIntroText,
   IntroText,
   Section,
   Column,
@@ -17,12 +19,13 @@ import {
   Quote,
   Text,
   BlogSlider,
-  ButtonLink
+  ButtonLink,
 } from '~/components/Ui';
 
 <AboveTheFold>
-  **Because evolution is unitary.**
-
+  <PreIntroText>
+    Because evolution is unitary.
+  </PreIntroText>
   <IntroText>
     # **Unitary Fund** is a <mark>501(c)(3) non-profit</mark> helping create a **quantum technology ecosystem** that <mark>benefits the most people</mark>.
   </IntroText>
@@ -31,14 +34,16 @@ import {
     1. ### Microgrants
         We run a microgrant program to fund explorers across the world to work on quantum technologies. Do you have an idea for a project?
         
-        **Apply for a microgrant.**
+        <NumberPointsLink url="/apply">Apply for a microgrant.</NumberPointsLink>
 
         See our **FAQ** and **previous grants**.
 
     2.  ### Research
         We do our own research to help the ecosystem as a whole. For example, we are developing **(1)mitiq**, an open source compiler for error-mitigated quantum programming, and **(2)metriq**, an open community platform for sharing quantum tech benchmarks.
+
     3.  ### Community
-            We host an open source quantum tech community that runs **hackathons** and events on our **Discord**. Have a look at our **Calendar**.
+        We host an open source quantum tech community that runs **hackathons** and events on our **Discord**. Have a look at our **Calendar**.
+
   </NumberPoints>
 </AboveTheFold>
 
@@ -48,22 +53,21 @@ import {
   bottomSpacing="large"
   titleStyle="secondary"
 >
-<ReducedWidth>
-  <Text style="one">
-    Project could be open source quantum sofware, education materials and workshops, a new quantum sensor prototype, or much more.
-  </Text>
-  <br></br>
-  <Text style="two">
-    Our program is designed to be as simple as possible. No organizational affiliation required. **Just a short form and a two minute video.** 
-        
-    For more information or to check on your application email: [**info@unitary.fund**](mailto:info@unitary.fund)
-  </Text>
-  <br></br>
-  <ButtonLink
-    text="Apply"
-    url="apply"
-  />
-</ReducedWidth>
+  <ReducedWidth>
+    <Text style="one">
+      Project could be open source quantum sofware, education materials and
+      workshops, a new quantum sensor prototype, or much more.
+    </Text>
+    <br></br>
+    <Text style="two">
+      Our program is designed to be as simple as possible. No organizational
+      affiliation required. **Just a short form and a two minute video.** For
+      more information or to check on your application email:
+      [**info@unitary.fund**](mailto:info@unitary.fund)
+    </Text>
+    <br></br>
+    <ButtonLink url="apply">Apply</ButtonLink>
+  </ReducedWidth>
 </Section>
 
 <Section

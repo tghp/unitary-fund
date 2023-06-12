@@ -36,8 +36,7 @@ const {
     bottomSpacing === 'medium' && 'pb-10 md:pb-14',
     bottomSpacing === 'large' && 'pb-14 md:pb-20',
     bottomSpacing === 'extra-large' && 'pb-14 md:pb-28',
-    backgroundColor &&
-        'bleed-bg bleed-light-grey',
+    backgroundColor && 'bleed-bg bleed-light-grey',
     backgroundColor === 'light-grey' && 'bg-light-grey',
   ]}
 >
@@ -65,11 +64,9 @@ const {
     }
     {
       button && (
-        <ButtonLink
-          text={button.text}
-          url={button.url}
-          className="hidden md:flex"
-        />
+        <ButtonLink url={button.url} className="hidden md:flex">
+          {button.text}
+        </ButtonLink>
       )
     }
   </div>
@@ -78,11 +75,9 @@ const {
   </div>
   {
     button && (
-      <ButtonLink
-        text={button.text}
-        url={button.url}
-        className="mt-10 justify-start md:hidden"
-      />
+      <ButtonLink url={button.url} className="mt-10 justify-start md:hidden">
+        {button.text}
+      </ButtonLink>
     )
   }
 </div>

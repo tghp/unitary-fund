@@ -7,7 +7,7 @@
 p {
   &.only-strong {
     strong {
-      //@apply font-inherit text-2xl;
+      @apply font-inherit text-2xl text-red-500;
     }
   }
 }
@@ -24,7 +24,7 @@ p {
 }
 
 .number-points {
-    @apply md:mb-8;
+  @apply md:mb-8;
   ol {
     counter-reset: item;
     @apply flex flex-wrap leading-6 gap-x-3 text-lg md:flex-nowrap relative bleed-border-b bleed-black;
@@ -65,5 +65,5 @@ p {
 }
 
 .swiper-button-disabled {
-    @apply opacity-50 cursor-default;
+  @apply opacity-50 cursor-default;
 }

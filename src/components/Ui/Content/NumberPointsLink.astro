@@ -1,0 +1,13 @@
+---
+import ButtonLink from '~/components/Ui/Content/ButtonLink.astro';
+
+export interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<ButtonLink url={url} arrow={false} underline={false}>
+  <slot />
+</ButtonLink>

@@ -2,25 +2,42 @@
 import Svg from '~/components/Util/Svg.astro';
 
 export interface Props {
-  text: string;
   url: string;
   className?: string;
+  arrow?: boolean;
+  underline?: boolean;
 }
 
-const { text, url, className } = Astro.props;
+const { url, className, arrow = true, underline = true } = Astro.props;
 ---
 
 <a
   class:list={[
-    'uppercase grid-in-button relative font-mono font-bold self-center text-lg md:text-xl flex max-w-fit',
+    'grid-in-button font-bold relative self-center text-lg md:text-xl flex max-w-fit',
     '[&>*]:hover:bg-yellow-400',
+    (underline || arrow) && 'uppercase font-mono',
     className,
   ]}
-  title={text}
   href={url}
 >
-  <span class="border-solid border-b-4 border-b-yellow-400 mr-2 px-1 flex items-center text-2xl svg-path-child:fill-black">
-    <Svg name="arrow" />
+  {
+    arrow && (
+      <span
+        class:list={[
+          'mr-2 px-1 flex items-center text-2xl svg-path-child:fill-black',
+          underline && 'border-solid border-b-4 border-b-yellow-400',
+        ]}
+      >
+        <Svg name="arrow" />
+      </span>
+    )
+  }
+  <span
+    class:list={[
+      arrow && 'px-1',
+      underline && 'border-solid border-b-4 border-b-yellow-400',
+    ]}
+  >
+    <slot />
   </span>
-  <span class="border-solid border-b-4 border-b-yellow-400 px-1">{text}</span>
 </a>
