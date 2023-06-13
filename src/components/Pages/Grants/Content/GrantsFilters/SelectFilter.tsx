@@ -1,12 +1,46 @@
 import { cn } from '~/util/cn';
 import { useSelect } from 'downshift';
 import type { GrantFilterKey } from '~/hooks/useGrantsFilter';
-import { filterHandleClick } from '~/components/Pages/Grants/Content/GrantsFilters/Filter';
+import { grantsFilterMap } from '~/util/store';
+import {
+  ISO_3166_ALPHA_2_CODES,
+  ISO_3166_ALPHA_2_MAPPINGS,
+} from '~/util/iso3166';
 
 type SelectFilterProps = {
   filterKey: GrantFilterKey;
   filterValues: string[];
 };
+
+function getSortedFilterValues(
+  filterKey: GrantFilterKey,
+  filterValues: string[]
+) {
+  if (filterKey === 'country') {
+    return filterValues.sort((a, b) => {
+      const aLabel = getLabel(filterKey, a);
+      const bLabel = getLabel(filterKey, b);
+
+      return aLabel.localeCompare(bLabel);
+    });
+  } else {
+    return filterValues.sort((a, b) => a.localeCompare(b));
+  }
+}
+
+function getLabel(filterKey: GrantFilterKey, value: string) {
+  if (filterKey === 'country' && ISO_3166_ALPHA_2_CODES.includes(value)) {
+    return ISO_3166_ALPHA_2_MAPPINGS[
+      value as (typeof ISO_3166_ALPHA_2_CODES)[number]
+    ];
+  } else if (filterKey === 'month') {
+    return new Date(0, parseInt(value, 10)).toLocaleString('default', {
+      month: 'long',
+    });
+  } else {
+    return value;
+  }
+}
 
 export default function SelectFilter({
   filterKey,
@@ -14,23 +48,30 @@ export default function SelectFilter({
 }: SelectFilterProps) {
   const {
     isOpen,
+    closeMenu,
     selectedItem,
     getToggleButtonProps,
     getLabelProps,
     getMenuProps,
     highlightedIndex,
     getItemProps,
-  } = useSelect({ items: filterValues });
+  } = useSelect({
+    items: filterValues,
+    selectedItem: grantsFilterMap.get()[filterKey] || '',
+  });
 
   return (
     <div className="flex-grow relative bg-light-grey after:hidden md:after:block after:top-0 after:content-['|'] after:absolute after:-right-[1.35rem] after:font-bold last:after:hidden">
-      <div className="w-100 flex flex-col gap-1 h-full">
+      <div className="w-100 flex flex-col gap-1 h-full select-none">
         <div
           className="flex cursor-pointer text-black  hover:text-black hover:bg-yellow-400 h-full"
           {...getToggleButtonProps()}
         >
           <span className="px-4">{isOpen ? <>&#8593;</> : <>&#8595;</>}</span>
-          <span className="font-bold">{filterKey}</span>
+          <span className="font-bold">
+            {!!selectedItem && getLabel(filterKey, selectedItem)}
+            {!selectedItem && filterKey}
+          </span>
         </div>
       </div>
       <ul
@@ -40,37 +81,28 @@ export default function SelectFilter({
         {...getMenuProps()}
       >
         {isOpen &&
-          filterValues.map((item, index) => (
-            <li
-              className={cn(
-                highlightedIndex === index && 'bg-yellow-400',
-                selectedItem === item && 'font-bold',
-                'py-1 px-4  flex flex-col text-black cursor-pointer border-black border-b'
-              )}
-              key={`${item}${index}`}
-              {...getItemProps({ item, index })}
-              onClick={filterHandleClick(filterKey, item)}
-            >
-              <span>{item}</span>
-            </li>
-          ))}
+          getSortedFilterValues(filterKey, filterValues).map((item, index) => {
+            const handleClick = () => {
+              grantsFilterMap.setKey(filterKey, item);
+              closeMenu();
+            };
+
+            return (
+              <li
+                className={cn(
+                  highlightedIndex === index && 'bg-yellow-400',
+                  selectedItem === item && 'font-bold',
+                  'py-1 px-4 flex flex-col text-black cursor-pointer border-black border-b'
+                )}
+                key={`${item}${index}`}
+                {...getItemProps({ item, index })}
+                onClick={handleClick}
+              >
+                <span>{getLabel(filterKey, item)}</span>
+              </li>
+            );
+          })}
       </ul>
     </div>
   );
-}
-
-{
-  /* {filterValues.map((value) => (
-          <div
-            key={value}
-            className={cn([
-              filterKey in grantsFilter &&
-                grantsFilter[filterKey] === value &&
-                'bg-red-500',
-            ])}
-            onClick={handleClick(value)}
-          >
-            {value}
-          </div>
-        ))} */
 }

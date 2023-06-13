@@ -1,19 +1,13 @@
 import { useStore } from '@nanostores/react';
 import { useContext, useMemo } from 'react';
 import { GrantsContext } from '~/components/Pages/Grants/Content/GrantContextProvider';
-import MultiSelectFilter from '~/components/Pages/Grants/Content/GrantsFilters/MultiSelectFilter';
+import TagFilter from '~/components/Pages/Grants/Content/GrantsFilters/TagFilter';
 import SelectFilter from '~/components/Pages/Grants/Content/GrantsFilters/SelectFilter';
 import type { GrantFilterKey } from '~/hooks/useGrantsFilter';
 import { grantsFilterMap } from '~/util/store';
 
 type FilterProps = {
   filterKey: GrantFilterKey;
-};
-
-export const filterHandleClick = (filterKey: string, value: string) => {
-  return () => {
-    grantsFilterMap.setKey(filterKey, value);
-  };
 };
 
 export function Filter({ filterKey }: FilterProps) {
@@ -51,7 +45,7 @@ export function Filter({ filterKey }: FilterProps) {
   }, [grants]);
 
   return filterKey === 'tags' ? (
-    <MultiSelectFilter filterKey={filterKey} filterValues={filterValues} />
+    <TagFilter filterKey={filterKey} filterValues={filterValues} />
   ) : (
     <SelectFilter filterKey={filterKey} filterValues={filterValues} />
   );

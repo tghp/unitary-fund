@@ -8,13 +8,11 @@ type SelectFilterProps = {
   filterValues: string[];
 };
 
-export default function MultiSelectFilter({
+export default function TagFilter({
   filterKey,
   filterValues,
 }: SelectFilterProps) {
   const initialSelectedItems: string[] = [];
-
-  console.log(filterValues);
 
   function getFilteredBooks(
     selectedItems: string[] | undefined,
@@ -144,7 +142,7 @@ export default function MultiSelectFilter({
                 className={cn(
                   highlightedIndex === index && 'bg-yellow-400',
                   selectedItem === item && 'font-bold',
-                  'py-1 px-4  flex flex-col text-black cursor-pointer border-black border-b'
+                  'py-1 px-4 flex flex-col text-black cursor-pointer border-black border-b'
                 )}
                 key={`${item}${index}`}
                 {...getItemProps({ item, index })}

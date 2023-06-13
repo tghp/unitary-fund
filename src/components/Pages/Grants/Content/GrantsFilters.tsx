@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { GrantsContext } from '~/components/Pages/Grants/Content/GrantContextProvider';
 import { Filter } from '~/components/Pages/Grants/Content/GrantsFilters/Filter';
 import { Button } from '~/components/Ui/Form/Button';
+import { grantsFilterMap } from '~/util/store';
 
 export default function GrantsFilters() {
   const grantsContext = useContext(GrantsContext);
@@ -11,11 +12,14 @@ export default function GrantsFilters() {
   }
 
   const { filters } = grantsContext;
-  console.log(filters);
+
+  const handleClearClick = () => {
+    grantsFilterMap.set({});
+  };
 
   return (
     <div className="fixed top-9 md:relative md:top-0 md:mb-20 flex flex-row flex-nowrap md:block w-full left-0">
-      <div className="order-2 md:order-1 pt-8 pb-2 md:pt-0 md:mb-0 md:bleed-bg md:bleed-black md:text-white uppercase items-center font-mono text-lg md:grid grid-cols-filters grid-rows-filters grid-areas-filters w-1/2 md:w-full">
+      <div className="order-2 md:order-1 pt-8 pb-[1px] md:pt-0 md:mb-0 md:bleed-bg md:bleed-black md:text-white uppercase items-center font-mono text-lg md:grid grid-cols-filters grid-rows-filters grid-areas-filters w-1/2 md:w-full">
         <div className="uppercase font-bold  md:bleed-black h-full flex items-center w-full">
           Filter
         </div>
@@ -30,7 +34,10 @@ export default function GrantsFilters() {
               )}
           </div>
           <div className="h-full uppercase items-center ml-4">
-            <Button className="p-0 h-full uppercase font-bold text-lg">
+            <Button
+              onClick={handleClearClick}
+              className="p-0 h-full uppercase font-bold text-lg"
+            >
               Clear
             </Button>
           </div>

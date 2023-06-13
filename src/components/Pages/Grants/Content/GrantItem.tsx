@@ -1,4 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
+import { ISO_3166_ALPHA_2_MAPPINGS } from '~/util/iso3166';
+import Pin from '~/assets/svg/pin.svg?raw';
 
 type GrantItemProps = {
   grant: CollectionEntry<'grant'>;
@@ -17,6 +19,13 @@ export default function GrantItem({ grant }: GrantItemProps) {
         {grant.data.name}
       </div>
       <div className="pl-4 min-h-[150px]">{grant.body}</div>
+      <div className="uppercase flex items-center pr-2 -ml-[4px] border-b border-black w-fit">
+        <div
+          className="flex items-center mr-1 px-1 py-2 bg-black [&_svg]:h-4 [&_svg]:w-auto"
+          dangerouslySetInnerHTML={{ __html: Pin }}
+        />
+        {ISO_3166_ALPHA_2_MAPPINGS[grant.data.country]}
+      </div>
     </div>
   );
 }

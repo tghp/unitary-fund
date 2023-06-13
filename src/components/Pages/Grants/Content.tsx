@@ -10,8 +10,13 @@ export type ContentProps = {
 };
 
 export default function Content({ filters, grants }: ContentProps) {
+  const finalFilters = [
+    ...(filters || []).slice(0, 4),
+    'tags',
+  ] satisfies Array<GrantFilterKey>;
+
   return (
-    <GrantsContextProvider filters={filters} grants={grants}>
+    <GrantsContextProvider filters={finalFilters} grants={grants}>
       <GrantsFilters />
       <GrantsOutput />
     </GrantsContextProvider>
