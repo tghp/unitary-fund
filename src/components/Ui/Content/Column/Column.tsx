@@ -37,35 +37,50 @@ const DefaultColumn = ({
   );
 };
 
+const CollapsibleColumn = ({
+  title,
+  titleStyle = 'simple',
+  children,
+}: ColumnContentProps) => {
+  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
+  return (
+    <>
+      {isDesktop && (
+        <DefaultColumn
+          title={title}
+          titleStyle={titleStyle}
+          children={children}
+        />
+      )}
+      {isMobile && (
+        <AccordionColumn
+          title={title}
+          titleStyle={titleStyle}
+          children={children}
+        />
+      )}
+    </>
+  );
+};
+
 export default function Column({
   title,
   titleStyle,
   isCollapsible,
   children,
 }: ColumnProps) {
-  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-
   return (
     <>
-      {isCollapsible ? (
-        <>
-          {isDesktop && (
-            <DefaultColumn
-              title={title}
-              titleStyle={titleStyle}
-              children={children}
-            />
-          )}
-          {isMobile && (
-            <AccordionColumn
-              title={title}
-              titleStyle={titleStyle}
-              children={children}
-            />
-          )}
-        </>
-      ) : (
+      {isCollapsible && (
+        <CollapsibleColumn
+          title={title}
+          titleStyle={titleStyle}
+          children={children}
+        />
+      )}
+      {!isCollapsible && (
         <DefaultColumn
           title={title}
           titleStyle={titleStyle}

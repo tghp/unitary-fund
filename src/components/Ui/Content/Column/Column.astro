@@ -1,5 +1,5 @@
 ---
-import Column from '~/components/Ui/Content/Column/Column';
+import SingleColumn from '~/components/Ui/Content/Column/Column';
 
 export interface Props {
   title?: string;
@@ -8,15 +8,27 @@ export interface Props {
 }
 
 const { title, isCollapsible = false, titleStyle = 'simple' } = Astro.props;
+
+const columnProps = {
+  title,
+  isCollapsible,
+  titleStyle,
+};
 ---
 
 <div class="mb-5">
-  <Column
-    title={title}
-    isCollapsible={isCollapsible}
-    titleStyle={titleStyle}
-    client:only
-  >
-    <slot />
-  </Column>
+  {
+    !isCollapsible && (
+      <SingleColumn {...columnProps} client:load>
+        <slot />
+      </SingleColumn>
+    )
+  }
+  {
+    isCollapsible && (
+      <SingleColumn {...columnProps} client:only>
+        <slot />
+      </SingleColumn>
+    )
+  }
 </div>
