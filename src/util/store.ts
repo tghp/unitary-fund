@@ -5,6 +5,7 @@ import { atom, map } from 'nanostores';
  */
 
 export const navigationOpenAtom = atom(false);
+export const navigationActiveSubmenuAtom = atom<string | null>(null);
 
 /**
  * Grants

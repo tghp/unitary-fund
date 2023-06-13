@@ -12,6 +12,19 @@ module.exports = {
         mono: ['Space Mono', ...defaultTheme.fontFamily.mono],
       },
       colors: {
+        gray: {
+          50: '#FCFCFC',
+          100: '#FAFAFA',
+          200: '#F6F6F6',
+          300: '#D6D6D6',
+          400: '#B8B8B8',
+          500: '#999999',
+          600: '#7A7A7A',
+          700: '#5C5C5C',
+          800: '#3D3D3D',
+          900: '#1F1F1F',
+          950: '#0F0F0F',
+        },
         yellow: {
           100: '#fafacc',
           200: '#FFFF99', // Main Faded Yellow
@@ -34,7 +47,7 @@ module.exports = {
           700: '#210042',
           800: '#140029',
           900: '#0A0014',
-          950: '#05000A'
+          950: '#05000A',
         },
         black: '#000000',
         'light-grey': '#f6f6f9',
@@ -45,17 +58,20 @@ module.exports = {
       },
       gridTemplateAreas: {
         header: ['logo nav', '.    nav'],
+        navigation: ['menu trigger', 'submenu submenu'],
         'section-header': ['title title', 'subtitle button'],
         'tag-search': ['title search', '. search'],
       },
       gridTemplateRows: {
         header: 'auto auto',
+        navigation: 'auto 1fr',
         'section-header': 'auto auto',
         filters: '30px',
         'tag-search': '30px auto',
       },
       gridTemplateColumns: {
         header: 'auto 1fr',
+        navigation: '1fr var(--menu-trigger-width)',
         'section-header': '1fr auto',
         filters: '150px 1fr auto',
         'tag-search': '150px auto',

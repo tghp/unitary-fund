@@ -13,11 +13,11 @@ import Navigation from './Header/Navigation.astro';
     >
     </div>
     <div
-      class="col-start-1 w-0 row-start-1 row-span-full bleed-bg-l bleed-yellow-400 -mt-[--header-pt]"
+      class="max-h-[calc(var(--logo-height)+var(--header-pt))] col-start-1 w-0 row-start-1 row-span-full bleed-bg-l bleed-yellow-400 -mt-[--header-pt]"
     >
     </div>
     <div
-      class="col-start-3 w-0 row-start-1 row-span-full bleed-bg-r bleed-yellow-400 -mt-[--header-pt]"
+      class="max-h-[calc(var(--header-pt)*2)] col-start-3 w-0 row-start-1 row-span-full bleed-bg-r bleed-yellow-400 -mt-[--header-pt]"
     >
     </div>
     <a
@@ -26,6 +26,8 @@ import Navigation from './Header/Navigation.astro';
     >
       <Svg name="logo" />
     </a>
-    <Navigation className="grid-in-nav h-full w-full" />
+    <Navigation
+      className="grid-in-nav grid grid-areas-navigation grid-cols-navigation grid-rows-navigation h-full w-full border-t-yellow-400 border-t-[length:--header-pt]"
+    />
   </div>
 </Container>

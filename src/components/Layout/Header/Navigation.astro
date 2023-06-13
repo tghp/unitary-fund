@@ -1,6 +1,6 @@
 ---
-import NavigationTrigger from '~/components/Layout/Header/NavigationTrigger';
-import NavigationMenu from '~/components/Layout/Header/NavigationMenu';
+import Trigger from '~/components/Layout/Header/Navigation/Trigger';
+import Menu from '~/components/Layout/Header/Navigation/Menu';
 
 export interface Props {
   className?: string;
@@ -23,7 +23,11 @@ const navigationParse = navigationSchema.safeParse(
 let navigation = navigationParse.success ? navigationParse.data : null;
 ---
 
-<nav id="main-navigation" class:list={[className]}>
-  <NavigationTrigger client:load />
-  <NavigationMenu menu={navigation} client:only />
+<nav
+  id="main-navigation"
+  class:list={[className]}
+  style={{ '--menu-trigger-width': '90px' }}
+>
+  <Trigger client:load />
+  <Menu menu={navigation} client:only />
 </nav>
