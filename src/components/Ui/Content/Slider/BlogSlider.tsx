@@ -5,7 +5,7 @@ import { Navigation } from 'swiper';
 import 'swiper/css';
 import type { CollectionEntry } from 'astro:content';
 
-import BlogItem from '~/components/Pages/Blog/Content/BlogItem';
+import { BlogItem } from '~/components/Pages/Blog/Content/BlogItem';
 import { ReactComponent as ArrowIcon } from '~/assets/svg/arrow.svg';
 
 type BlogSliderProps = {
@@ -30,8 +30,7 @@ export default function BlogSlider({ numberOfPosts, posts }: BlogSliderProps) {
           noSwipingClass: 'swiper-slide',
         },
       }}
-      modules={[Navigation]}
-    >
+      modules={[Navigation]}>
       {posts.map((post) => (
         <SwiperSlide key={post.id}>
           <BlogItem key={post.id} post={post} />
@@ -40,14 +39,12 @@ export default function BlogSlider({ numberOfPosts, posts }: BlogSliderProps) {
       <div className="flex mt-5 md:mt-14 gap-x-2">
         <div
           className="swiper-button-prev flex items-center cursor-pointer px-3 justify-start md:justify-center w-1/2 md:w-[50px] h-[35px] bg-black"
-          title="Prev"
-        >
+          title="Prev">
           <ArrowIcon className="rotate-180" />
         </div>
         <div
           className="swiper-button-next flex items-center cursor-pointer px-3 justify-end md:justify-center w-1/2 md:w-[50px] h-[35px] bg-black"
-          title="Next"
-        >
+          title="Next">
           <ArrowIcon />
         </div>
       </div>
