@@ -6,7 +6,7 @@
       "children": [
         {
           "text": "Apply",
-          "link": "/grants/apply/"
+          "link": "https://unitaryfund.typeform.com/to/j0kAOd?typeform-source=unitary.fund"
         },
         {
           "text": "Grants",
@@ -18,7 +18,7 @@
         },
         {
           "text": "FAQ",
-          "link": "/faq/"
+          "link": "/faqs/"
         }
       ]
     },
