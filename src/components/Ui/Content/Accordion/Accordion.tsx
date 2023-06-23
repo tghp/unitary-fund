@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { PlusIcon, MinusIcon } from 'lucide-react';
@@ -12,11 +10,7 @@ const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={cn('border-b', className)}
-    {...props}
-  />
+  <AccordionPrimitive.Item ref={ref} className={cn('border-b', className)} {...props} />
 ));
 AccordionItem.displayName = 'AccordionItem';
 
@@ -31,8 +25,7 @@ const AccordionTrigger = React.forwardRef<
         'flex flex-1 items-center justify-between font-medium transition-all [&[data-state=open]>svg]:rotate-90',
         className
       )}
-      {...props}
-    >
+      {...props}>
       {children}
       <PlusIcon className="h-4 w-4 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
@@ -50,8 +43,7 @@ const AccordionContent = React.forwardRef<
       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
       className
     )}
-    {...props}
-  >
+    {...props}>
     <div className="pt-0">{children}</div>
     <AccordionTrigger className="mt-2 uppercase px-2 text-base font-bold font-mono tracking-widest bg-yellow-400">
       Collapse
