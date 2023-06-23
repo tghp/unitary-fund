@@ -1,12 +1,12 @@
 import type { PropsWithChildren } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { cn } from '~/util/cn';
-import AccordionColumn from '~/components/Ui/Content/Accordion/AccordionColumn';
+import AccordionColumn from '~/components/Ui/Content/Column/AccordionColumn';
 
-type ColumnProps = PropsWithChildren<{
+export type ColumnProps = PropsWithChildren<{
   title?: string;
   isCollapsible?: boolean;
-  titleStyle?: 'simple' | 'marked' | 'strike';
+  titleStyle?: 'simple' | 'marked' | 'strike' | 'solid';
 }>;
 
 export type ColumnContentProps = Omit<ColumnProps, 'isCollapsible'>;
@@ -19,6 +19,7 @@ export function getColumnStyles(titleStyle: string) {
     titleStyle === 'marked' &&
       'border-solid border-b border-b-black bg-yellow-400',
     titleStyle === 'strike' && 'text-white bg-black',
+    titleStyle === 'solid' && 'solid-heading',
   ];
 }
 

@@ -14,31 +14,24 @@ const { url, className, arrow = true, underline = true } = Astro.props;
 <slot name="before" />
 <a
   class:list={[
-    'grid-in-button font-bold relative self-center text-lg md:text-xl flex max-w-fit',
+    'font-bold relative text-lg md:text-xl flex max-w-fit no-underline',
     '[&>*]:hover:bg-yellow-400',
     (underline || arrow) && 'uppercase font-mono',
     className,
   ]}
-  href={url}
->
+  href={url}>
   {
     arrow && (
       <span
         class:list={[
           'mr-2 px-1 flex items-center text-2xl svg-path-child:fill-black',
           underline && 'border-solid border-b-4 border-b-yellow-400',
-        ]}
-      >
+        ]}>
         <Svg name="arrow" />
       </span>
     )
   }
-  <span
-    class:list={[
-      arrow && 'px-1',
-      underline && 'border-solid border-b-4 border-b-yellow-400',
-    ]}
-  >
+  <span class:list={[arrow && 'px-1', underline && 'border-solid border-b-4 border-b-yellow-400']}>
     <slot />
   </span>
 </a>

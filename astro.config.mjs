@@ -6,17 +6,26 @@ import { defineConfig } from 'astro/config';
 import remarkDirective from 'remark-directive';
 import remarkGfm from 'remark-gfm';
 import remarkOembed from 'remark-oembed';
-import { gistDirective, imageDirective } from './src/remark/directives';
-import remarkOnlyBold from './src/remark/only-bold';
+import {
+  imageDirective,
+  gistDirective,
+  socialDirective,
+} from './src/remark/directives';
+import remarkOnlyStrong from './src/remark/only-strong';
 import svgr from 'vite-plugin-svgr';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://unitaryfund.tghp.co.uk',
-  integrations: [tailwind(), mdx(), react(), dotHtmlRedirects()],
+  integrations: [
+    tailwind({ config: { applyBaseStyles: false } }),
+    mdx(),
+    react(),
+    dotHtmlRedirects(),
+  ],
   markdown: {
     remarkPlugins: [
-      remarkOnlyBold,
+      remarkOnlyStrong,
       remarkGfm,
       [
         remarkOembed,
@@ -27,6 +36,7 @@ export default defineConfig({
       remarkDirective,
       imageDirective,
       gistDirective,
+      socialDirective,
     ],
   },
   vite: {

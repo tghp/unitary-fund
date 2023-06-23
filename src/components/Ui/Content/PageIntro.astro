@@ -3,18 +3,19 @@ import ReducedWidth from '~/components/Ui/ReducedWidth.astro';
 
 export interface Props {
   onlyTitle?: boolean;
-  reducedSpacingBelow?: boolean;
+  spacingBelow: 'small' | 'large' | false;
 }
 
-const { onlyTitle = false, reducedSpacingBelow = false } = Astro.props;
+const { onlyTitle = false, spacingBelow = false } = Astro.props;
 ---
 
 <ReducedWidth
   className={[
-    'pt-44 no-only-strong:text-2xl [&_h1]:text-5xl [&_h1]:mb-6 [&_>_p]:my-14',
-    !reducedSpacingBelow && 'pb-24',
-  ]}
->
+    'pt-8 no-only-strong:text-xl [&_h1]:text-4xl [&_h1]:mb-6 [&_>_p]:my-14',
+    'md:pt-44 md:[&_h1]:text-5xl md:no-only-strong:text-2xl',
+    spacingBelow === 'small' && 'pb-10',
+    spacingBelow === 'large' && 'pb-24',
+  ]}>
   {!onlyTitle && <slot />}
   {
     onlyTitle && (

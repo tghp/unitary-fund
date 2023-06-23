@@ -11,6 +11,14 @@
         {
           "text": "Grants",
           "link": "/grants/"
+        },
+        {
+          "text": "Project Inspiration",
+          "link": "/ideas/"
+        },
+        {
+          "text": "FAQ",
+          "link": "/faq/"
         }
       ]
     },
@@ -54,7 +62,21 @@
     },
     {
       "text": "Community",
-      "link": "/community/"
+      "link": "",
+      "children": [
+        {
+          "text": "Discord",
+          "link": "{social.discord}"
+        },
+        {
+          "text": "Events",
+          "link": "/community/events/"
+        },
+        {
+          "text": "Work with us",
+          "link": "/careers/"
+        }
+      ]
     },
     {
       "text": "Blog",
@@ -63,6 +85,10 @@
     {
       "text": "Donate",
       "link": "/donate/"
+    },
+    {
+      "text": "Shop",
+      "link": "https://unitaryfund.myspreadshop.com/"
     }
   ]
 }

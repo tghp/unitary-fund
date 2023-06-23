@@ -1,13 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
-import type { GrantFilterKey } from '~/hooks/useGrantsFilter';
+import type { FilterSpec } from '~/hooks/useFilter';
 import Content from './Content';
 
 // Get the blog content collection, BlogOutput will handle rendering via React
 const posts = await getCollection('blog');
 
 // Define filters, only a maximum of 4 will render
-export const filters: Array<GrantFilterKey> = ['month', 'year', 'tags'];
+export const filters: Array<FilterSpec['grant']['keys']> = ['year', 'month'];
 ---
 
-<Content filters={filters} posts={posts} client:load />
+<Content filters={filters} items={posts} client:load />

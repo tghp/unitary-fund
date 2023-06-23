@@ -13,6 +13,7 @@ type HTMLAnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 
 type CommonButtonProps = {
   icon: 'plus' | 'minus' | 'chevron';
+  floatingIcon?: boolean;
   active?: boolean;
   current?: boolean;
 };
@@ -32,21 +33,33 @@ export default function Button({
   children,
   className,
   icon,
+  floatingIcon = false,
   active,
   current,
   href,
   ...props
 }: ButtonProps) {
   const buttonClassName = cn([
-    'grow flex justify-between items-center bg-gray-200 text-black h-[34px] px-2 text-sm font-bold',
+    'grow relative flex h-[--navigation-row-height] justify-between items-center px-2',
+    'bg-gray-200 text-black text-xs font-bold no-underline antialiased',
     'hover:bg-black hover:text-white transition-colors duration-100 ease-in-out',
+    'nav-icon:pl-2',
+    floatingIcon &&
+      'nav-icon:absolute nav-icon:top-1/2 nav-icon:transform nav-icon:-translate-y-1/2 nav-icon:right-2',
     active && 'bg-black text-white',
     current && 'bg-black text-yellow-400 hover:text-yellow-400',
     className,
   ]);
 
   const iconOutput = (
-    <>{icon && <div dangerouslySetInnerHTML={{ __html: icons[icon] }} />}</>
+    <>
+      {icon && (
+        <div
+          className="icon"
+          dangerouslySetInnerHTML={{ __html: icons[icon] }}
+        />
+      )}
+    </>
   );
 
   if (href) {
@@ -54,7 +67,7 @@ export default function Button({
 
     return (
       <a href={href} className={buttonClassName} {...anchorProps}>
-        {children}
+        <span className="label">{children}</span>
         {iconOutput}
       </a>
     );
@@ -63,7 +76,7 @@ export default function Button({
 
     return (
       <button className={buttonClassName} {...buttonProps}>
-        {children}
+        <span className="label">{children}</span>
         {iconOutput}
       </button>
     );

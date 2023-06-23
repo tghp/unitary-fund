@@ -8,7 +8,7 @@ export const navigationOpenAtom = atom(false);
 export const navigationActiveSubmenuAtom = atom<string | null>(null);
 
 /**
- * Grants
+ * Filtering
  */
 
-export const grantsFilterMap = map<Record<string, string>>({});
+export const filterMap = map<Record<string, string>>({});

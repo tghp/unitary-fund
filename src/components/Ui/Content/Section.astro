@@ -38,11 +38,9 @@ const {
     bottomSpacing === 'extra-large' && 'pb-14 md:pb-28',
     backgroundColor && 'bleed-bg bleed-light-grey',
     backgroundColor === 'light-grey' && 'bg-light-grey',
-  ]}
->
+  ]}>
   <div
-    class="grid grid-cols-section-header grid-rows-section-header grid-areas-section-header gap-x-5 relative"
-  >
+    class="grid grid-cols-section-header grid-rows-section-header grid-areas-section-header gap-x-5 relative">
     {
       title && (
         <h2
@@ -57,14 +55,12 @@ const {
     }
     {
       subtitle && (
-        <div class="font-normal text-xl md:text-3xl mt-6 grid-in-subtitle">
-          {subtitle}
-        </div>
+        <div class="font-normal text-xl md:text-3xl mt-6 grid-in-subtitle">{subtitle}</div>
       )
     }
     {
       button && (
-        <ButtonLink url={button.url} className="hidden md:flex">
+        <ButtonLink url={button.url} className="grid-in-button self-center hidden md:flex">
           {button.text}
         </ButtonLink>
       )

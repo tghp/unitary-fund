@@ -13,9 +13,7 @@ import { getTextListStyles } from '~/components/Ui/Content/List/List';
 
 const supporterEntry = (await getEntry('supporter', type)) as unknown;
 const supporterParse = supporterSchema.safeParse(
-  supporterEntry &&
-    typeof supporterEntry === 'object' &&
-    'data' in supporterEntry
+  supporterEntry && typeof supporterEntry === 'object' && 'data' in supporterEntry
     ? supporterEntry.data
     : null
 );
@@ -25,12 +23,12 @@ let supporters = supporterParse.success ? supporterParse.data : null;
 
 <ul
   class:list={[
+    'list-image-none',
     (type === 'core' || type === 'supporting') &&
       'md:py-5 md:px-2 md:pb-0 bg-light-grey md:bg-transparent',
     type === 'other' && 'py-2 md:py-5 px-2 pb-0 gap-5',
     ...getTextListStyles(columns),
-  ]}
->
+  ]}>
   {
     supporters?.supporters.map((supporter) => (
       <li
@@ -38,15 +36,12 @@ let supporters = supporterParse.success ? supporterParse.data : null;
           (type === 'core' || type === 'supporting') &&
             'border-b border-white last:border-b-0 my-1',
           type === 'other' && 'py-2 md:py-1',
-        ]}
-      >
+        ]}>
         <a class="break-words" href={supporter.url} title={supporter.title}>
           {supporter?.imageId ? (
             <SupporterImage imageId={supporter.imageId} />
           ) : (
-            <span class="border-b text-base md:text-lg border-black">
-              {supporter.title}
-            </span>
+            <span class="border-b text-base md:text-lg border-black">{supporter.title}</span>
           )}
         </a>
       </li>

@@ -34,6 +34,7 @@ export const blogSchema = z.object({
   publishDay: z.number().or(z.string()),
   publishMonth: z.number(),
   publishYear: z.number(),
+  tags: z.array(z.string()).optional(),
 });
 
 const blogCollection = defineCollection({
@@ -57,6 +58,38 @@ export const grantSchema = z.object({
 const grantCollection = defineCollection({
   type: 'content',
   schema: grantSchema,
+});
+
+/**
+ * Events
+ */
+
+export const eventSchema = z.object({
+  title: z.string(),
+  day: z.number(),
+  month: z.number(),
+  year: z.number(),
+  time: z.string(),
+  host: z.string(),
+  image: z.string().optional(),
+});
+
+const eventCollection = defineCollection({
+  type: 'content',
+  schema: eventSchema,
+});
+
+/**
+ * Jobs
+ */
+
+export const jobSchema = z.object({
+  title: z.string(),
+});
+
+const jobCollection = defineCollection({
+  type: 'content',
+  schema: jobSchema,
 });
 
 /**
@@ -118,6 +151,8 @@ export const collections = {
   navigation: navigationCollection,
   blog: blogCollection,
   grant: grantCollection,
+  event: eventCollection,
+  job: jobCollection,
   supporter: supporterCollection,
   advisor: advisorCollection,
   team: teamCollection,

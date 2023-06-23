@@ -1,0 +1,27 @@
+<div class="flex max-md:flex-col font-mono md:h-8">
+  <div class="flex">
+    <div
+      class:list={['bg-black text-yellow-400 px-1', 'md:mr-3 md:text-white']}
+    >
+      &rarr;
+    </div>
+    <div
+      class:list={[
+        'bg-white grow',
+        'direct-child:h-full direct-child:px-2 direct-child:text-black direct-child:uppercase direct-child:font-normal',
+      ]}
+    >
+      <slot name="input" />
+    </div>
+  </div>
+  <div
+    class:list={[
+      'bg-black text-yellow-400',
+      'md:w-32 md:text-white',
+      'max-md:w-fit max-md:px-3 max-md:py-0.5',
+      'direct-child:h-full direct-child:text-center direct-child:uppercase direct-child:w-full direct-child:font-bold',
+    ]}
+  >
+    <slot name="button" />
+  </div>
+</div>

@@ -3,6 +3,7 @@ import '~/styles/main.scss';
 import Container from '~/components/Ui/Container.astro';
 import Header from '~/components/Layout/Header.astro';
 import Footer from '~/components/Layout/Footer.astro';
+import FloatingSocial from '~/components/Layout/FloatingSocial.astro';
 
 interface LayoutProps {
   title?: string;
@@ -59,22 +60,31 @@ if (title) {
     <meta name="robots" content="noindex" />
     <title>{metaTitle}</title>
   </head>
-  <body class="font-manrope overflow-x-hidden">
+  <body class="font-manrope overflow-x-hidden overscroll-none">
     <Header />
-    {
-      generic && (
-        <Container className="prose" reducedWidth>
-          <slot />
-        </Container>
-      )
-    }
-    {
-      !generic && (
-        <Container>
-          <slot />
-        </Container>
-      )
-    }
+    <FloatingSocial />
+    <div class="min-h-[calc(100vh-200px)] nav-mobile-open:bg-gray-300">
+      <Container>
+        <slot name="page-start" />
+      </Container>
+      {
+        generic && (
+          <Container className="prose nav-mobile-open:invisible" reducedWidth>
+            <slot />
+          </Container>
+        )
+      }
+      {
+        !generic && (
+          <Container className="nav-mobile-open:invisible">
+            <slot />
+          </Container>
+        )
+      }
+      <Container>
+        <slot name="page-end" />
+      </Container>
+    </div>
     <Footer />
   </body>
 </html>

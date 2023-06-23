@@ -11,9 +11,10 @@ const { className, smaller = false, center = false } = Astro.props;
 
 <div
   class:list={[
-    !smaller && 'max-w-4xl',
-    smaller && 'max-w-2xl',
+    !smaller && 'w-[870px]',
+    smaller && 'w-2xl',
     center && 'mx-auto',
+    'max-w-full',
     className,
   ]}
 >

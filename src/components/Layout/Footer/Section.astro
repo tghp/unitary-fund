@@ -1,13 +1,16 @@
 ---
 export interface Props {
   title?: string;
+  className?: string;
 }
 
-const { title } = Astro.props;
+const { title, className } = Astro.props;
 ---
 
-<div>
-  <h2>{title || <>&nbsp;</>}</h2>
+<div class={className}>
+  <h2 class="font-mono uppercase font-normal text-xl mb-6 antialiased">
+    {title || <>&nbsp;</>}
+  </h2>
   <div>
     <slot />
   </div>

@@ -3,7 +3,7 @@ import Trigger from '~/components/Layout/Header/Navigation/Trigger';
 import Menu from '~/components/Layout/Header/Navigation/Menu';
 
 export interface Props {
-  className?: string;
+  className?: string[];
 }
 
 const { className } = Astro.props;
@@ -25,9 +25,9 @@ let navigation = navigationParse.success ? navigationParse.data : null;
 
 <nav
   id="main-navigation"
-  class:list={[className]}
+  class:list={className}
   style={{ '--menu-trigger-width': '90px' }}
 >
-  <Trigger client:load />
+  <Trigger client:only />
   <Menu menu={navigation} client:only />
 </nav>

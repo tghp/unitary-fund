@@ -1,20 +1,28 @@
-import type { CollectionEntry } from 'astro:content';
-// import GrantsContextProvider from '~/components/Pages/Grants/Content/GrantContextProvider';
-// import GrantsFilters from '~/components/Pages/Grants/Content/GrantsFilters';
-// import GrantsOutput from '~/components/Pages/Grants/Content/GrantsOutput';
-import type { GrantFilterKey } from '~/hooks/useGrantsFilter';
+import { FilterContextProvider } from '~/components/Filter/FilterContextProvider';
+import { Filters } from '~/components/Filter/Filters';
+import { BlogOutput } from '~/components/Pages/Blog/Content/BlogOutput';
+import type { FilterSpec } from '~/hooks/useFilter';
 
 export type ContentProps = {
-  filters?: Array<GrantFilterKey>;
-  grants?: Array<CollectionEntry<'grant'>>;
+  filters?: Array<FilterSpec['blog']['keys']>;
+  items?: FilterSpec['blog']['items'];
 };
 
-export default function Content({ filters, grants }: ContentProps) {
+export default function Content({ filters, items }: ContentProps) {
+  const finalFilters: Array<FilterSpec['blog']['keys']> = [];
+
+  if (filters) {
+    for (const filter of filters.slice(0, 4)) {
+      finalFilters.push(filter);
+    }
+  }
+
+  finalFilters.push('tags');
+
   return (
-    <p>Test</p>
-    // <GrantsContextProvider filters={filters} grants={grants}>
-    //   <GrantsFilters />
-    //   <GrantsOutput />
-    // </GrantsContextProvider>
+    <FilterContextProvider type="blog" filterKeys={finalFilters} items={items}>
+      <Filters />
+      <BlogOutput />
+    </FilterContextProvider>
   );
 }

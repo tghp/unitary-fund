@@ -1,9 +1,7 @@
 import { useMemo } from 'react';
-import type { CollectionEntry } from 'astro:content';
+import type { FilterSpec } from '~/hooks/useFilter';
 
-export default function useGrantsByYear(
-  grants?: Array<CollectionEntry<'grant'>>
-) {
+export default function useGrantsByYear(grants?: FilterSpec['grant']['items']) {
   return useMemo<Map<number, typeof grants>>(() => {
     // Create a map of grants by year, using the type of grants as we're just going to re-organise
     const grantsByYear = new Map();
@@ -27,6 +25,8 @@ export default function useGrantsByYear(
       }
     }
 
-    return grantsByYear;
+    return new Map(
+      [...grantsByYear].sort((a, b) => a[0].toString().localeCompare(b[0].toString())).reverse()
+    );
   }, [grants]);
 }

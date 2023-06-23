@@ -13,15 +13,19 @@ We're excited to share our Q2 2022 quarterly update and highlight some of what U
 
 We **launched [Metriq](https://unitary.fund/posts/metriq_release.html)**, the community-driven platform to benchmark quantum computing metrics. We partnered with IQT Labs, USRA, RIKEN, the SQMS quantum research center, Cambridge Quantum, Strangeworks, Agnostiq, Super.Tech, Quantonation, the Quantum Computing Report and more organizations. Add and review benchmarks at: https://metriq.info/
 
-# Video
+## Video
 
 https://www.youtube.com/watch?v=aoLhACqJCUg
 
-# How did 2023 Go?
+## How did 2023 Go?
+
+### Q1 Progress
 
 It went well
 
 ::gist[matt-lourens/6cc14d37209de07abd707804f1b0219e]
+
+### Q2 Progress, So Far
 
 This went well too
 

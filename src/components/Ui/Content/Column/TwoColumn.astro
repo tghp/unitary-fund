@@ -1,9 +1,16 @@
 ---
-export interface Props {}
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
 ---
 
 <div
-  class="flex flex-wrap gap-x-3 [&>div]:w-full md:flex-nowrap md:[&>div]:w-1/2"
+  class:list={[
+    'flex justify-between flex-wrap gap-x-6 direct-child:w-full direct-child:flex-grow md:direct-child:w-[calc(50%-theme(spacing.3))]',
+    className,
+  ]}
 >
   <slot />
 </div>

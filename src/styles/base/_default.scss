@@ -1,0 +1,48 @@
+body {
+  font-size: 18px;
+}
+
+mark {
+  --reduce-mark-color: #fff;
+  box-shadow: inset 0px 0.33em 0px 0px var(--reduce-mark-color),
+    inset 0px -0.28em 0px 0px var(--reduce-mark-color);
+}
+
+h1 {
+  @apply antialiased;
+}
+
+a {
+  @apply font-bold underline;
+}
+
+p,
+ul,
+ol,
+blockquote {
+  @apply mb-6;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+p {
+  &.only-strong {
+    strong {
+      @apply font-inherit text-xl md:text-2xl;
+    }
+  }
+}
+
+ul {
+  @apply list-image-[url(/images/bullet.svg)] list-inside;
+
+  li {
+    @apply marker:pr-10;
+  }
+}
+
+hr {
+  @apply border-black my-6;
+}

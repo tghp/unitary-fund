@@ -22,13 +22,30 @@ const entry = await getEntry('blog', slug);
 
 const { Content } = await entry.render();
 
-const { title, publishDay, publishMonth, publishYear } = entry.data;
+const { title, author, publishDay, publishMonth, publishYear } = entry.data;
 ---
 
-<Layout title={entry.data.title}>
-  <h1 class="text-2xl mb-6">{entry.data.title}</h1>
-  <date>{publishYear} - {publishMonth} - {publishDay}</date>
-  <div class="prose">
-    <Content />
-  </div>
+<Layout title={entry.data.title} generic>
+  <a
+    href="/blog"
+    slot="page-start"
+    class="font-mono font-bold bg-yellow-400 text-black uppercase py-0.5 px-4"
+    >&larr; Back to Blog</a
+  >
+  <article class="mt-12">
+    <header>
+      <div class="flex text-sm">
+        <date class="py-1 px-2 bg-yellow-400 text-black font-mono"
+          >{publishDay}.{publishMonth}.{publishYear}</date
+        >
+        <div class="py-1 px-2 font-bold bg-black text-yellow-400 min-w-[15em]">
+          {author}
+        </div>
+      </div>
+      <h1 class="text-3xl my-6">{title}</h1>
+    </header>
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+  </article>
 </Layout>
