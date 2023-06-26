@@ -11,21 +11,26 @@ import { teamSchema } from '~/content/config';
 
 const teamEntry = (await getEntry('team', 'main')) as unknown;
 const teamParse = teamSchema.safeParse(
-  teamEntry && typeof teamEntry === 'object' && 'data' in teamEntry
-    ? teamEntry.data
-    : null
+  teamEntry && typeof teamEntry === 'object' && 'data' in teamEntry ? teamEntry.data : null
 );
 
 let teamMemebers = teamParse.success ? teamParse.data : null;
 ---
 
-<ul class:list={['py-2 md:py-5 px-2 pb-0 gap-5', ...getTextListStyles(columns)]}>
+<ul class:list={['py-2 md:py-5 px-2 pb-0 gap-5 list-image-none', ...getTextListStyles(columns)]}>
   {
     teamMemebers?.team.map((member) => (
       <li class="py-2 md:py-1">
-        <a class="break-words" href={member.url} title={member.title}>
-          <span class="border-b text-base md:text-lg">{member.title}</span>
-        </a>
+        {!!member.url && (
+          <a class="font-normal break-words" href={member.url} title={member.title}>
+            <span class="border-b text-base md:text-lg">{member.title} &rarr;</span>
+          </a>
+        )}
+        {!member.url && (
+          <span class="break-words">
+            <span class="border-b text-base md:text-lg">{member.title}</span>
+          </span>
+        )}
       </li>
     ))
   }

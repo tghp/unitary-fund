@@ -12,11 +12,10 @@ const { className, smaller = false, center = false } = Astro.props;
 <div
   class:list={[
     !smaller && 'w-[870px]',
-    smaller && 'w-2xl',
+    smaller && 'w-[642px]',
     center && 'mx-auto',
     'max-w-full',
     className,
-  ]}
->
+  ]}>
   <slot />
 </div>

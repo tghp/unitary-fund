@@ -25,7 +25,7 @@ const { Content } = await entry.render();
 const { title, author, day, month, year } = entry.data;
 ---
 
-<Layout title={entry.data.title} generic>
+<Layout title={entry.data.title} contained>
   <a
     href="/blog"
     slot="page-start"

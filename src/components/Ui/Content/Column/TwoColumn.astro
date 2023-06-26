@@ -1,16 +1,18 @@
 ---
 export interface Props {
   className?: string;
+  columnGap?: 'small' | 'medium';
 }
 
-const { className } = Astro.props;
+const { className, columnGap = 'small' } = Astro.props;
 ---
 
 <div
   class:list={[
-    'flex justify-between flex-wrap gap-x-6 direct-child:w-full direct-child:flex-grow md:direct-child:w-[calc(50%-theme(spacing.3))]',
+    'flex justify-between flex-wrap direct-child:w-full direct-child:flex-grow',
+    columnGap === 'small' && 'gap-x-6 md:direct-child:w-[calc(50%-theme(spacing.3))]',
+    columnGap === 'medium' && 'gap-x-16 md:direct-child:w-[calc(50%-theme(spacing.8))]',
     className,
-  ]}
->
+  ]}>
   <slot />
 </div>

@@ -100,7 +100,7 @@ export const supporterSchema = z.object({
   supporters: z.array(
     z.object({
       title: z.string(),
-      url: z.string().url(),
+      url: z.string().url().optional(),
       imageId: z.string().optional(),
     })
   ),
@@ -119,7 +119,7 @@ export const advisorSchema = z.object({
   advisors: z.array(
     z.object({
       title: z.string(),
-      url: z.string().url(),
+      url: z.string().url().optional(),
     })
   ),
 });
@@ -137,7 +137,7 @@ export const teamSchema = z.object({
   team: z.array(
     z.object({
       title: z.string(),
-      url: z.string().url(),
+      url: z.string().url().optional(),
     })
   ),
 });

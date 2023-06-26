@@ -18,7 +18,7 @@ export function BlogItem({ post: { data: post, slug } }: BlogItemProps) {
       </div>
       <footer className=" mb-0">
         <a
-          className="font-bold border-l-4 block pl-4 border-black text:lg md:text-xl"
+          className="font-bold no-underline border-l-4 block pl-4 border-black text:lg md:text-xl"
           href={`/posts/${slug}`}
           title={post.title}>
           Read More

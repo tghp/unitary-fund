@@ -20,8 +20,8 @@ const createPlugin = (): AstroIntegration => {
 
       'astro:build:done': async ({ dir, routes, pages }) => {
         for (const page of pages) {
-          // Ignore '' which is / aka the homepage, no redirect needed here
-          if (page.pathname) {
+          // Ignore '' which is / aka the homepage and 404, no redirect needed here
+          if (page.pathname && page.pathname !== '404/') {
             const htmlPath = `${path
               .join(fileURLToPath(_config.outDir), page.pathname)
               .replace(/\/$/, '')}.html`;

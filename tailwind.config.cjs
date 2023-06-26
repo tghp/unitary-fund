@@ -124,8 +124,8 @@ module.exports = {
       },
       fontSize: {
         '2xs': ['0.65rem', { lineHeight: '1rem' }],
-        '3xl': ['2rem', { lineHeight: '2.25rem' }],
-        '5xl': ['3.25rem', { lineHeight: '3.125rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.55rem' }],
+        '5xl': ['3.25rem', { lineHeight: '3.85rem' }],
       },
       filterOrder: {
         logo: 'invert brightness saturate',
@@ -138,6 +138,9 @@ module.exports = {
       addVariant('nav-desktop-open', 'body:not(.nav-mobile).nav-open &');
       addVariant('nav-mobile', 'body.nav-mobile &');
       addVariant('nav-mobile-open', 'body.nav-mobile.nav-open &');
+      addVariant('page-title', '& h1');
+      addVariant('paragraph', '& p');
+      addVariant('only-strong', '& p.only-strong strong');
       addVariant('has-only-strong', '&:has(.only-strong)');
       addVariant('no-only-strong', '&:not(:has(.only-strong))');
       addVariant('svg-child', '& > svg');

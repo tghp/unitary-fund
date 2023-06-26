@@ -7,14 +7,14 @@ import FloatingSocial from '~/components/Layout/FloatingSocial.astro';
 
 interface LayoutProps {
   title?: string;
-  generic?: boolean;
+  contained?: boolean;
 }
 
 export interface Props extends LayoutProps {
   frontmatter?: LayoutProps;
 }
 
-const { title, generic } = Astro.props.frontmatter || Astro.props;
+const { title, contained } = Astro.props.frontmatter || Astro.props;
 
 const titleSeparator = '-';
 const titleName = 'Unitary Fund';
@@ -33,23 +33,9 @@ if (title) {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -68,14 +54,14 @@ if (title) {
         <slot name="page-start" />
       </Container>
       {
-        generic && (
+        contained && (
           <Container className="prose nav-mobile-open:invisible" reducedWidth>
             <slot />
           </Container>
         )
       }
       {
-        !generic && (
+        !contained && (
           <Container className="nav-mobile-open:invisible">
             <slot />
           </Container>

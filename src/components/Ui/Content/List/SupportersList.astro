@@ -33,17 +33,27 @@ let supporters = supporterParse.success ? supporterParse.data : null;
     supporters?.supporters.map((supporter) => (
       <li
         class:list={[
-          (type === 'core' || type === 'supporting') &&
-            'border-b border-white last:border-b-0 my-1',
+          (type === 'core' || type === 'supporting') && 'my-1',
           type === 'other' && 'py-2 md:py-1',
         ]}>
-        <a class="break-words" href={supporter.url} title={supporter.title}>
-          {supporter?.imageId ? (
-            <SupporterImage imageId={supporter.imageId} />
-          ) : (
-            <span class="border-b text-base md:text-lg border-black">{supporter.title}</span>
-          )}
-        </a>
+        {!!supporter.url && (
+          <a class="break-words font-normal" href={supporter.url} title={supporter.title}>
+            {supporter?.imageId ? (
+              <SupporterImage imageId={supporter.imageId} />
+            ) : (
+              <span class="text-base md:text-lg">{supporter.title} &rarr;</span>
+            )}
+          </a>
+        )}
+        {!supporter.url && (
+          <span class="break-words">
+            {supporter?.imageId ? (
+              <SupporterImage imageId={supporter.imageId} />
+            ) : (
+              <span class="text-base md:text-lg">{supporter.title}</span>
+            )}
+          </span>
+        )}
       </li>
     ))
   }

@@ -11,8 +11,10 @@ const { onlyTitle = false, spacingBelow = false } = Astro.props;
 
 <ReducedWidth
   className={[
-    'pt-8 no-only-strong:text-xl [&_h1]:text-4xl [&_h1]:mb-6 [&_>_p]:my-14',
-    'md:pt-44 md:[&_h1]:text-5xl md:no-only-strong:text-2xl',
+    'pt-8 text-2xl paragraph:my-8',
+    'page-title:text-4xl page-title:mb-6',
+    'only-strong:text-3xl has-only-strong:text-2xl',
+    'md:pt-44 md:page-title:text-5xl md:no-only-strong:text-2xl',
     spacingBelow === 'small' && 'pb-10',
     spacingBelow === 'large' && 'pb-24',
   ]}>
