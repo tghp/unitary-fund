@@ -1,6 +1,6 @@
 ---
 title: Open Quantum Systems in Python (OQuPy)
-authors: Gerald Fux and Dominic Gribben
+author: Gerald Fux and Dominic Gribben
 day: 7
 month: 2
 year: 2022

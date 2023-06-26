@@ -30,7 +30,7 @@ const navigationCollection = defineCollection({
 
 export const blogSchema = z.object({
   title: z.string(),
-  author: z.string(),
+  author: z.string().optional(),
   day: z.number().or(z.string()),
   month: z.number(),
   year: z.number(),
