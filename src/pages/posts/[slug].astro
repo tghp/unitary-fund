@@ -22,7 +22,7 @@ const entry = await getEntry('blog', slug);
 
 const { Content } = await entry.render();
 
-const { title, author, publishDay, publishMonth, publishYear } = entry.data;
+const { title, author, day, month, year } = entry.data;
 ---
 
 <Layout title={entry.data.title} generic>
@@ -35,9 +35,7 @@ const { title, author, publishDay, publishMonth, publishYear } = entry.data;
   <article class="mt-12">
     <header>
       <div class="flex text-sm">
-        <date class="py-1 px-2 bg-yellow-400 text-black font-mono"
-          >{publishDay}.{publishMonth}.{publishYear}</date
-        >
+        <date class="py-1 px-2 bg-yellow-400 text-black font-mono">{day}.{month}.{year}</date>
         <div class="py-1 px-2 font-bold bg-black text-yellow-400 min-w-[15em]">
           {author}
         </div>

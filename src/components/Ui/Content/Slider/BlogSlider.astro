@@ -12,14 +12,10 @@ const { numberOfPosts = 4 } = Astro.props;
 const blogEntries = await getCollection('blog');
 
 const sortedEntries = blogEntries.slice(0, numberOfPosts).sort((a, b) => {
-  const dateA = new Date(
-    `${a.data.publishYear}-${a.data.publishMonth}-${a.data.publishDay}`
-  );
-  const dateB = new Date(
-    `${b.data.publishYear}-${b.data.publishMonth}-${b.data.publishDay}`
-  );
+  const dateA = new Date(`${a.data.year}-${a.data.month}-${a.data.day}`);
+  const dateB = new Date(`${b.data.year}-${b.data.month}-${b.data.day}`);
   return Number(dateB) - Number(dateA);
 });
 ---
 
-<BlogSlider numberOfPosts={numberOfPosts} posts ={sortedEntries} client:only />
+<BlogSlider numberOfPosts={numberOfPosts} posts={sortedEntries} client:only />

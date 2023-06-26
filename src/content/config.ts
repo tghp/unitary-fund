@@ -31,9 +31,9 @@ const navigationCollection = defineCollection({
 export const blogSchema = z.object({
   title: z.string(),
   author: z.string(),
-  publishDay: z.number().or(z.string()),
-  publishMonth: z.number(),
-  publishYear: z.number(),
+  day: z.number().or(z.string()),
+  month: z.number(),
+  year: z.number(),
   tags: z.array(z.string()).optional(),
 });
 
