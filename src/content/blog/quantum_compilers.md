@@ -1,6 +1,6 @@
 ---
 title: "A Bird's-Eye View of Upcoming System-Level Quantum-Classical Compilers"
-date: January 13 2022
+date: 13 January 2022
 author: Alex McCaskey
 ---
 
