@@ -2,7 +2,7 @@
 title: "This is a test blog post"
 author: "John Smith"
 publishYear: 2023
-publishMonth: 08
+publishMonth: 06
 publishDay: 07
 ---
 # This is a heading one
