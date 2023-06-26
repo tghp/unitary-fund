@@ -1,7 +1,9 @@
 ---
 title: Calibrating Error Mitigation with Mitiq
-date: 17 April 2023
 author: Nate Stemen
+day: 17
+month: 4
+year: 2023
 ---
 
 # What is error mitigation calibration?

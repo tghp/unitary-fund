@@ -1,9 +1,11 @@
 ---
 title: HierarQcal - A quick and easy way to build or generate Quantum Convolutional Neural Networks
-date: 17 February 2023
 author: Matt Lourens
-
+day: 17
+month: 2
+year: 2023
 ---
+
 <style>
 .center {
   display: block;

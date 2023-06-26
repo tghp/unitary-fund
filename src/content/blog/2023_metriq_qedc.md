@@ -1,7 +1,9 @@
 ---
 title: Automatically running QED-C benchmarks on Metriq
-date: 28 February 2023
 author: Metriq Team
+day: 28
+month: 2
+year: 2023
 ---
 
 We are excited to announce the integration of an automated pipeline to add
@@ -54,4 +56,3 @@ automatic QED-C to Metriq pipeline.
 The automated QED-C to Metriq pipeline will be continuing to run on more
 algorithms and platforms to generate further benchmarking results to be
 displayed on [Metriq](https://metriq.info/)!
-

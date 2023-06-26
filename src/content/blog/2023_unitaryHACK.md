@@ -1,7 +1,9 @@
 ---
 title: "unitaryHACK 2023: The Unitary Fund hackathon supporting quantum open source projects returns!"
-date: 26 May 2023
 author: Unitary Fund Team
+day: 26
+month: 5
+year: 2023
 ---
 
 Unitary Fund is happy to announce the third edition of **[unitaryHACK](https://unitaryhack.dev/), which will run from May 26th to June 13th, 2023**.

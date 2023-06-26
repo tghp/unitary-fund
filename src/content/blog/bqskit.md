@@ -1,7 +1,9 @@
 ---
 title: Combining Circuit Compilation and Error Mitigation
-date: 3 October 2022
 author: Unitary Fund Team
+day: 3
+month: 10
+year: 2022
 ---
 
 <img src="../../images/bqskit.png" alt="BQSKit and Mitiq logo in tandom" width="400"/>

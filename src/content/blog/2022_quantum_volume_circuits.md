@@ -1,7 +1,9 @@
 ---
 title: Random quantum volume circuits for benchmarking
-date: 31 July 2022
 author: Nick Gardner
+day: 31
+month: 7
+year: 2022
 ---
 
 ## About quantum volume

@@ -1,8 +1,11 @@
 ---
 title: Implementing a Variational Quantum Algorithms module in QuTiP
-date: 9 February 2022
 author: Ben Braham
+day: 9
+month: 2
+year: 2022
 ---
+
 ## About me 
 
 I'm an undergraduate student at the University of Sydney, studying Physics and Computer Science. I've worked on a few quantum computing projects in the past and was really excited to be awarded a microgrant by the Unitary Fund to work on this project. My personal website is available at [benbraham.com](https://benbraham.com).

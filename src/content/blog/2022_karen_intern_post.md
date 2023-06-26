@@ -1,7 +1,9 @@
 ---
 title: Meet the UF Interns - Karen Rezkalla
-date: 22 August 2022
 author: Karen Rezkalla
+day: 22
+month: 8
+year: 2022
 ---
 
 ## About Me
@@ -27,4 +29,3 @@ After being familiarized with Metriq, while posting issues whenever we deem fit,
 ## Closing Note
 
 Thanks to Unitary Fund I learned how to be a better researcher, analyst when reading academic papers, a problem solver, a full stack developer, a team member,and a better learner. Also thanks to The Coding School and Qubit by Qubit for the thorough training and also for the community I made with my classmates and the one at Unitray Fund.
-

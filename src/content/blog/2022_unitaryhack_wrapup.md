@@ -1,9 +1,10 @@
 ---
 title: Wrapping up unitaryHACK 2022!
-date: 8 July 2022
 author: Nathan Shammah
+day: 8
+month: 7
+year: 2022
 ---
-
 
 Whether you were a participant, maintainer, bounty hacker, or community
 member: Thank you for participating in [unitaryHACK](https://unitaryhack.dev/) 2022! It was a blast

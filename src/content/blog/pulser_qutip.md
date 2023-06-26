@@ -1,7 +1,9 @@
 ---
 title: Stay on the pulse of open-source quantum simulation with Pulser and QuTiP
-date: 24 January 2022
-author:
+author: null
+day: 24
+month: 1
+year: 2022
 ---
 
 Today two papers \[[[H. Silvério & S. Grijalva]{.ul} *[et

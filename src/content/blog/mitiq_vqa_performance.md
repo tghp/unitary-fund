@@ -1,8 +1,11 @@
 ---
 title: Improving VQA Performance through Error Mitigation
-date: 27 October 2021
 author: Danny Samuel
+day: 27
+month: 10
+year: 2021
 ---
+
 ## About Me
 
 I am a senior in high school with a great interest in Quantum Computing. I was able to learn about it by taking QubitxQubit’s Introduction to Quantum Computing course last year.

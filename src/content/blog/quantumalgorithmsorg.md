@@ -1,7 +1,9 @@
 ---
 title: Learn how to write new quantum algorithms on quantumalgorithms.org
-date: 9 November 2021
 author: Alessandro Luongo and Armando Bellante
+day: 9
+month: 11
+year: 2021
 ---
 
 Have you ever tried to learn about quantum algorithms but got stranded by the lack of structured material online? We've got you covered. Now you can learn more about it on [https://quantumalgorithms.org](https://quantumalgorithms.org)!
@@ -43,6 +45,3 @@ The core team,
 - Armando Bellante, armando.bellante[at]polimi.it
 
 P.s. We are working on some high-quality [quantumalgorithms.org](https://quantumalgorithms.org)'s swag for our contributors ;)
-
-
-

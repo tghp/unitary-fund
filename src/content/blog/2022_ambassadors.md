@@ -1,7 +1,9 @@
 ---
 title: Unitary Fund ambassadors announced!
-date: 13 December 2022
 author: Unitary Fund Team
+day: 13
+month: 12
+year: 2022
 ---
 
 We are excited to announce the new cohort of Unitary Fund Quantum Ambassadors!

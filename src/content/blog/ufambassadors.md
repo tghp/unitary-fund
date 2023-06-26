@@ -1,7 +1,9 @@
 ---
 title: Announcing the Unitary Fund Ambassador Program and introducing our first Ambassadors
-date: 18 October 2021
 author: Unitary Fund Team
+day: 18
+month: 10
+year: 2021
 ---
 
 Quantum technology is growing rapidly, and finding space where you can grow and succeed is more important than ever. Open source tools and communities are a critical component in enabling the development of cutting edge quantum technologies. However, there is a lack of acknowledgement for the amazing things people are supporting these efforts and projects around the globe. As a non-profit organization supporting the open quantum ecosystem, we want to help change that.

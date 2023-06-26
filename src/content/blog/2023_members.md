@@ -1,7 +1,9 @@
 ---
 title: Announcing the 2023 Unitary Fund Members
-date: 7 February 2023
 author: Unitary Fund Team
+day: 7
+month: 2
+year: 2023
 ---
 
 Since its launch last year, our membership program has allowed Unitary
@@ -123,4 +125,3 @@ programs to pursue this mission.Through Unitary Labs we work on in-house
 projects that help the ecosystem as a whole. Through our microgrant
 program, we fund an inclusive community of explorers across the world to
 work on quantum technologies.
-

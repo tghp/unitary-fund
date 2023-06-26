@@ -1,7 +1,9 @@
 ---
 title: Meet the UF Ambassadors – Andre Alves
-date: 25 January 2022
 author: Andre Alves
+day: 25
+month: 1
+year: 2022
 ---
 
 Having a somewhat unorthodox background, my introduction into the quantum computing space actually began with a TikTok video.

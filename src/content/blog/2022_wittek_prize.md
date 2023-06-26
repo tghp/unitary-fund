@@ -1,7 +1,9 @@
 ---
 title: "Celebrating quantum open-source software contributors: Announcing the 2021 Wittek prize winner with QOSF"
-date: 21 January 2022
 author: Unitary Fund Team
+day: 21
+month: 1
+year: 2022
 ---
 
 Unitary Fund is glad to announce the 2022 edition of **[unitaryHACK](https://unitaryhack.dev/), which will be hosted from June 3rd to June 17th, 2022**.

@@ -1,7 +1,9 @@
 ---
-title: "QUARC: A Hybrid System for Bounded Model Checking"
-date: 3 February 2023
+title: 'QUARC: A Hybrid System for Bounded Model Checking'
 author: Christoph Kirsch and Stefanie Muroya Lei
+day: 3
+month: 2
+year: 2023
 ---
 
 Bounded Model Checking (BMC) is a well-established technique used to ensure the correctness of critical software. Some examples are verifying properties of software systems and malware detection. However BMC techniques do not generally scale. Thereafter, the aim of our project is to develop a compiler that encodes efficiently classical programs so that quantum computers can help accelerating bounded model checking even in the NISQ-era.
@@ -37,4 +39,3 @@ Finally, QUARC has helped us explain concepts such as unitary matrices, oracles,
 We thank very much Unitary Fund for their support. The grant allowed us to push further QUARC, which was initially only in our TO-DO list. The grant motivated us to do even more than was expected since we ended developing an algorithm that reduced substantially the number of ancillae that the final quantum program requires.
 
 The unicorn team.
-

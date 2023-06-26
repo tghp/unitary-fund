@@ -1,7 +1,9 @@
 ---
 title: "unitaryHACK 2022: The Unitary Fund hackathon supporting quantum open source projects returns from June 3rd, 2022"
-date: 24 May 2022
 author: Unitary Fund Team
+day: 24
+month: 5
+year: 2022
 ---
 
 Unitary Fund is glad to announce the 2022 edition of **[unitaryHACK](https://unitaryhack.dev/), which will be hosted from June 3rd to June 17th, 2022**.

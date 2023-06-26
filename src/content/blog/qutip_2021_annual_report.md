@@ -1,8 +1,11 @@
 ---
 title: QuTiP 2021 Annual Review
-date: 11 April 2022
 author: Simon Cross
+day: 11
+month: 4
+year: 2022
 ---
+
 Earlier this year the QuTiP Admin Team conducted its annual review.
 
 We happy to report that 2021 was a busy, productive and successful year for QuTiP with many new features, bugs fixed, contributions from the community, and, of course, lots of support from the Unitary Fund.

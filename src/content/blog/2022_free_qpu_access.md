@@ -1,7 +1,9 @@
 ---
 title: How to Run Programs on Quantum Computers for Free
-date: 27 June 2022
 author: Nathan Shammah
+day: 27
+month: 6
+year: 2022
 ---
 
 The Unitary Fund team and Advisory Board often get asked this question: “How can I run programs on quantum computers?”

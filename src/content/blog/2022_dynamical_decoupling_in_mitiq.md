@@ -1,9 +1,10 @@
 ---
 title: Adding Digital Dynamical Decoupling to Mitiq
-date: 21 June 2022
 author: UF Team
+day: 21
+month: 6
+year: 2022
 ---
-
 
 The Unitary Fund team is excited to announce the addition of dynamical decoupling features to Mitiq, the open-source quantum toolbox in Python that mitigates errors of NISQ devices.
 
@@ -32,4 +33,3 @@ The code design document was drafted by [Aaron Robertson](https://github.com/Aar
 The dynamical decoupling module has been deployed into Mitiq since version 0.16.0 and it marks a major milestone in the [2022 Mitiq Roadmap](https://github.com/unitaryfund/mitiq/wiki#mitiq-2022-roadmap).
 
 This is a reminder for everyone to join the Mitiq community calls, which are held weekly on Fridays at 6pm CET / 12pm ET on the [Unitary Fund Discord](http://discord.unitary.fund).
-
