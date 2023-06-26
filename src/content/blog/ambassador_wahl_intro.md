@@ -1,6 +1,6 @@
 ---
 title: Meet the UF Ambassadors – Misty Wahl
-date: November 11, 2021
+date: 11 November 2021
 author: Misty Wahl
 ---
 

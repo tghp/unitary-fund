@@ -1,6 +1,6 @@
 ---
 title: Unitary Fund welcomes Agnostiq as a new Unitary Fund supporting member 
-date: March 31, 2022
+date: 31 March 2022
 author: UF Team
 ---
 

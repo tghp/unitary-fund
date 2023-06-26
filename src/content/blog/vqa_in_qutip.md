@@ -1,6 +1,6 @@
 ---
 title: Implementing a Variational Quantum Algorithms module in QuTiP
-date: 09 February 2022
+date: 9 February 2022
 author: Ben Braham
 ---
 ## About me 

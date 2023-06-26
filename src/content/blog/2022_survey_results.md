@@ -1,6 +1,6 @@
 ---
 title: Results Are in for the 2022 Quantum Open Source Software Survey!
-date: 07 November 2022
+date: 7 November 2022
 author: Unitary Fund Team
 ---
 

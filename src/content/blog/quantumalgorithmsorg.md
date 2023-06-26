@@ -1,6 +1,6 @@
 ---
 title: Learn how to write new quantum algorithms on quantumalgorithms.org
-date: November 9, 2021
+date: 9 November 2021
 author: Alessandro Luongo and Armando Bellante
 ---
 

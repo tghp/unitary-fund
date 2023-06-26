@@ -1,6 +1,6 @@
 ---
 title: Automatically running QED-C benchmarks on Metriq
-date: 28 Feb 2023
+date: 28 February 2023
 author: Metriq Team
 ---
 

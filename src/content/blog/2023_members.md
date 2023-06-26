@@ -1,6 +1,6 @@
 ---
 title: Announcing the 2023 Unitary Fund Members
-date: 07 February 2023
+date: 7 February 2023
 author: Unitary Fund Team
 ---
 

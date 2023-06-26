@@ -1,6 +1,6 @@
 ---
 title: Unitary Fund Announces New Support through New Membership Program
-date: January 31, 2022
+date: 31 January 2022
 author: UF Team
 ---
 
