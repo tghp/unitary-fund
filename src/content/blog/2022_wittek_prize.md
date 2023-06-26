@@ -1,6 +1,6 @@
 ---
 title: "Celebrating quantum open-source software contributors: Announcing the 2021 Wittek prize winner with QOSF"
-date: 21 Jan 2022
+date: 21 January 2022
 author: Unitary Fund Team
 ---
 
