@@ -34,13 +34,13 @@ const { title, author, day, month, year } = entry.data;
   >
   <article class="mt-12">
     <header>
-      <div class="flex text-sm">
+      <div class="flex text-sm mb-8">
         <date class="py-1 px-2 bg-yellow-400 text-black font-mono">{day}.{month}.{year}</date>
         <div class="py-1 px-2 font-bold bg-black text-yellow-400 min-w-[15em]">
           {author}
         </div>
       </div>
-      <h1 class="text-3xl my-6">{title}</h1>
+      <h1 class="text-5xl mb-6 font-normal">{title}</h1>
     </header>
     <div class="prose max-w-none">
       <Content />
