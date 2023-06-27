@@ -5,6 +5,9 @@ day: 07
 month: 06
 year: 2023
 ---
+
+**This is a featured Paragraph. Praesent laoreet hendrerit bibendum. Praesent tincidunt mauris ac mi lobortis, nec venenatis enim euismod. Fusce quis tortor tortor. Aliquam erat volutpat. Praesent non velit ex. Curabitur lobortis, massa quis condimentum lobortis, enim erat egestas justo, id vestibulum lacus nisi vitae est. Integer mattis, ex id sollicitudin congue, nibh tellus eleifend nibh, pellentesque rhoncus augue urna in mi. Aenean non velit id lectus sagittis varius. Fusce quis sem et ex tempor luctus at eget velit. Maecenas consequat laoreet porttitor**
+
 # This is a heading one
 
 Praesent laoreet hendrerit bibendum. Praesent tincidunt mauris ac mi lobortis, nec venenatis enim euismod. Fusce quis tortor tortor. Aliquam erat volutpat. Praesent non velit ex. Curabitur lobortis, massa quis condimentum lobortis, enim erat egestas justo, id vestibulum lacus nisi vitae est. Integer mattis, ex id sollicitudin congue, nibh tellus eleifend nibh, pellentesque rhoncus augue urna in mi. Aenean non velit id lectus sagittis varius. Fusce quis sem et ex tempor luctus at eget velit. Maecenas consequat laoreet porttitor
