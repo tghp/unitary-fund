@@ -94,10 +94,10 @@ module.exports = {
             '--tw-prose-invert-td-borders': theme('colors.white'),
             ul: {
               listStyleType: null,
+              paddingLeft: '0',
+              // li: {
               // paddingLeft: '0',
-              li: {
-                // paddingLeft: '0',
-              },
+              // },
             },
           },
         },
