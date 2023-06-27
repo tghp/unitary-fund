@@ -9,7 +9,19 @@ mark {
 }
 
 h1 {
-  @apply antialiased;
+  @apply antialiased font-normal;
+}
+
+h2 {
+  @apply font-bold font-mono uppercase;
+}
+
+h3 {
+  @apply font-bold font-mono uppercase;
+}
+
+h4 {
+  @apply font-bold font-mono uppercase;
 }
 
 a {
@@ -36,11 +48,7 @@ p {
 }
 
 ul {
-  @apply list-image-[url(/images/bullet.svg)] list-inside;
-
-  li {
-    @apply marker:pr-10;
-  }
+  @apply arrow-list;
 }
 
 hr {
