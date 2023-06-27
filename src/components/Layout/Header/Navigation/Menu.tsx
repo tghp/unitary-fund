@@ -79,7 +79,7 @@ export default function Menu({ menu }: NavigationProps) {
           }>
           <ul
             className={cn([
-              'm-0 w-full flex',
+              'm-0 w-full flex no-arrow-list',
               'nav-mobile:flex-col',
               'nav-desktop:absolute nav-desktop:top-0 nav-desktop:left-0 nav-desktop:flex-wrap nav-desktop:gap-[2px]',
               !isOpen && 'hidden',
@@ -158,7 +158,7 @@ export default function Menu({ menu }: NavigationProps) {
       {/* Mobile */}
       <ul
         className={cn([
-          'm-0 flex flex-col fixed top-[--logo-height] left-0 right-0',
+          'm-0 flex flex-col fixed top-[--logo-height] left-0 right-0 no-arrow-list',
           (!isOpen || !isMobile) && 'hidden',
         ])}>
         {menuItems}
@@ -166,7 +166,7 @@ export default function Menu({ menu }: NavigationProps) {
       {/* Desktop */}
       <ul
         className={cn([
-          'm-0 grid-in-menu grid grid-cols-[--nav-cols]',
+          'm-0 grid-in-menu grid grid-cols-[--nav-cols] no-arrow-list',
           (!isOpen || isMobile) && 'invisible pointer-events-none',
         ])}
         style={
