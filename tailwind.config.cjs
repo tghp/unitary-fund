@@ -146,7 +146,7 @@ module.exports = {
       fontSize: {
         '2xs': ['0.65rem', { lineHeight: '1rem' }],
         '3xl': ['1.875rem', { lineHeight: '2.55rem' }],
-        '5xl': ['3.25rem', { lineHeight: '3.85rem' }],
+        '5xl': ['2.9rem', { lineHeight: '3.85rem' }],
       },
       filterOrder: {
         logo: 'invert brightness saturate',
