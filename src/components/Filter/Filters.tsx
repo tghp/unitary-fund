@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { FilterContext } from '~/components/Filter/FilterContextProvider';
 import { FilterRenderer } from '~/components/Filter/Renderer/FilterRenderer';
 import { Button } from '~/components/Ui/Form/Button';
+import { cn } from '~/util/cn';
 import { filterMap } from '~/util/store';
 
 export function Filters() {
@@ -18,9 +19,14 @@ export function Filters() {
   };
 
   return (
-    <div className="fixed top-[--navigation-trigger-height] md:relative md:top-0 md:mb-20 flex flex-row flex-nowrap md:block w-full left-0">
+    <div
+      className={cn([
+        'fixed top-[--navigation-trigger-height] flex flex-row flex-nowrap  w-full left-0',
+        'md:sticky md:top-[--header-height] z-30 md:mb-20 md:block md:before:bleed-bg-r md:before:bleed-white',
+        'md:before:content-[""] md:before:absolute md:before:bottom-0 md:before:left-0 md:before:w-full md:before:h-[calc(100%+var(--header-height))] md:before:bg-white md:before:-z-10',
+      ])}>
       <div className="order-2 md:order-1 pt-8 pb-[1px] md:pt-0 md:mb-0 md:bleed-bg md:bleed-black md:text-white uppercase items-center font-mono text-lg md:grid grid-cols-filters grid-rows-filters grid-areas-filters w-1/2 md:w-full">
-        <div className="uppercase font-bold  md:bleed-black h-full flex items-center w-full">
+        <div className="uppercase font-bold md:-ml-5 md:bleed-black h-full flex items-center w-full">
           Filter
         </div>
         <div className="flex-col h-full md:flex-row hidden md:flex">
@@ -39,8 +45,8 @@ export function Filters() {
         </div>
       </div>
 
-      <div className="order-1 md:order-2 pt-8 pb-2 md:pt-0 md:mb-0 bg-darker-grey md:bg-white flex flex-col md:text-white uppercase gap-x-8 items-center font-mono md:grid grid-cols-tag-search grid-rows-tag-search grid-areas-tag-search md:bleed-white md:bleed-border-t w-1/2 md:w-full">
-        <div className="uppercase font-bold grid-in-title flex items-center bleed-bg-l md:bleed-black h-full ">
+      <div className="order-1 md:order-2 pt-8 pb-2 md:pt-0 md:mb-0 md:bg-white flex flex-col md:text-white uppercase gap-x-8 items-center font-mono md:grid grid-cols-tag-search grid-rows-tag-search grid-areas-tag-search md:bleed-white md:bleed-border-t w-1/2 md:w-full">
+        <div className="uppercase font-bold grid-in-title md:-ml-5 flex items-center bleed-bg-l md:bleed-black h-full ">
           Search by tag
         </div>
         <div className="gap-5 grid-in-search self-start hidden md:block">

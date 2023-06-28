@@ -1,13 +1,14 @@
 import type { CollectionEntry } from 'astro:content';
-import { css } from '@emotion/css';
-import Markdown from 'markdown-to-jsx';
 import {
   useState,
   type MouseEventHandler,
   PropsWithChildren,
   DetailedHTMLProps,
   HTMLAttributes,
+  Fragment,
 } from 'react';
+import { css } from '@emotion/css';
+import Markdown from 'markdown-to-jsx';
 import { CloudinaryImage } from '~/components/Ui/Content/Image/CloudinaryImage';
 import Minus from '~/assets/svg/minus.svg?raw';
 import Plus from '~/assets/svg/plus.svg?raw';
@@ -62,8 +63,7 @@ export default function EventItem({ event }: EventItemProps) {
       <h2
         {...props}
         data-heading-index={headingRenderIndex}
-        className="flex justify-between items-center"
-      >
+        className="flex font-manrope normal-case text-lg justify-between items-center">
         <span className="pointer-events-none">{children}</span>
         <span
           dangerouslySetInnerHTML={{
@@ -79,8 +79,8 @@ export default function EventItem({ event }: EventItemProps) {
     <article className="event flex flex-col border-l border-black">
       <header className="flex items-center gap-3 pl-2 pb-2 border-b border-black">
         <time
-          dateTime={`${event.data.year}-${event.data.month}-${event.data.day}`}
-        >
+          className="font-mono"
+          dateTime={`${event.data.year}-${event.data.month}-${event.data.day}`}>
           {event.data.day}.{`${event.data.month}`}.{event.data.year}
         </time>
         <span
@@ -89,7 +89,7 @@ export default function EventItem({ event }: EventItemProps) {
           }}
           className="pointer-events-none"
         />
-        <div className="uppercase">{event.data.time}</div>
+        <div className="font-mono uppercase">{event.data.time}</div>
         <div className="ml-1 font-bold">{event.data.host}</div>
       </header>
       <div className="p-2 mb-6">{event.data.title}</div>
@@ -100,18 +100,24 @@ export default function EventItem({ event }: EventItemProps) {
       )}
       <main
         className={cn([
-          'p-2 mt-2',
+          'p-2 pb-0 mt-2',
           css`
             ${headingDisplayStyles}
           `,
         ])}
-        onClick={handleMainClick}
-      >
+        onClick={handleMainClick}>
         <Markdown
-          options={{ overrides: { h2: { component: ContentHeading } } }}
-        >
-          {event.body}
-        </Markdown>
+          children={event.body}
+          options={{
+            wrapper: Fragment,
+            // createElement(type, props, children) {
+            //   return <div className="parent">{createElement(type, props, children)}</div>;
+            // },
+            overrides: { h2: { component: ContentHeading } },
+          }}
+        />
+        {/* {event.body} */}
+        {/* </Markdown> */}
       </main>
     </article>
   );

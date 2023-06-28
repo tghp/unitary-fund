@@ -55,7 +55,6 @@ module.exports = {
         },
         black: '#000000',
         'light-grey': '#f6f6f9',
-        'darker-grey': '#d9d9d9',
       },
       typography: ({ theme }) => ({
         DEFAULT: {
@@ -146,6 +145,7 @@ module.exports = {
       fontSize: {
         '2xs': ['0.65rem', { lineHeight: '1rem' }],
         '3xl': ['1.875rem', { lineHeight: '2.55rem' }],
+        '4xl': ['2.7rem', { lineHeight: '3.3rem' }],
         '5xl': ['2.9rem', { lineHeight: '3.85rem' }],
       },
       filterOrder: {
@@ -171,6 +171,11 @@ module.exports = {
       addVariant('direct-child', '& > *');
       addVariant('direct-child-first', '& > *:first-child');
       addVariant('direct-child-last', '& > *:last-child');
+      addVariant('button-link', '& a.button-link');
+      addVariant(
+        'button-link-first-part',
+        '& :is(a.button-link:not(.button-link-subtext + a.button-link), .button-link-subtext:not(a.button-link + .button-link-subtext))'
+      );
 
       addUtilities({
         '.svg-scale-h': {

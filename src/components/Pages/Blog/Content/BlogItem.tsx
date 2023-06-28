@@ -13,7 +13,7 @@ export function BlogItem({ post: { data: post, slug } }: BlogItemProps) {
         </time>
         <div className="mt-1 md:mt-0 md:ml-3 font-bold">{post.author}</div>
       </header>
-      <div className="p-2 pl-3 md:pl-4 pt-4 pb-8 md:pt-5 text-lg md:text-2xl md:min-h-[120px]">
+      <div className="flex-grow p-2 pl-3 md:pl-4 pt-4 pb-8 md:pt-5 text-lg md:text-2xl md:min-h-[120px]">
         {post.title}
       </div>
       <footer className=" mb-0">

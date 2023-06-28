@@ -28,7 +28,7 @@ export default function Content({ events }: ContentProps) {
 
   return (
     <>
-      {[true, false].map((previous) => {
+      {[false, true].map((previous) => {
         return (
           <div>
             <div className="solid-heading">
@@ -43,12 +43,7 @@ export default function Content({ events }: ContentProps) {
               )}
               {(previous ? previousEvents : upcomingEvents)?.map((event) => (
                 <EventItem
-                  key={
-                    event.data.title +
-                    event.data.day +
-                    event.data.month +
-                    event.data.year
-                  }
+                  key={event.data.title + event.data.day + event.data.month + event.data.year}
                   event={event}
                 />
               ))}
