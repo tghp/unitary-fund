@@ -19,10 +19,11 @@ export default function Trigger() {
   return (
     <Button
       className={cn([
-        'grid-in-trigger opacity-0 transition-opacity duration-300 z-10',
+        'grid-in-trigger opacity-0 transition-opacity duration-300 z-10 h-[--navigation-trigger-height-mobile]',
         isMounted && 'nav-mobile:opacity-100 nav-desktop:opacity-100',
         'nav-desktop:h-full nav-desktop:bg-black nav-desktop:text-white',
-        'nav-mobile:h-[--navigation-trigger-height] nav-mobile:bg-gray-200 nav-mobile-open:bg-transparent nav-mobile:border-b nav-mobile:border-black nav-mobile:justify-end nav-mobile:uppercase',
+        'md:h-[--navigation-trigger-height-mobile]',
+        'nav-mobile:h-[--navigation-trigger-height-mobile] nav-mobile:bg-gray-200 nav-mobile-open:bg-transparent nav-mobile:border-b nav-mobile:border-black nav-mobile:justify-end nav-mobile:uppercase',
         'nav-mobile:absolute nav-mobile:left-0 nav-mobile:right-0 nav-mobile:top-[calc(var(--header-pt)*2)]',
       ])}
       onClick={handleToggleClick}

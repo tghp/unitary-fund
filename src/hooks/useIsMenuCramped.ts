@@ -2,9 +2,10 @@ import { Ref, RefCallback, useState } from 'react';
 import { useIsomorphicLayoutEffect, useMeasure } from 'react-use';
 import mergeRefs from 'merge-refs';
 
-export type UseIsMenuCrampedResult<
-  E extends HTMLUListElement = HTMLUListElement
-> = [Ref<E> | RefCallback<E>, boolean];
+export type UseIsMenuCrampedResult<E extends HTMLUListElement = HTMLUListElement> = [
+  Ref<E> | RefCallback<E>,
+  boolean
+];
 
 const defaultState = false;
 
@@ -17,23 +18,21 @@ export default function useIsMenuCramped<
 
   useIsomorphicLayoutEffect(() => {
     if (element) {
-      const anyButtonCramped = [...element.querySelectorAll('button, a')].find(
-        (el, i) => {
-          const label = el.querySelector('.label');
-          const icon = el.querySelector('.icon');
+      const anyButtonCramped = !![...element.querySelectorAll('a')].find((el, i) => {
+        const label = el.querySelector('.label');
+        const icon = el.querySelector('.icon');
 
-          if (label && icon) {
-            const labelRect = label.getBoundingClientRect();
-            const iconRect = icon.getBoundingClientRect();
+        if (label && icon) {
+          const labelRect = label.getBoundingClientRect();
+          const iconRect = icon.getBoundingClientRect();
 
-            if (labelRect.right >= iconRect.left) {
-              return true;
-            } else {
-              return false;
-            }
+          if (labelRect.right >= iconRect.left) {
+            return true;
+          } else {
+            return false;
           }
         }
-      );
+      });
 
       setIsCramped(!!anyButtonCramped);
     }

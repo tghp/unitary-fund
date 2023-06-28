@@ -158,7 +158,7 @@ export default function Menu({ menu }: NavigationProps) {
       {/* Mobile */}
       <ul
         className={cn([
-          'm-0 flex flex-col fixed top-[--logo-height] left-0 right-0 no-arrow-list',
+          'm-0 flex flex-col fixed top-[--logo-height-mobile] left-0 right-0 no-arrow-list',
           (!isOpen || !isMobile) && 'hidden',
         ])}>
         {menuItems}
@@ -166,7 +166,7 @@ export default function Menu({ menu }: NavigationProps) {
       {/* Desktop */}
       <ul
         className={cn([
-          'm-0 grid-in-menu grid grid-cols-[--nav-cols] no-arrow-list',
+          'm-0 grid-in-menu grid grid-cols-[--nav-cols] no-arrow-list w-[calc(min(100vw,theme(screens.2xl))-var(--logo-width)-var(--menu-trigger-width)-theme(spacing.10))]',
           (!isOpen || isMobile) && 'invisible pointer-events-none',
         ])}
         style={
