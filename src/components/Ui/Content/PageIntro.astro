@@ -11,10 +11,11 @@ const { onlyTitle = false, spacingBelow = false } = Astro.props;
 
 <ReducedWidth
   className={[
-    'pt-8 text-2xl paragraph:my-4 [&_>_:last-child]:mb-0',
-    'page-title:text-4xl page-title:mb-6',
+    'pt-8 text-2xl',
+    'page-title:text-4xl page-title:mt-2 page-title:mb-6 page-title-direct-child:my-0',
     'only-strong:text-3xl has-only-strong:text-2xl',
-    'md:pt-44 md:page-title:text-5xl md:no-only-strong:text-2xl',
+    'md:pt-28 md:page-title:text-5xl md:no-only-strong:text-2xl',
+    !onlyTitle && 'paragraph:my-4 direct-child-last:mb-0',
     spacingBelow === 'small' && 'pb-10',
     spacingBelow === 'large' && 'pb-24',
   ]}>

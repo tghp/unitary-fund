@@ -3,23 +3,26 @@ import Svg from '~/components/Util/Svg.astro';
 
 export interface Props {
   url: string;
+  href?: string;
   className?: string;
   arrow?: boolean;
   underline?: boolean;
 }
 
-const { url, className, arrow = true, underline = true } = Astro.props;
+const { url, href, className, arrow = true, underline = true } = Astro.props;
+
+const buttonUrl = url || href;
 ---
 
 <slot name="before" />
 <a
   class:list={[
     'font-bold relative text-lg md:text-xl flex max-w-fit no-underline',
-    'paragraph:!m-0 [&>*]:hover:bg-yellow-400',
+    'paragraph:!m-0 direct-child:hover:bg-yellow-400',
     (underline || arrow) && 'uppercase font-mono',
     className,
   ]}
-  href={url}>
+  href={buttonUrl}>
   {
     arrow && (
       <span

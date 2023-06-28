@@ -17,8 +17,12 @@ const socials = [
       </div>
       <ul class="py-3 px-2 flex no-arrow-list">
         {socials.map(([name, url]) => (
-          <li class="flex">
-            <a href={url} class="flex pl-0.5 pr-7" target="_blank" rel="noopener noreferrer">
+          <li class="flex pl-0.5 pr-7">
+            <a
+              href={url}
+              class="flex p-1 -m-1 hover:bg-yellow-400"
+              target="_blank"
+              rel="noopener noreferrer">
               <span class="flex w-4 h-4">
                 <img class="h-full w-full" src={`/images/social-${name}.png`} />
               </span>

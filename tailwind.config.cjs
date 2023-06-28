@@ -160,6 +160,7 @@ module.exports = {
       addVariant('nav-mobile', 'body.nav-mobile &');
       addVariant('nav-mobile-open', 'body.nav-mobile.nav-open &');
       addVariant('page-title', '& h1');
+      addVariant('page-title-direct-child', '& h1 > *');
       addVariant('paragraph', '& p');
       addVariant('only-strong', '& p.only-strong strong');
       addVariant('has-only-strong', '&:has(.only-strong)');
@@ -168,6 +169,8 @@ module.exports = {
       addVariant('svg-path-child', '& > svg path');
       addVariant('nav-icon', '& > .icon');
       addVariant('direct-child', '& > *');
+      addVariant('direct-child-first', '& > *:first-child');
+      addVariant('direct-child-last', '& > *:last-child');
 
       addUtilities({
         '.svg-scale-h': {

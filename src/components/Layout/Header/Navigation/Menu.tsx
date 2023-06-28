@@ -87,7 +87,7 @@ export default function Menu({ menu }: NavigationProps) {
             {item.children.map(({ link, text }) => (
               <li className="flex grow" key={link}>
                 <Button
-                  className="min-w-[180px] nav-mobile:border-b nav-mobile:border-white"
+                  className="min-w-[180px] nav-desktop:hover:text-yellow-400 nav-mobile:border-b nav-mobile:border-white"
                   href={processLink(link)}
                   active={true}
                   icon="chevron">
@@ -111,7 +111,7 @@ export default function Menu({ menu }: NavigationProps) {
         const isCurrent = activeSubmenu === key;
 
         const buttonClassName = cn([
-          'nav-desktop:border-r nav-desktop:border-black nav-desktop:hover:border-white',
+          'nav-desktop:border-r nav-desktop:border-black nav-desktop:hover:border-white nav-desktop:hover:text-yellow-400',
           'nav-mobile:border-b nav-mobile:border-black',
           isCurrent && 'nav-desktop:border-white nav-mobile:bg-yellow-400 nav-mobile:text-black',
         ]);
