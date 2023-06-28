@@ -122,8 +122,8 @@ module.exports = {
         header: 'auto 1fr',
         navigation: '1fr var(--menu-trigger-width)',
         'section-header': '1fr auto',
-        filters: '150px 1fr auto',
-        'tag-search': '150px auto',
+        filters: '130px 1fr auto',
+        'tag-search': '130px auto',
       },
       keyframes: {
         'accordion-down': {

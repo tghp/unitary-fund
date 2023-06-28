@@ -1,8 +1,5 @@
 import { useContext, useMemo } from 'react';
-import {
-  FilterContext,
-  FilterContextValues,
-} from '~/components/Filter/FilterContextProvider';
+import { FilterContext, FilterContextValues } from '~/components/Filter/FilterContextProvider';
 import TagFilter from '~/components/Filter/Renderer/TagFilter';
 import SelectFilter from '~/components/Filter/Renderer/SelectFilter';
 
@@ -41,9 +38,9 @@ export function FilterRenderer({ filterKey }: FilterProps) {
     return Array.from(values);
   }, [items]);
 
-  return filterKey === 'tags' ? (
-    <TagFilter filterKey={filterKey} filterValues={filterValues} />
-  ) : (
-    <SelectFilter filterKey={filterKey} filterValues={filterValues} />
-  );
+  if (filterKey === 'tags') {
+    return <TagFilter filterKey={filterKey} filterValues={filterValues} />;
+  } else {
+    return <SelectFilter filterKey={filterKey} filterValues={filterValues} />;
+  }
 }
