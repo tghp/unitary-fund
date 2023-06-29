@@ -7,7 +7,7 @@ type BlogItemProps = {
 export function BlogItem({ post: { data: post, slug } }: BlogItemProps) {
   return (
     <article className="flex flex-col border-l border-black">
-      <header className="flex  flex-col md:flex-row p-2 pl-3 mdpl-4 border-b  border-black">
+      <header className="flex flex-col md:flex-row p-2 pl-3 mdpl-4 border-b  border-black">
         <time className="font-mono" dateTime={`${post.year}-${post.month}-${post.day}`}>
           {post.day}.{`${post.month}`}.{post.year}
         </time>
