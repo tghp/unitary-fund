@@ -15,7 +15,7 @@ export function BlogOutput() {
   const filteredPosts = useFilter<'blog'>((items || []) as BlogEntry[]);
 
   return (
-    <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-12">
+    <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 sm:gap-y-12">
       {filteredPosts?.map((post) => (
         <BlogItem key={post.slug} post={post} />
       ))}

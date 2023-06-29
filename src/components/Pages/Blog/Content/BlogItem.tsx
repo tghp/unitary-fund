@@ -1,24 +1,37 @@
 import type { FilterSpec } from '~/hooks/useFilter';
+import { cn } from '~/util/cn';
 
 type BlogItemProps = {
+  className?: string;
   post: FilterSpec['blog']['items'][0];
 };
 
-export function BlogItem({ post: { data: post, slug } }: BlogItemProps) {
+export function BlogItem({ className, post: { data: post, slug } }: BlogItemProps) {
   return (
-    <article className="flex flex-col border-l border-black">
-      <header className="flex flex-col md:flex-row p-2 pl-3 mdpl-4 border-b  border-black">
-        <time className="font-mono" dateTime={`${post.year}-${post.month}-${post.day}`}>
+    <article className={cn(['flex flex-col border-l border-black max-sm:bg-gray-200', className])}>
+      <header className="flex flex-col p-2 pl-3 mdpl-4 border-b border-black md:flex-row">
+        <time
+          className="font-mono max-md:text-lg"
+          dateTime={`${post.year}-${post.month}-${post.day}`}>
           {post.day}.{`${post.month}`}.{post.year}
         </time>
-        <div className="mt-1 md:mt-0 md:ml-3 font-bold">{post.author}</div>
+        <div className="font-bold md:ml-3 max-md:text-lg">{post.author}</div>
       </header>
-      <div className="flex-grow p-2 pl-3 md:pl-4 pt-4 pb-8 md:pt-5 text-lg md:text-2xl md:min-h-[120px]">
+      <div
+        className={cn([
+          'flex-grow p-2 pl-3 text-lg pt-4 pb-8',
+          'md:pt-5 md:pl-4 md:text-2xl md:min-h-[120px]',
+          'max-md:text-xl',
+        ])}>
         {post.title}
       </div>
       <footer className=" mb-0">
         <a
-          className="font-bold no-underline border-l-4 block pl-4 border-black text:lg md:text-xl"
+          className={cn([
+            'font-bold no-underline border-l-4 block border-black',
+            'md:text-xl md:pl-4',
+            'max-md:pl-[calc(theme(spacing.4)-5px)] max-md:py-1 max-md:text-lg',
+          ])}
           href={`/posts/${slug}`}
           title={post.title}>
           Read More

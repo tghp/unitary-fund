@@ -1,5 +1,9 @@
 html {
-  font-size: 18px;
+  font-size: 16px;
+
+  @media (min-width: theme('screens.md')) {
+    font-size: 18px;
+  }
 }
 
 mark {

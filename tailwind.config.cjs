@@ -5,6 +5,13 @@ const fontFamilyManrope = ['Manrope', ...defaultTheme.fontFamily.serif];
 const fontFamilyGrotesk = ['Space Grotesk', ...defaultTheme.fontFamily.serif];
 const fontFamilyMono = ['Space Mono', ...defaultTheme.fontFamily.mono];
 
+const round = (num) =>
+  num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, '$1')
+    .replace(/\.0$/, '');
+const em = (px, base) => `${round(px / base)}em`;
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -91,13 +98,103 @@ module.exports = {
             '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
             '--tw-prose-invert-th-borders': theme('colors.white'),
             '--tw-prose-invert-td-borders': theme('colors.white'),
+
             ul: {
               listStyleType: null,
               paddingLeft: '0',
-              // li: {
-              // paddingLeft: '0',
-              // },
             },
+
+            h1: {
+              fontSize: em(36, 16),
+              marginTop: '0',
+              marginBottom: em(32, 36),
+              lineHeight: round(40 / 36),
+
+              '@media (max-width: theme("screens.md"))': {
+                fontSize: em(24, 16),
+                marginTop: em(48, 24),
+                marginBottom: em(24, 24),
+                lineHeight: round(32 / 24),
+              },
+            },
+
+            h2: {
+              fontSize: em(24, 16),
+              marginTop: em(48, 24),
+              marginBottom: em(24, 24),
+              lineHeight: round(32 / 24),
+
+              '@media (max-width: theme("screens.md"))': {
+                fontSize: em(16, 16),
+                marginTop: em(32, 20),
+                marginBottom: em(12, 20),
+                lineHeight: round(32 / 20),
+              },
+            },
+
+            h3: {
+              fontSize: em(20, 16),
+              marginTop: em(32, 20),
+              marginBottom: em(12, 20),
+              lineHeight: round(32 / 20),
+
+              '@media (max-width: theme("screens.md"))': {
+                fontSize: em(16, 16),
+                marginTop: em(24, 16),
+                marginBottom: em(8, 16),
+                lineHeight: round(24 / 16),
+              },
+            },
+
+            h4: {
+              fontSize: em(16, 16),
+              marginTop: em(24, 16),
+              marginBottom: em(8, 16),
+              lineHeight: round(24 / 16),
+
+              '@media (max-width: theme("screens.md"))': {
+                fontSize: em(16, 16),
+                marginTop: em(24, 16),
+                marginBottom: em(8, 16),
+                lineHeight: round(24 / 16),
+              },
+            },
+
+            // h1: {
+            //   fontSize: em(36, 16),
+            //   marginTop: '0',
+            //   marginBottom: em(32, 36),
+            //   lineHeight: round(40 / 36),
+
+            //   '@media (max-width: theme("screens.md"))': {},
+            // },
+
+            // h2: {
+            //   fontSize: em(24, 16),
+            //   marginTop: em(48, 24),
+            //   marginBottom: em(24, 24),
+            //   lineHeight: round(32 / 24),
+
+            //   '@media (max-width: theme("screens.md"))': {},
+            // },
+
+            // h3: {
+            //   fontSize: em(20, 16),
+            //   marginTop: em(32, 20),
+            //   marginBottom: em(12, 20),
+            //   lineHeight: round(32 / 20),
+
+            //   '@media (max-width: theme("screens.md"))': {},
+            // },
+
+            // h4: {
+            //   fontSize: em(16, 16),
+            //   marginTop: em(24, 16),
+            //   marginBottom: em(8, 16),
+            //   lineHeight: round(24 / 16),
+
+            //   '@media (max-width: theme("screens.md"))': {},
+            // },
           },
         },
       }),

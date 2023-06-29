@@ -1,11 +1,13 @@
+import Arrow from '~/assets/svg/arrow.svg?raw';
 import MenuPlus from '~/assets/svg/menu-plus.svg?raw';
 import MenuMinus from '~/assets/svg/menu-minus.svg?raw';
 import MenuChevron from '~/assets/svg/menu-chevron.svg?raw';
 import { cn } from '~/util/cn';
 
-export type IconName = 'plus' | 'minus' | 'chevron';
+export type IconName = 'arrow' | 'plus' | 'minus' | 'chevron';
 
 const icons = {
+  arrow: Arrow,
   plus: MenuPlus,
   minus: MenuMinus,
   chevron: MenuChevron,

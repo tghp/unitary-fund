@@ -32,8 +32,8 @@ export default function BlogSlider({ numberOfPosts, posts }: BlogSliderProps) {
       }}
       modules={[Navigation]}>
       {posts.map((post) => (
-        <SwiperSlide key={post.id}>
-          <BlogItem key={post.id} post={post} />
+        <SwiperSlide key={post.id} className="self-stretch !h-auto">
+          <BlogItem key={post.id} post={post} className="h-full" />
         </SwiperSlide>
       ))}
       <div className="flex mt-5 md:mt-14 gap-x-2">

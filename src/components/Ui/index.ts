@@ -5,7 +5,7 @@ export { default as AboveTheFold } from './Content/AboveTheFold.astro';
 export { default as NumberPoints } from './Content/NumberPoints.astro';
 export { default as PreIntroText } from './Content/PreIntroText.astro';
 export { default as IntroText } from './Content/IntroText.astro';
-export { default as Section } from './Content/Section.astro';
+export { default as HomeSection } from './Content/HomeSection.astro';
 export { default as Column } from './Content/Column/Column.astro';
 export { default as SupportersList } from './Content/List/SupportersList.astro';
 export { default as TwoColumn } from './Content/Column/TwoColumn.astro';

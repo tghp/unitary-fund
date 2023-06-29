@@ -26,8 +26,10 @@ export function GrantsOutput() {
           <div key={year} className="relative">
             <h2
               className={cn([
-                'bg-yellow-400 inline-block relative font-mono text-xl pr-4 bleed-bg-l bleed-yellow-400 z-10',
-                'before:block before:absolute before:w-screen before:left-[100%] before:translate-x-0 before:top-0 before:-z-10 before:box-border before:content-[""] before:border-solid before:border-b before:border-b-black',
+                'relative inline-block font-mono text-xl pr-4 bleed-bg-l bleed-yellow-400 z-10',
+                'before:block before:absolute before:w-full before:h-full before:left-0 before:top-0 before:-z-10 before:content-[""] before:bg-yellow-400',
+                'after:block after:absolute after:w-screen after:left-0 after:translate-x-0 after:top-[1px] after:-z-20 after:box-border after:content-[""] after:border-solid after:border-b after:border-b-black',
+                'max-md:after:hidden nav-mobile:after:hidden',
               ])}>
               {year}
             </h2>
