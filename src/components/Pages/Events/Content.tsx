@@ -34,7 +34,7 @@ export default function Content({ events }: ContentProps) {
             <div className="solid-heading">
               <h2>{previous ? 'Previous Events' : 'Upcoming Events'}</h2>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid lg:grid-cols-2 gap-3">
               {(previous ? previousEvents : upcomingEvents).length === 0 && (
                 <>
                   There are currently no {previous ? 'previous' : 'upcoming'}
