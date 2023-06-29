@@ -12,3 +12,6 @@ export const navigationActiveSubmenuAtom = atom<string | null>(null);
  */
 
 export const filterMap = map<Record<string, string>>({});
+
+export type FilterMode = 'tags' | 'filter';
+export const filterModeAtom = atom<FilterMode | null>(null);

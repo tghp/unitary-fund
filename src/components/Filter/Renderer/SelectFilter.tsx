@@ -1,8 +1,9 @@
 import { cn } from '~/util/cn';
 import { useSelect } from 'downshift';
 import type { FilterContextValues } from '~/components/Filter/FilterContextProvider';
-import { filterMap } from '~/util/store';
+import { filterMap, filterModeAtom } from '~/util/store';
 import { ISO_3166_ALPHA_2_CODES, ISO_3166_ALPHA_2_MAPPINGS } from '~/util/iso3166';
+import { Icon } from '~/components/Ui/Icon';
 
 type SelectFilterProps = {
   filterKey: NonNullable<FilterContextValues['filterKeys']>[0];
@@ -57,36 +58,50 @@ export default function SelectFilter({ filterKey, filterValues }: SelectFilterPr
       className={cn([
         'flex-grow relative bg-white',
         'after:top-0 after:content-["|"] after:absolute after:-right-[1.35rem] after:font-bold after:hidden md:after:block last:after:hidden',
+        'max-md:text-sm',
       ])}>
       <div className="w-100 flex flex-col gap-1 h-full select-none">
         <div
-          className="flex cursor-pointer text-black hover:text-black hover:bg-yellow-400 h-full"
+          className={cn([
+            'flex cursor-pointer text-black hover:text-black hover:bg-yellow-400 h-full',
+            'max-md:px-4 max-md:py-2 max-md:border-b max-md:border-black max-md:items-center',
+          ])}
           {...getToggleButtonProps()}>
-          <span className="px-4">{isOpen ? <>&#8593;</> : <>&#8595;</>}</span>
-          <span className="font-bold">
+          <div className="px-4 max-md:hidden">{isOpen ? <>&#8593;</> : <>&#8595;</>}</div>
+          {!!selectedItem && <div className="font-bold md:hidden mr-2">{filterKey}:</div>}
+          <div className="font-bold">
             {!!selectedItem && getLabel(filterKey, selectedItem)}
             {!selectedItem && filterKey}
-          </span>
+          </div>
+          <div className="pr-1 pl-3 ml-auto md:hidden">
+            <Icon icon={isOpen ? 'minus' : 'plus'} />
+          </div>
         </div>
       </div>
       <ul
-        className={`md:absolute w-full mt-0  max-h-80 z-20 bg-light-grey overflow-y-scroll scrollbar-hide p-0 ${
-          !isOpen && 'hidden'
-        }`}
+        className={cn([
+          'w-full mt-0 max-h-80 z-20  overflow-y-scroll scrollbar-hide p-0 list-image-none',
+          'md:absolute md:bg-light-grey',
+          'max-md:bg-gray-200',
+          !isOpen && 'hidden',
+        ])}
         {...getMenuProps()}>
         {isOpen &&
           getSortedFilterValues(filterKey, filterValues).map((item, index) => {
             const handleClick = () => {
               filterMap.setKey(filterKey, item);
+              filterModeAtom.set(null);
               closeMenu();
             };
 
             return (
               <li
                 className={cn(
+                  'px-4 flex flex-col text-black cursor-pointer border-black border-b',
+                  'md:py-1',
+                  'max-md:py-2',
                   highlightedIndex === index && 'bg-yellow-400',
-                  selectedItem === item && 'font-bold',
-                  'py-1 px-4 flex flex-col text-black cursor-pointer border-black border-b'
+                  selectedItem === item && 'font-bold'
                 )}
                 key={`${item}${index}`}
                 {...getItemProps({ item, index })}

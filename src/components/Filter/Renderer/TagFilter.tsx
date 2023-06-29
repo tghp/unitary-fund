@@ -74,6 +74,7 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
           if (newSelectedItem && selectedItems) {
             setSelectedItems([...selectedItems, newSelectedItem]);
           }
+          setInputValue('');
           break;
 
         case useCombobox.stateChangeTypes.InputChange:
@@ -93,16 +94,21 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
 
   return (
     <div className="relative">
-      <div className="w-full h-[30px] bleed-black bleed-border-b">
+      <div className="w-full md:h-[30px] bleed-black bleed-border-b">
         <div className="flex h-full">
           <input
             placeholder="Enter Tag"
-            className="w-full text-black text-xs outline-none uppercase font-bold placeholder:font-normal placeholder:uppercase"
+            className={cn([
+              'w-full text-black text-xs outline-none uppercase font-mono font-bold placeholder:font-normal placeholder:uppercase',
+              'max-md:py-2 max-md:px-4 max-md:placeholder:text-black max-md:placeholder:font-bold',
+              !inputValue && 'max-md:bg-gray-100',
+              !!inputValue && 'max-md:bg-gray-200',
+            ])}
             {...getInputProps(getDropdownProps({ preventKeyAction: isOpen }))}
           />
           <button
-            aria-label="toggle menu"
-            className="pl-2"
+            className="max-md:hidden pl-2"
+            aria-label="Toggle Menu"
             type="button"
             {...getToggleButtonProps()}>
             &#8595;
@@ -110,7 +116,9 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
         </div>
         <ul
           className={cn([
-            'absolute w-screen -left-8 z-20 bg-white border-black border border-b-0 max-h-80 overflow-y-scroll scrollbar-hide p-0 list-image-none',
+            'absolute w-screen z-20 bg-white border-black border border-b-0 max-h-80 overflow-y-scroll scrollbar-hide p-0 list-image-none',
+            'md:-left-8',
+            'max-md:border-l-0 max-md:border-r-0',
             !(isOpen && items.length) && 'hidden',
           ])}
           {...getMenuProps()}>
@@ -120,37 +128,56 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
                 className={cn(
                   highlightedIndex === index && 'bg-yellow-400',
                   selectedItem === item && 'font-bold',
-                  'pr-4 flex gap-2 text-black cursor-pointer border-black border-b'
+                  'flex gap-2 text-black cursor-pointer border-black border-b',
+                  'max-md:pl-4 max-md:text-xs max-md:bg-gray-100',
+                  'md:pr-4'
                 )}
                 key={`${item}${index}`}
                 {...getItemProps({ item, index })}>
-                <span className="flex items-center px-0.5 bg-black text-white">+</span>
-                <span className="py-[0.15rem] tracking-wider">{item}</span>
+                <span
+                  className={cn([
+                    'flex items-center bg-black text-white',
+                    'max-md:order-2 max-md:ml-auto max-md:px-3',
+                    'md:px-0.5',
+                  ])}>
+                  +
+                </span>
+                <span className="py-[0.15rem] tracking-wider max-md:py-2">{item}</span>
               </li>
             ))}
         </ul>
       </div>
-      <div className="-ml-8 text-xs flex mt-[-1px]">
-        {selectedItems?.map(function renderSelectedItem(selectedItemForRender, index) {
-          return (
-            <div
-              className="cursor-pointer h-[27px] text-black border-black border flex items-center	hover:bg-yellow-400 group"
-              key={`selected-item-${index}`}
-              {...getSelectedItemProps({
-                selectedItem: selectedItemForRender,
-                index,
-              })}
-              onClick={(e) => {
-                e.stopPropagation();
-                removeSelectedItem(selectedItemForRender);
-              }}>
-              <span className="px-0.5 bg-black text-white h-full flex items-center group-hover:text-yellow-400">
-                &#10005;
-              </span>
-              <span className="block px-3 tracking-wider">{selectedItemForRender}</span>
-            </div>
-          );
-        })}
+      <div className={cn(['flex text-xs mt-[-1px]', 'max-md:flex-col', 'md:-ml-8'])}>
+        {selectedItems?.map((item, index) => (
+          <div
+            className={cn([
+              'flex cursor-pointer bg-white text-black border-black border items-center group',
+              'hover:bg-yellow-400',
+              'md:h-[27px]',
+              'max-md:border-l-0 max-md:border-r-0',
+            ])}
+            key={`selected-item-${index}`}
+            {...getSelectedItemProps({
+              selectedItem: item,
+              index,
+            })}
+            onClick={(e) => {
+              e.stopPropagation();
+              removeSelectedItem(item);
+            }}>
+            <span
+              className={cn([
+                'px-0.5 bg-black text-white h-full flex items-center',
+                'group-hover:text-yellow-400',
+                'max-md:order-2 max-md:ml-auto max-md:py-1 max-md:px-3',
+              ])}>
+              &#10005;
+            </span>
+            <span className={cn(['block px-3 tracking-wider', 'max-md:py-1 max-md:px-3'])}>
+              {item}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );

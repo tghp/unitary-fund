@@ -1,18 +1,12 @@
-import type {
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-  PropsWithChildren,
-} from 'react';
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, PropsWithChildren } from 'react';
 import { cn } from '~/util/cn';
-import MenuPlus from '~/assets/svg/menu-plus.svg?raw';
-import MenuMinus from '~/assets/svg/menu-minus.svg?raw';
-import MenuChevron from '~/assets/svg/menu-chevron.svg?raw';
+import { Icon, IconName } from '~/components/Ui/Icon';
 
 type HTMLButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 type HTMLAnchorProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 
 type CommonButtonProps = {
-  icon: 'plus' | 'minus' | 'chevron';
+  icon: IconName;
   floatingIcon?: boolean;
   active?: boolean;
   current?: boolean;
@@ -22,12 +16,6 @@ type ButtonProps = PropsWithChildren<
   | (HTMLButtonProps & { href?: never } & CommonButtonProps)
   | (HTMLAnchorProps & { href: string } & CommonButtonProps)
 >;
-
-const icons = {
-  plus: MenuPlus,
-  minus: MenuMinus,
-  chevron: MenuChevron,
-} satisfies Record<CommonButtonProps['icon'], string>;
 
 export default function Button({
   children,
@@ -51,16 +39,7 @@ export default function Button({
     className,
   ]);
 
-  const iconOutput = (
-    <>
-      {icon && (
-        <div
-          className="icon"
-          dangerouslySetInnerHTML={{ __html: icons[icon] }}
-        />
-      )}
-    </>
-  );
+  const iconOutput = <>{icon && <Icon icon={icon} />}</>;
 
   if (href) {
     const anchorProps = props as HTMLAnchorProps;

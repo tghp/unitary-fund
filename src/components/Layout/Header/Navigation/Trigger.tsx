@@ -24,12 +24,12 @@ export default function Trigger() {
         'nav-desktop:h-full nav-desktop:bg-black nav-desktop:text-white',
         'md:h-[--navigation-trigger-height-mobile]',
         'nav-mobile:h-[--navigation-trigger-height-mobile] nav-mobile:bg-gray-200 nav-mobile-open:bg-transparent nav-mobile:border-b nav-mobile:border-black nav-mobile:justify-end nav-mobile:uppercase',
-        'nav-mobile:absolute nav-mobile:left-0 nav-mobile:right-0 nav-mobile:top-[calc(var(--header-pt)*2)]',
+        'nav-mobile:hover:text-black nav-mobile-open:hover:text-white nav-mobile:pr-5 nav-mobile:absolute nav-mobile:left-0 nav-mobile:right-0 nav-mobile:top-[calc(var(--header-pt)*2)] nav-mobile:[&_.icon]:pl-6',
       ])}
       onClick={handleToggleClick}
       active={isOpen}
       icon={isOpen ? 'minus' : 'plus'}>
-      Menu
+      {isOpen ? 'Close' : 'Menu'}
     </Button>
   );
 }
