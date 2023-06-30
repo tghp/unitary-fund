@@ -13,7 +13,7 @@ export function BlogItem({ className, post: { data: post, slug } }: BlogItemProp
         <time
           className="font-mono max-md:text-lg"
           dateTime={`${post.year}-${post.month}-${post.day}`}>
-          {post.day}.{`${post.month}`}.{post.year}
+          {`${post.month}`}.{post.day}.{post.year}
         </time>
         <div className="font-bold md:ml-3 max-md:text-lg">{post.author}</div>
       </header>

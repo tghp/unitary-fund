@@ -12,7 +12,7 @@ export function GrantItem({ grant: { data: grant, body } }: GrantItemProps) {
       <time
         className="block text-sm font-mono border-black border-b -ml-1 pl-3 pb-1"
         dateTime={`${grant.year}-${grant.month}-${grant.day}`}>
-        {grant.day}.{`${grant.month}`}.{grant.year}
+        {`${grant.month}`}.{grant.day}.{grant.year}
       </time>
       <div className="pl-4 pt-2 pb-5 uppercase font-bold font-mono">{grant.name}</div>
       <div className="pl-4 min-h-[150px] text-sm">{body}</div>

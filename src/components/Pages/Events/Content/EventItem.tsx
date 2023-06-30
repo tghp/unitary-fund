@@ -81,7 +81,7 @@ export default function EventItem({ event }: EventItemProps) {
         <time
           className="font-mono"
           dateTime={`${event.data.year}-${event.data.month}-${event.data.day}`}>
-          {event.data.day}.{`${event.data.month}`}.{event.data.year}
+          {`${event.data.month}`}.{event.data.day}.{event.data.year}
         </time>
         <span
           dangerouslySetInnerHTML={{
