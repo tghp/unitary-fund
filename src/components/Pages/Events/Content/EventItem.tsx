@@ -77,7 +77,7 @@ export default function EventItem({ event }: EventItemProps) {
 
   return (
     <article className="event flex flex-col border-l border-black">
-      <header className="flex items-center gap-3 pl-2 pb-2 border-b border-black">
+      <header className="flex items-center gap-x-3 pl-2 pb-2 border-b border-black max-sm:flex-wrap max-sm:leading-tight">
         <time
           className="font-mono"
           dateTime={`${event.data.year}-${event.data.month}-${event.data.day}`}>
@@ -90,7 +90,7 @@ export default function EventItem({ event }: EventItemProps) {
           className="pointer-events-none"
         />
         <div className="font-mono uppercase">{event.data.time}</div>
-        <div className="ml-1 font-bold">{event.data.host}</div>
+        <div className="font-bold sm:ml-1 max-sm:w-full max-sm:text-lg">{event.data.host}</div>
       </header>
       <div className="p-2 mb-6">{event.data.title}</div>
       {event.data.image && (
