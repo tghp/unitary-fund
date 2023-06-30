@@ -72,17 +72,17 @@ hackers**. More stats and graphics are below:
 
 - Leaderboard of the unitaryHACK bounty winners:
 
-![](../images/unitaryhack-2022-winners-project.png)
+![](/images/unitaryhack-2022-winners-project.png)
 
 -  Completed bounties by project per users:
 
-![](../images/unitaryhack-2022-project-winners.png)
+![](/images/unitaryhack-2022-project-winners.png)
 
 -  Completed bounties per participating project
-![](../images/unitaryhack-2022-bounty-project.png)
+![](/images/unitaryhack-2022-bounty-project.png)
 
 -  Hackers per country
-![](../images/unitaryhack-2022-bounty-hackers-country.png)
+![](/images/unitaryhack-2022-bounty-hackers-country.png)
 
 
 Once again, unitaryHACK would not be possible without the support of

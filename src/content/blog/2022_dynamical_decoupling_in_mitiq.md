@@ -16,7 +16,7 @@ The Mitiq community has designed and implemented this technique into it's own mo
 Here is a sketch of how digital dynamical decoupling is applied in Mitiq.
 
 
-![Digital Dynamical Decoupling workflow in Mitiq](../images/ddd_workflow.png)
+![Digital Dynamical Decoupling workflow in Mitiq](/images/ddd_workflow.png)
 
 
 ## Learn more in the documentation

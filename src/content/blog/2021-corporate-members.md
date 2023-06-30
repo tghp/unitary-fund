@@ -16,7 +16,7 @@ The corporate member program contributes to Unitary Fund’s work on a recurring
 
 ## Unitary Fund Core Members: IBM and Accenture
 
-![](../images/core-members-2021.png "Core members IBM and Accenture")
+![](/images/core-members-2021.png "Core members IBM and Accenture")
 
 “Our support of Unitary Fund is an important part of IBM’s effort to develop an open ecosystem around our Qiskit software, community and quantum computing platform” said Liz Durst, Director, IBM Quantum & Qiskit Community.
 
@@ -26,7 +26,7 @@ The Unitary Fund awards $4,000 [grants](https://unitary.fund/grants.html) to ind
 
 ## Unitary Fund Supporting Members: Xanadu, IonQ, BCG, Pasqal, IQM, and DoraHacks
 
-![](../images/supporting-members-2021.png "Unitary Fund Supporting Members: Xanadu, IonQ, BCG, Pasqal, IQM, and DoraHacks")
+![](/images/supporting-members-2021.png "Unitary Fund Supporting Members: Xanadu, IonQ, BCG, Pasqal, IQM, and DoraHacks")
 
 "It was important for Pasqal to reaffirm its support to open-source initiatives in quantum software by becoming a sponsor of Unitary Fund” says Loïc Henriet, Chief Technology Officer of Pasqal, a French startup building quantum processors out of neutral atoms. “We are thrilled to join the efforts led by Unitary Fund to build a solid ecosystem in this field."
 

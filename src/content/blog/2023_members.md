@@ -36,7 +36,7 @@ We are excited to announce the 2023 Member cohort!
 
 ## **Core Member:**
 
-[![](../images/IBM_quantum.png)](https://quantum-computing.ibm.com/)
+[![](/images/IBM_quantum.png)](https://quantum-computing.ibm.com/)
 
 ## **Supporting Members:**
 [Agnostiq](https://www.covalent.xyz/),
@@ -47,7 +47,7 @@ We are excited to announce the 2023 Member cohort!
 [Quandela](https://www.quandela.com/),
 [Qyber](https://www.qyber.ai/)
 
-![](../images/2023_supporting_members.png)
+![](/images/2023_supporting_members.png)
 
 We would also like to thank the following organizations for their
 support of Unitary Fund's mission:
@@ -58,7 +58,7 @@ Labs](https://www.iqt.org/labs/), [QC
 Ware](https://www.qcware.com/),
 [QuEra](https://www.quera.com/),
 [Riverlane](https://www.riverlane.com/), and
-[Xanadu](https://www.xanadu.ai/).](../images/2023_supporters.png)
+[Xanadu](https://www.xanadu.ai/).](/images/2023_supporters.png)
 
 
 ***Testimonials from our Members***:

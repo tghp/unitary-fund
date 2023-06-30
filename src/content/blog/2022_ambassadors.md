@@ -19,7 +19,7 @@ Anyone is eligible to become an ambassador, and winners are nominated by the Uni
 ## New Ambassadors
 The new ambassadors join the previous [cohort of ambassadors](https://unitary.fund/posts/uf_ambassadors.html). We are excited to announce the list below:
 
-![](../images/2022_ambassadors.png)
+![](/images/2022_ambassadors.png)
 
 - **Alberto Maldonado Romo**, [Github](https://github.com/maldoalberto), [Twitter](https://twitter.com/AlbertoMaldoQC), [LinkedIn](https://www.linkedin.com/in/albertomaldonadoromo/). Alberto is a PhD student at the Instituto Politécnico Nacional, in Mexico and has been active in the Quantum Universal Education and Quantum Open Source Foundation activities. He has an interest in quantum algorithms and their application of Grove's algorithm; quantum machine learning using tensor networks, error mitigation using zero-noise extrapolation.
 

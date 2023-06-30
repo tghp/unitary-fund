@@ -12,7 +12,7 @@ We’re excited to share the first **Quantum Open Source Software (QOSS) Survey*
 Please take a couple of minutes to fill out the QOSS Survey [here](https://www.surveymonkey.com/r/qoss)
 
 
-![Take the Quantum Open Source Software Survey](../images/qoss_survey.png)
+![Take the Quantum Open Source Software Survey](/images/qoss_survey.png)
 
 The QOSS survey aims at obtaining a community-wide and industry-wide snapshot that is representative of everyone who codes or wants to code for and with **quantum computing technologies**. We'll share the results publicly to ultimately get a better understanding of the quantum computing community’s needs and background and improve products/services/events and educational material.
 

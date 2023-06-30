@@ -6,7 +6,7 @@ month: 10
 year: 2022
 ---
 
-<img src="../../images/bqskit.png" alt="BQSKit and Mitiq logo in tandom" width="400"/>
+<img src="/images/bqskit.png" alt="BQSKit and Mitiq logo in tandom" width="400"/>
 
 **Quantum circuit compilation** is a task that has become ubiquitous in today's quantum programming landscape.
 Just as a classical program compiler takes programs specified at a high-level of abstraction and brings them down to a lower level that hardware can "understand", a quantum compiler converts abstract programs to a set of instructions amenable to a quantum processing unit's (QPU) constraints.

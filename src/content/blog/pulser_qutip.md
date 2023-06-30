@@ -24,7 +24,7 @@ reproduce the expected behavior of the hardware. The Pulser manuscript
 can be found
 [here](https://quantum-journal.org/papers/q-2022-01-24-629/).
 
-![](../../images/pulser.png){width="6.5in" height="3.1666666666666665in"}
+![](/images/pulser.png){width="6.5in" height="3.1666666666666665in"}
 
 An example of a pulse sequence for Bell state preparation created in
 Pulser. Each channel changes its target qubit along the sequence and is
@@ -58,7 +58,7 @@ dynamical solvers to obtain the full-state time evolution.
 The QuTiP QIP manuscript can be found
 [here](https://quantum-journal.org/papers/q-2022-01-24-630/).
 
-![](../../images/qutip-qip.png){width="6.473144138232721in"
+![](/images/qutip-qip.png){width="6.473144138232721in"
 height="4.515629921259842in"}
 
 Figure 3 from [[B. Li]{.ul} *[et al., Quantum]{.ul}* [**6**, 630

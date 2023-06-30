@@ -73,7 +73,7 @@ But I believe by eliminating the comparison step, which required an analog-to-di
 So, I had an idea to improve their design by building a quantum-based comparator circuit where phototransistors can be used in such a way where when one electrical path opens, it shorts out the other path.
 I also want to use an FPGA to receive the signal, since that will be much faster than a general-purpose microcontroller.
 
-![Quantum-based Comparator Circuit](../../images/ambassador_alves_intro_circuit.png)
+![Quantum-based Comparator Circuit](/images/ambassador_alves_intro_circuit.png)
 
 Building this device is obviously a multi-step process, and I am currently at the circuit-proof-of-concept stage.
 At this point, I have designed and conventionally simulated the circuit.
@@ -101,7 +101,7 @@ I got in touch with QuNetSim’s creator and Unitary Fund micrograntee [Stephen 
 While it was outside the scope of what I could accomplish during the hackathon, I pitched my friend and UI/UX designer [Frances Poblete](http://francespoblete.com) to help design the UI, and she agreed.
 Her design looks great, and the prototype will form the basis for building the UI.
 
-![Frances Poblete's Prototype for a QuNetSim Web-Based User Interface](../../images/ambassador_alves_intro_QuNetSim_UI.png)
+![Frances Poblete's Prototype for a QuNetSim Web-Based User Interface](/images/ambassador_alves_intro_QuNetSim_UI.png)
 
 While I have not found the time to dedicate to improving my front-end development skills during this last semester, I still plan to be a major contributor to this UI as it gets built later this year.
 

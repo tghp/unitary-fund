@@ -36,7 +36,7 @@ However, there are multiple problems that inhibit the effectiveness of Loschmidt
 
 It’s these limitations with Loschmidt echo circuits that prompted the creation of the Mirror Circuits benchmarking method. Mirror Circuits take the Loschmidt echo circuits and use key changes to it to avoid the aforementioned problems with them. For these purposes, it’s best to think of the echo circuit as a series of Clifford layers followed by the inverses of each of these layers. To reduce the chances of systematic error cancellation, we insert a central random pauli layer and insert random pauli layers between each layer. Additionally, we add a layer of random single-qubit Clifford gates to the beginning of the circuit, and the inverse of that layer to the end of the circuit to avoid the problems involving preparing and measuring in only one basis. After these changes, we are left with this:
 
-![An example of a simple, single layer randomized mirror circuit](../images/mitiq_vqe_performance.png "An example of a simple, single layer randomized mirror circuit")
+![An example of a simple, single layer randomized mirror circuit](/images/mitiq_vqe_performance.png "An example of a simple, single layer randomized mirror circuit")
 
 This is an example of a simple, single layer randomized mirror circuit. The nice thing about randomized mirror circuits is it still only has one possible output making it easy to use for benchmarking quantum processors, while minimizing the problems present in Loschmidt echo circuits.
 

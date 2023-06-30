@@ -22,7 +22,7 @@ cal = Calibrator(execute, frontend="cirq")
 cal.execute_with_mitigation(circuit)
 ``` -->
 
-![image demonstating the code workflow using a `Calibrator` object](../../images/mitiq-demo.png)
+![image demonstating the code workflow using a `Calibrator` object](/images/mitiq-demo.png)
 
 The Calibrator runs a series of experiments using different parameters on a collection of circuits.
 The performance of these techniques are then weighed according to the improvement across a variety of circuits, and the strategy that performed best is returned to be used immediately on your circuit of choice.
