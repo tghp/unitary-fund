@@ -12,22 +12,22 @@ member: Thank you for participating in [unitaryHACK](https://unitaryhack.dev/) 2
 
 **\#\# Community voices**
 
-It's been great to host a [**[kick-off
-party]{.ul}**](https://www.youtube.com/playlist?list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F)
+It's been great to host a [**kick-off
+party**](https://www.youtube.com/playlist?list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F)
 on Twitch, hosted by **Misty Wahl**, from the Unitary Fund technical
 staff and a Mitiq maintainer
-\[[[Video]{.ul}](https://www.youtube.com/watch?v=kQJugFdIfqA&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=4)\],
+\[[Video](https://www.youtube.com/watch?v=kQJugFdIfqA&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=4)\],
 together with other project maintainers and community leaders,
 including:
 
 -   **Catalina Albornoz**, from Xanadu's Pennylane
-    > \[[[Video]{.ul}](https://www.youtube.com/watch?v=8rSXVFE6knM&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=2)\]
+    > \[[Video](https://www.youtube.com/watch?v=8rSXVFE6knM&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=2)\]
 
 -   **Luciano Bello**, from IBM's Qiskit
-    > \[[[Video]{.ul}](https://www.youtube.com/watch?v=gLLgKaH6yu4&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=1&t=128s)\]
+    > \[[Video](https://www.youtube.com/watch?v=gLLgKaH6yu4&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=1&t=128s)\]
 
 -   **Filippo Vincentini**, postdoc at EPFL and maintainer of NetKet
-    > \[[[Video]{.ul}](https://www.youtube.com/watch?v=KtRqreNV2Wk&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=3&t=1s)\]
+    > \[[Video](https://www.youtube.com/watch?v=KtRqreNV2Wk&list=PL-VMs2BCTI_lhMY4SxVkJQpwwQL-wi14F&index=3&t=1s)\]
 
  
  Hear what our community members had to say about unitaryHACK!
@@ -48,8 +48,8 @@ push some of my first contributions into the quantum open source
 ecosystem! Thank you unitaryHACK ❤️"
 
 **Gregory Vargese**, aka \@WingCode, the participant with most hacks:
-**8 bounties completed**. In the wrap-up party on [**[Unitary Fund's
-Discord]{.ul}**](http://discord.unitary.fund/), all the three of them
+**8 bounties completed**. In the wrap-up party on [**Unitary Fund's
+Discord**](http://discord.unitary.fund/), all the three of them
 were featured in the community call, together with maintainers from
 **PyQIR**, **QuTiP**, **Qiskit**, **Mitiq**, **Qrack**, **Toqito** and
 many participants.
@@ -91,5 +91,5 @@ generous donors including **Microsoft Azure Quantum**, **DoraHacks**,
 Xanadu, IonQ, Boston Consulting Group, Pasqal, IQM, DoraHacks, and
 Agnostiq.
 
-See you in 2023 with unitaryHACK and sooner on the [[Unitary Fund
-Discord server]{.ul}](http://discord.unitary.fund/).
+See you in 2023 with unitaryHACK and sooner on the [Unitary Fund
+Discord server](http://discord.unitary.fund/).

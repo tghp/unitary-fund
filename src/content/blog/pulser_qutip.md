@@ -15,14 +15,14 @@ published in the open-access, community-driven journal
 information on **Pulser** and **qutip-qip**, two Python packages for the
 pulse-level simulation of quantum programs on quantum computers.
 
-[**[Pulser]{.ul}**](https://github.com/pasqal-io/Pulser) is a software
+[**Pulser**](https://github.com/pasqal-io/Pulser) is a software
 for controlling and simulating neutral-atom quantum processors. It
 enables users to control the arrangement of qubits in arbitrary
 geometries on Pasqal chips and to write sequences of laser pulses to be
 applied on the system. A custom emulator relying on QuTiP is included to
 reproduce the expected behavior of the hardware. The Pulser manuscript
 can be found
-[[here]{.ul}](https://quantum-journal.org/papers/q-2022-01-24-629/).
+[here](https://quantum-journal.org/papers/q-2022-01-24-629/).
 
 ![](../../images/pulser.png){width="6.5in" height="3.1666666666666665in"}
 
@@ -46,7 +46,7 @@ developer behind Pulser.
 
 The second paper illustrates the possibility to simulate noisy quantum
 processors with the
-[**[qutip-qip]{.ul}**](https://github.com/qutip/qutip-qip/) package from
+[**qutip-qip**](https://github.com/qutip/qutip-qip/) package from
 the Quantum Toolbox in Python. It bridges the gap between the gate-level
 circuit simulation and the simulation of quantum dynamics following the
 master equation for various hardware models. Provided a Hamiltonian
@@ -56,7 +56,7 @@ generate the physical model described by control pulses and use QuTiP\'s
 dynamical solvers to obtain the full-state time evolution.
 
 The QuTiP QIP manuscript can be found
-[[here]{.ul}](https://quantum-journal.org/papers/q-2022-01-24-630/).
+[here](https://quantum-journal.org/papers/q-2022-01-24-630/).
 
 ![](../../images/qutip-qip.png){width="6.473144138232721in"
 height="4.515629921259842in"}
