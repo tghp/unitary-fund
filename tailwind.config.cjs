@@ -99,6 +99,10 @@ module.exports = {
             '--tw-prose-invert-th-borders': theme('colors.white'),
             '--tw-prose-invert-td-borders': theme('colors.white'),
 
+            a: {
+              wordBreak: 'break-word',
+            },
+
             ul: {
               listStyleType: null,
               paddingLeft: '0',

@@ -12,7 +12,7 @@ const events = await getCollection('event');
   .event {
     main {
       h2 {
-        @apply border-l-2 border-black cursor-pointer select-none -ml-2 pl-[calc(theme('spacing.2')-1px)];
+        @apply border-l-2 border-black cursor-pointer select-none -ml-2 pl-[calc(theme('spacing.2')-1px)] max-sm:py-1;
 
         ~ :not(h2) {
           @apply hidden;
