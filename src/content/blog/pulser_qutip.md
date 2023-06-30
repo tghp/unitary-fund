@@ -5,13 +5,13 @@ month: 1
 year: 2022
 ---
 
-Today two papers \[[[H. Silvério & S. Grijalva]{.ul} *[et
-al.]{.ul}*](https://quantum-journal.org/papers/q-2022-01-24-629/), [[B.
-Li]{.ul} *[et
-al.]{.ul}*](https://quantum-journal.org/papers/q-2022-01-24-630/)\] on
+Today two papers \[[H. Silvério & S. Grijalva *et
+al.*](https://quantum-journal.org/papers/q-2022-01-24-629/), [B.
+Li *et
+al.*](https://quantum-journal.org/papers/q-2022-01-24-630/)\] on
 quantum open source software projects supported by the Unitary Fund are
 published in the open-access, community-driven journal
-[*[Quantum]{.ul}*](https://quantum-journal.org/). The papers provide
+[*Quantum*](https://quantum-journal.org/). The papers provide
 information on **Pulser** and **qutip-qip**, two Python packages for the
 pulse-level simulation of quantum programs on quantum computers.
 
@@ -24,15 +24,15 @@ reproduce the expected behavior of the hardware. The Pulser manuscript
 can be found
 [here](https://quantum-journal.org/papers/q-2022-01-24-629/).
 
-![](/images/pulser.png){width="6.5in" height="3.1666666666666665in"}
+![](/images/pulser.png)
 
 An example of a pulse sequence for Bell state preparation created in
 Pulser. Each channel changes its target qubit along the sequence and is
 populated with pulses addressing a specific energy transition, thus
 executing the necessary quantum gates. A detailed explanation can be
-found in section 3.2 of the Pulser paper. [[H. Silvério & S.
-Grijalva]{.ul} *[et al. Quantum]{.ul}* [**6**, 629
-(2022)*.*]{.ul}](https://quantum-journal.org/papers/q-2022-01-24-629/)
+found in section 3.2 of the Pulser paper. [H. Silvério & S.
+Grijalva *et al. Quantum* **6**, 629
+(2022)*.*](https://quantum-journal.org/papers/q-2022-01-24-629/)
 
 *"We set out to develop Pulser based on the conviction that neutral-atom
 quantum devices can only be fully put to use when the programmer has
@@ -58,8 +58,7 @@ dynamical solvers to obtain the full-state time evolution.
 The QuTiP QIP manuscript can be found
 [here](https://quantum-journal.org/papers/q-2022-01-24-630/).
 
-![](/images/qutip-qip.png){width="6.473144138232721in"
-height="4.515629921259842in"}
+![](/images/qutip-qip.png)
 
-Figure 3 from [[B. Li]{.ul} *[et al., Quantum]{.ul}* [**6**, 630
-(2022)*.*]{.ul}](https://quantum-journal.org/papers/q-2022-01-24-630/)
+Figure 3 from [B. Li *et al., Quantum* **6**, 630
+(2022)*.*](https://quantum-journal.org/papers/q-2022-01-24-630/)
