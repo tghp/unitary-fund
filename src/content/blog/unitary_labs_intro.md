@@ -34,8 +34,4 @@ Having worked with the QuTiP community, I saw the value of open-source software 
   
 With complementary skills and experience, Ryan, Andrea, Will and I are working on in-house research to help the whole ecosystem. **Our mission is to build an open and inclusive quantum ecosystem. If you’d like to join us – we’ll all be reviewing micro-grant applications – you can apply [here](https://www.tutorialspoint.com/index.html#apply).  
   
-**
 
-This website is hosted on [github](https://github.com/unitaryfund/unitary-fund), and our community follows this [code of conduct](https://github.com/unitaryfund/unitary-fund/blob/master/CODE_OF_CONDUCT.md).  
-  
-If you have suggestions for changes then please open up a pull request!
