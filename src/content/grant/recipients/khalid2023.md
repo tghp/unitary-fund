@@ -1,0 +1,7 @@
+---
+name: "Abduallah Khalid"
+tags:
+  - quantum
+  - python
+---
+To **[Abdullah Khalid](https://abdullahkhalid.com/)** to further develop **[stac](https://github.com/abdullahkhalids/stac)**, a circuit library optimized for building fault-tolerant circuits for stabilizer codes.
