@@ -1,5 +1,5 @@
 ---
-name: "Abuzer Yakaryilmaz"
+name: "QWorld"
 tags:
  - quantum education
 ---
