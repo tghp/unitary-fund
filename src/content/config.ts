@@ -70,7 +70,7 @@ export const eventSchema = z.object({
   month: z.number(),
   year: z.number(),
   time: z.string(),
-  host: z.string(),
+  speaker: z.string(),
   image: z.string().optional(),
 });
 
