@@ -1,5 +1,5 @@
 ---
-name: "Jiaqi Leng and Yuxiang Peng"
+name: QHDOPT
 tags:
   - gradient descent
   - quantum
