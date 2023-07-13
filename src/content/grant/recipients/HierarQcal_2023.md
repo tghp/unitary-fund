@@ -1,5 +1,6 @@
 ---
 name: HierarQcal
+year: 2023
 tags:
   - Quantum CNN
   - python
