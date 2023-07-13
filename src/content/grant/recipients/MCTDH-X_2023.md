@@ -1,5 +1,5 @@
 ---
-name: "Numerical Solutions of ultracold Quantum many body Systems"
+name: MCTDH-X
 tags:
   - quantum
   - software 
