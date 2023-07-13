@@ -1,5 +1,6 @@
 ---
 name: "QWorld"
+year: 2023
 tags:
  - quantum education
 ---
