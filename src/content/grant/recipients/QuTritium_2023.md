@@ -1,5 +1,5 @@
 ---
-name: "Son Pham and Tien Nguyen"
+name: "QuTritium"
 tags:
   - Python
   - Quantum
