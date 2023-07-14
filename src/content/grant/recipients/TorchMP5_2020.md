@@ -1,6 +1,9 @@
 ---
-name: PyTorch Tool Box
+name: TorchMPS, quantum-inspired machine learning models
 year: 2020
+month: 11
+day: 16
+country: USA
 tags:
   - python
 ---
