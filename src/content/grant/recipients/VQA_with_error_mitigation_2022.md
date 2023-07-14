@@ -1,6 +1,9 @@
 ---
-name: VQA with errors
+name: VQA with error mitigation
 year: 2022
+month: 6
+day: 29
+country: USA
 tags:
   - quantum algorithm
   - python
