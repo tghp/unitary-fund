@@ -1,6 +1,9 @@
 ---
-name: "Unicorn Programs"
+name: "Unicorn"
 year: 2022
+month: 9
+day: 26
+country: Austria
 tags:
   - rust
   - quantum algorithms
