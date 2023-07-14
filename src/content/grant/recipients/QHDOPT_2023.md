@@ -1,6 +1,9 @@
 ---
 name: QHDOPT
 year: 2023
+month: 6
+day: 26
+country: USA
 tags:
   - gradient descent
   - quantum
