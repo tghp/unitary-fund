@@ -1,6 +1,9 @@
 ---
 name: QRand
 year: 2020
+month: 10
+day: 5
+country: Spain, USA 
 tags:
   - python
   - quantum
