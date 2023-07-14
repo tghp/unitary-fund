@@ -1,6 +1,9 @@
 ---
-name: QIR
+name: "The QIR Book"
 year: 2022
+month: 9
+day: 26
+country: USA
 tags:
   - Quantum Education
 ---
