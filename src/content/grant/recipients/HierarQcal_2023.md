@@ -1,6 +1,9 @@
 ---
 name: HierarQcal
 year: 2023
+month: 2
+day: 27
+country: South Africa
 tags:
   - Quantum CNN
   - python
