@@ -1,5 +1,5 @@
 ---
-title: Celebrating quantum open-source software contributors: Announcing the 2020 Wittek prize winner with QOSF
+title: 'Celebrating quantum open-source software contributors: Announcing the 2020 Wittek prize winner with QOSF'
 author: Unitary Fund Team
 day: 1
 month: 2
