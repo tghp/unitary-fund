@@ -1,6 +1,9 @@
 ---
 name: "QuTritium"
 year: 2023
+month: 4
+day: 24
+country: Vietnam
 tags:
   - Python
   - Quantum
