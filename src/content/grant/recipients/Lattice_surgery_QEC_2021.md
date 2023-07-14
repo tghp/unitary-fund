@@ -1,6 +1,9 @@
 ---
-name: "Lattice surgery QEC"
+name: "Lattice surgery QEC" 
 year: 2021
+month: 10
+day: 13
+country: Canada
 tags:
   - QEC
   - python
