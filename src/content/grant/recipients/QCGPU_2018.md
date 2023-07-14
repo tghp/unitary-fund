@@ -1,7 +1,6 @@
 ---
 name: QCGPU
 year: 2018
-country:
 tags:
   - GPU
   - python
