@@ -1,6 +1,9 @@
 ---
-name: "Marta CT"
+name: "Marta CT" 
 year: 2020
+month: 11
+day: 2
+country: Italy
 tags:
   - medical 
   - quantum
