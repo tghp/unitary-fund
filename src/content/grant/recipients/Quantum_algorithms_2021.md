@@ -1,6 +1,9 @@
 ---
 name: "Quantom Alogirthms"
 year: 2021
+month: 3
+day: 10
+country: Singapore
 tags:
   - quantum education
   - quantum alogrithms
