@@ -1,6 +1,9 @@
 ---
-name: "debug in Q#"
+name: "%debug in Q#" 
 year: 2021
+month: 3
+day: 22
+country: USA
 tags:
   - Q#
   - visualization
