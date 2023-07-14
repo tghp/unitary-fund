@@ -1,6 +1,9 @@
 ---
 name: Symmer
 year: 2022
+month: 9
+day: 26
+country: UK
 tags:
   - python
   - quantum computing
