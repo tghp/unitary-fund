@@ -1,6 +1,7 @@
 ---
-name: QCousins
+name: QWorld's Qcousins
 year: 2019
+country: Hungary, Latvia, Poland
 tags: 
   - quantum education
   - software
