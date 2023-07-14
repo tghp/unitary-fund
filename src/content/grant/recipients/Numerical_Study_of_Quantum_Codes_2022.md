@@ -1,6 +1,9 @@
 ---
-name: "Rust Error Correction"
+name: Numerical Study of Good Rate Quantum Codes with Different Error Models
 year: 2022
+month: 11
+day: 28
+country: USA
 tags:
   - rust
   - QEC
