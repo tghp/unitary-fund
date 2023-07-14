@@ -1,6 +1,9 @@
 ---
-name:"Guide to QEC"
+name: "Guide to QEC" 
 year: 2022
+month: 9
+day: 26
+country: Canada
 tags:
   - QEC
   - Quantum Education
