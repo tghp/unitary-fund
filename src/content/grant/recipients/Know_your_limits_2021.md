@@ -1,6 +1,9 @@
 ---
-name: Benchmark Limitations of Noise
+name: Know your limits
 year: 2021
+month: 1
+day: 15
+country: Denmark
 tags:
   - software
   - quantum 
