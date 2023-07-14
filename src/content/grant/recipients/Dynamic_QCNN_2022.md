@@ -1,6 +1,9 @@
 ---
-name: "Dynamic QCNN"
+name: Dynamic structures for quantum convolutional neural networks
 year: 2022
+month: 5
+day: 5
+country: South Africa
 tags:
   - quantum CNN
   - python
