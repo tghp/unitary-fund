@@ -4,7 +4,7 @@ day: 19
 month: 8
 year: 2021
 time: 12PM EST/5PM GMT
-speaker: "Pedro Rivero"
+speaker: "Goutam Tamvada"
 ---
 
 ## About the talk
