@@ -1,6 +1,9 @@
 ---
-name:PyClifford
+name: PyClifford
 year: 2022
+month: 9
+day: 26
+country: USA
 tags:
   - python
   - simulator
