@@ -1,6 +1,8 @@
 ---
 name: Iteration One
 year: 2022
+month: 9
+day: 28
 country: USA
 tags:
   - quantum education
