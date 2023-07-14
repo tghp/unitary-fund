@@ -1,6 +1,9 @@
 ---
-name: "QWorld"
+name: Strategic partnership events in 2023
 year: 2023
+month: 4
+day: 3
+country: Latvia
 tags:
  - quantum education
 ---
