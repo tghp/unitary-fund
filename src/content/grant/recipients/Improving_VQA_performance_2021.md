@@ -1,6 +1,9 @@
 ---
-name: VQA benchmarks
+name: Improving VQA Performance
 year: 2021
+month: 7
+day: 14
+country: USA
 tags:
   - VQA
   - quantum
