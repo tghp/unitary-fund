@@ -27,7 +27,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@unpic/react": "^0.0.27",
-    "astro": "^2.7.0",
+    "astro": "^2.8.3",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
     "date-fns": "^2.30.0",
@@ -66,5 +66,8 @@
     "prettier-plugin-astro": "^0.9.0",
     "sass": "^1.59.2",
     "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "vite": "^4"
   }
 }
