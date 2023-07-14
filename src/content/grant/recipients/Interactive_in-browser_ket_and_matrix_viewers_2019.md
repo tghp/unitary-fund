@@ -1,6 +1,7 @@
 ---
-name: Quantum States Visualized
+name: Interactive, in-browser ket and matrix viewers
 year: 2019
+country: Poland
 tags:
   - quantum education
   - visualization
