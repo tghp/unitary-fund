@@ -1,6 +1,9 @@
 ---
-name: Machine Learning Textbook
+name: Quantum Machine Learning Textbook 
 year: 2020
+month: 11
+day: 16
+country: India
 tags:
   - QML
   - quantum education
