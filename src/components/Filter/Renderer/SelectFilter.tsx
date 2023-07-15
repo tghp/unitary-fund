@@ -4,6 +4,7 @@ import type { FilterContextValues } from '~/components/Filter/FilterContextProvi
 import { filterMap, filterModeAtom } from '~/util/store';
 import { ISO_3166_ALPHA_2_CODES, ISO_3166_ALPHA_2_MAPPINGS } from '~/util/iso3166';
 import { Icon } from '~/components/Ui/Icon';
+import { useStore } from '@nanostores/react';
 
 type SelectFilterProps = {
   filterKey: NonNullable<FilterContextValues['filterKeys']>[0];
@@ -21,6 +22,8 @@ function getSortedFilterValues(
 
       return aLabel.localeCompare(bLabel);
     });
+  } else if (filterKey === 'month' || filterKey === 'year' || filterKey === 'day') {
+    return filterValues.sort((a, b) => +a - +b);
   } else {
     return filterValues.sort((a, b) => a.localeCompare(b));
   }
@@ -30,27 +33,46 @@ function getLabel(filterKey: NonNullable<FilterContextValues['filterKeys']>[0], 
   if (filterKey === 'country' && ISO_3166_ALPHA_2_CODES.includes(value)) {
     return ISO_3166_ALPHA_2_MAPPINGS[value as (typeof ISO_3166_ALPHA_2_CODES)[number]];
   } else if (filterKey === 'month') {
-    return new Date(0, parseInt(value, 10)).toLocaleString('default', {
-      month: 'long',
-    });
+    const monthNames = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+
+    return monthNames[+value - 1];
   } else {
     return value;
   }
 }
 
 export default function SelectFilter({ filterKey, filterValues }: SelectFilterProps) {
+  const filter = useStore(filterMap);
+  const filterValue = filterKey in filter ? filter[filterKey] : '';
+
+  if (Array.isArray(filterValue)) {
+    throw new Error('SelectFilter does not support multiple values');
+  }
+
   const {
     isOpen,
     closeMenu,
     selectedItem,
     getToggleButtonProps,
-    getLabelProps,
     getMenuProps,
     highlightedIndex,
     getItemProps,
   } = useSelect({
     items: filterValues,
-    selectedItem: filterMap.get()[filterKey] || '',
+    selectedItem: filterValue,
   });
 
   return (

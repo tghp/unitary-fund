@@ -1,7 +1,9 @@
 import { cn } from '~/util/cn';
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useMultipleSelection, useCombobox } from 'downshift';
 import type { FilterContextValues } from '~/components/Filter/FilterContextProvider';
+import { filterMap } from '~/util/store';
+import { useStore } from '@nanostores/react';
 
 type SelectFilterProps = {
   filterKey: NonNullable<FilterContextValues['filterKeys']>[0];
@@ -9,47 +11,42 @@ type SelectFilterProps = {
 };
 
 export default function TagFilter({ filterKey, filterValues }: SelectFilterProps) {
-  const initialSelectedItems: string[] = [];
+  const filter = useStore(filterMap);
+  const filterValue = filterKey in filter ? filter[filterKey] : [];
+
+  if (!Array.isArray(filterValue)) {
+    throw new Error('TagFilter does not support single values');
+  }
 
   /**
    * State
    */
 
   const [inputValue, setInputValue] = useState('');
-  const [selectedItems, setSelectedItems] = useState<string[] | undefined>(initialSelectedItems);
 
   /**
    * Hooks
    */
 
-  const items = useMemo(() => {
-    const lowerCasedInputValue = inputValue.toLowerCase();
-
-    return filterValues.filter((filter) => {
-      return (
-        selectedItems &&
-        !selectedItems.includes(filter) &&
-        (filter.toLowerCase().includes(lowerCasedInputValue) ||
-          filter.toLowerCase().includes(lowerCasedInputValue))
-      );
-    });
-  }, [selectedItems, inputValue]);
-
   const { getSelectedItemProps, getDropdownProps, removeSelectedItem } = useMultipleSelection({
-    selectedItems,
+    selectedItems: filterKey in filter ? (filter[filterKey] as string[]) : [],
     onStateChange({ selectedItems: newSelectedItems, type }) {
       switch (type) {
         case useMultipleSelection.stateChangeTypes.SelectedItemKeyDownBackspace:
         case useMultipleSelection.stateChangeTypes.SelectedItemKeyDownDelete:
         case useMultipleSelection.stateChangeTypes.DropdownKeyDownBackspace:
         case useMultipleSelection.stateChangeTypes.FunctionRemoveSelectedItem:
-          setSelectedItems(newSelectedItems);
-          break;
-        default:
+          if (newSelectedItems?.length === 0) {
+            filterMap.setKey(filterKey, undefined);
+          } else {
+            filterMap.setKey(filterKey, newSelectedItems);
+          }
           break;
       }
     },
   });
+
+  const items = filterValues.filter((item) => !filterValue.includes(item));
 
   const {
     isOpen,
@@ -61,7 +58,7 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
     selectedItem,
   } = useCombobox({
     items,
-    itemToString(item) {
+    itemToString() {
       return '';
     },
     defaultHighlightedIndex: 0, // after selection, highlight the first item.
@@ -71,8 +68,8 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
         case useCombobox.stateChangeTypes.InputKeyDownEnter:
         case useCombobox.stateChangeTypes.ItemClick:
         case useCombobox.stateChangeTypes.InputBlur:
-          if (newSelectedItem && selectedItems) {
-            setSelectedItems([...selectedItems, newSelectedItem]);
+          if (newSelectedItem) {
+            filterMap.setKey(filterKey, [...new Set([...filterValue, newSelectedItem])]);
           }
           setInputValue('');
           break;
@@ -81,8 +78,6 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
           if (newInputValue) {
             setInputValue(newInputValue);
           }
-          break;
-        default:
           break;
       }
     },
@@ -147,8 +142,9 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
             ))}
         </ul>
       </div>
-      <div className={cn(['flex text-xs mt-[-1px]', 'max-md:flex-col', 'md:-ml-8'])}>
-        {selectedItems?.map((item, index) => (
+      <div
+        className={cn(['absolute top-full flex text-xs mt-[-1px]', 'max-md:flex-col', 'md:-ml-8'])}>
+        {filterValue?.map((item, index) => (
           <div
             className={cn([
               'flex cursor-pointer bg-white text-black border-black border items-center group',

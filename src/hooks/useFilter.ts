@@ -24,9 +24,7 @@ export type FilterSpec = {
   };
 };
 
-export default function useFilter<T extends FilterType>(
-  items: FilterSpec[T]['items']
-) {
+export default function useFilter<T extends FilterType>(items: FilterSpec[T]['items']) {
   const filter = useStore(filterMap);
 
   return useMemo<typeof items>(() => {
@@ -34,35 +32,54 @@ export default function useFilter<T extends FilterType>(
 
     if (filter) {
       for (const item of items) {
-        let canAdd = true;
-
         const itemCheck = item as FilterSpec[T]['items'][0];
         const itemDataCheck = item.data as FilterSpec[T]['items'][0]['data'];
         const filterKeys = Object.keys(filter) as Array<keyof typeof filter>;
 
-        for (const key of filterKeys) {
-          const itemDataFilterValue =
-            itemDataCheck[key as keyof typeof itemDataCheck];
+        const canAdd = filterKeys.every((key) => {
+          if (key in itemDataCheck) {
+            const filterValue = filter[key as keyof typeof filter];
+            const itemDataFilterValue = itemDataCheck[key as keyof typeof itemDataCheck];
 
-          if (
-            key in filter &&
-            key in itemDataCheck &&
-            typeof filter[key as keyof typeof filter] !== 'undefined'
-          ) {
-            if (
-              typeof itemDataFilterValue === 'string' &&
-              itemDataFilterValue !== filter[key as keyof typeof filter]
-            ) {
-              canAdd = false;
-            } else if (
-              typeof itemDataFilterValue === 'number' &&
-              itemDataFilterValue !== +filter[key as keyof typeof filter]
-            ) {
-              canAdd = false;
+            if (typeof filterValue !== 'undefined') {
+              if (Array.isArray(filterValue)) {
+                return (
+                  filterValue.filter((filterValueItem) => {
+                    if (Array.isArray(itemDataFilterValue)) {
+                      if (
+                        typeof filterValueItem === 'number' &&
+                        itemDataFilterValue.includes(filterValueItem)
+                      ) {
+                        return true;
+                      } else if (
+                        typeof filterValueItem === 'string' &&
+                        itemDataFilterValue.includes(filterValueItem)
+                      ) {
+                        return true;
+                      }
+                    }
+
+                    return false;
+                  }).length > 0
+                );
+              } else {
+                if (
+                  typeof itemDataFilterValue === 'number' &&
+                  itemDataFilterValue === +filterValue
+                ) {
+                  return true;
+                } else if (
+                  typeof itemDataFilterValue === 'string' &&
+                  itemDataFilterValue === filterValue
+                ) {
+                  return true;
+                }
+              }
             }
-            break;
+
+            return false;
           }
-        }
+        });
 
         if (canAdd) {
           filteredItems.push(itemCheck);

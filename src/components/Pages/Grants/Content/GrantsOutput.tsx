@@ -34,7 +34,7 @@ export function GrantsOutput() {
               {year}
             </h2>
             {displayBackgroundNumber && (
-              <div className="hidden lg:block sticky top-[calc(var(--logo-height))] left-0 leading-none text-[300px] opacity-[0.02] font-mono z-0">
+              <div className="hidden lg:block sticky top-[calc(var(--logo-height))] left-0 leading-none text-[300px] opacity-[0.02] font-mono z-0 pointer-events-none">
                 {year}
               </div>
             )}

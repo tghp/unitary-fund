@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { FilterContext } from '~/components/Filter/FilterContextProvider';
 import { FilterRenderer } from '~/components/Filter/Renderer/FilterRenderer';
 import { Button } from '~/components/Ui/Form/Button';
@@ -113,7 +113,7 @@ export function Filters() {
         </div>
         <div
           className={cn([
-            'w-full order-2 pt-0 mb-0 pb-2 flex flex-col text-xs uppercase gap-x-8 items-center font-mono',
+            'w-full order-2 pt-0 mb-0 flex flex-col text-xs uppercase gap-x-8 items-center font-mono',
             'bg-white text-white bleed-white bleed-border-t grid grid-cols-tag-search grid-rows-tag-search grid-areas-tag-search',
           ])}>
           <div className="h-full uppercase font-bold grid-in-title flex items-center bleed-bg-l bleed-black">
