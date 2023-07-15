@@ -9,7 +9,7 @@ const jobs = await getCollection('job');
   <div class="solid-heading">
     <h2>Open Positions</h2>
   </div>
-  {jobs.length === 0 && <p>There are currenty no open positions</p>}
+  {jobs.length === 0 && <p>There are currently no open positions</p>}
   {
     jobs.length > 0 && (
       <ul class="flex flex-col gap-4 list-image-none">
