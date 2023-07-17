@@ -3,7 +3,7 @@ name: Iteration One
 year: 2022
 month: 9
 day: 28
-country: USA
+country: US
 tags:
   - quantum education
   - physics
