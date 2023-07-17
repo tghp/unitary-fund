@@ -3,7 +3,7 @@ name: ML-powered QAOA Util
 year: 2020
 month: 11
 day: 1
-country: Poland
+country: PL
 tags:
   - python
   - Machine Learning
