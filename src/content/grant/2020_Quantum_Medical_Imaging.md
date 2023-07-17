@@ -3,7 +3,7 @@ name: Quantum Medical Imaging
 year: 2020
 month: 9
 day: 20
-country: UK
+country: GB
 tags:
   - medical
   - quantum
