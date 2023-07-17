@@ -3,7 +3,7 @@ name: "Lattice surgery QEC"
 year: 2021
 month: 10
 day: 13
-country: Canada
+country: CA
 tags:
   - QEC
   - python
