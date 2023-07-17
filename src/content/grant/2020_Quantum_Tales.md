@@ -3,7 +3,7 @@ name: Quantum Tales
 year: 2020
 month: 9
 day: 21
-country: USA
+country: US
 tags:
   - quantum education
   - quantum algorithm
