@@ -1,7 +1,7 @@
 ---
 name: zxQentiana
 year: 2019
-country: Austria, Switzerland
+country: AT, CH
 tags:
   - Javascript
   - quantum
