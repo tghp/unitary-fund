@@ -1,7 +1,7 @@
 ---
 name: SciGym
 year: 2019
-country: Austria
+country: AT
 tags:
   - Machine Learning
   - quantum
