@@ -3,7 +3,7 @@ name: "TEMPO Features"
 year: 2021
 month: 9
 day: 27
-country: UK
+country: GB
 tags:
   - simulator
   - quantum
