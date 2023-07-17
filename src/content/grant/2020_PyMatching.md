@@ -3,7 +3,7 @@ name: PyMatching
 year: 2020
 month: 1
 day: 5
-country: UK
+country: GB
 tags:
   - QEC
   - python
