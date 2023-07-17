@@ -1,7 +1,7 @@
 ---
 name: Toqito
 year: 2020
-country: Canada
+country: CA
 tags:
   - python
   - ganes
