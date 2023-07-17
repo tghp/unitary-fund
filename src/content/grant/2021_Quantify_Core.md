@@ -3,7 +3,7 @@ name: "Quantify Core"
 year: 2021
 month: 4
 day: 26
-country: The Netherlands
+country: NL
 tags:
   - python
   - experiments 
