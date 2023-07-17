@@ -1,7 +1,7 @@
 ---
 name: Avalon
 year: 2018
-country: The Congo
+country: CG
 tags:
   - compiler
   - python
