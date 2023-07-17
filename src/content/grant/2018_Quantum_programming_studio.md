@@ -1,7 +1,7 @@
 ---
 name: Quantum Programming Studio
 year: 2018
-country: Serbia
+country: RS
 tags:
   - python
   - quantum
