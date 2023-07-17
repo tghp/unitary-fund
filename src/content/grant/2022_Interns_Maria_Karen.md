@@ -3,7 +3,7 @@ name: Interns Maria and Karen
 year: 2022
 month: 6
 day: 8
-country: USA
+country: US
 tags:
   - python
   - intern
