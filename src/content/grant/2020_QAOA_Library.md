@@ -1,7 +1,7 @@
 ---
 name: QAOA Library
 year: 2020
-country: poland
+country: PL
 tags:
   - quantum algorithm
   - Q#
