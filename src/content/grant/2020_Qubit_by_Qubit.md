@@ -1,6 +1,7 @@
 ---
 name: Qubit by Qubit
 year: 2020
+country: US
 tags:
   - quantum education
 ---
