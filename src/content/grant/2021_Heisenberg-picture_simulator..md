@@ -3,7 +3,7 @@ name: "Heisenberg-picture simulator"
 year: 2021
 month: 10
 day: 25
-country: USA
+country: US
 tags:
   -  simulator
   -  quantum
