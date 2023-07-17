@@ -3,7 +3,7 @@ name: "Graphix"
 year: 2023
 month: 1
 day: 23
-country: UK, Japan
+country: GB, JP
 tags:
   - python
   - Quantum 
