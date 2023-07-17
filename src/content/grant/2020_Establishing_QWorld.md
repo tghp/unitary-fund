@@ -3,7 +3,7 @@ name: Establishing QWorld a Non-Profit Organization
 year: 2020
 month: 10
 day: 5
-country: Latvia
+country: LV
 tags:
   - quantum education
   - non-profit
