@@ -3,7 +3,7 @@ name: SQWalk
 year: 2021
 month: 4
 day: 26
-country: Italy
+country: IT
 tags:
   - simulator
   - python
