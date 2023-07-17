@@ -1,7 +1,7 @@
 ---
 name: Interactive, in-browser ket and matrix viewers
 year: 2019
-country: Poland
+country: PL
 tags:
   - quantum education
   - visualization
