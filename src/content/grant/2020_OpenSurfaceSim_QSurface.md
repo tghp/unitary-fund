@@ -3,7 +3,7 @@ name: OpenSurfaceSim (QSurface)
 year: 2020
 month: 6
 day: 1
-country: The Netherlands
+country: NL
 tags:
   - simulator
   - visualization
