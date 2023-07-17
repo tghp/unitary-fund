@@ -3,7 +3,7 @@ name: VQA in QuTip
 year: 2021
 month: 11
 day: 10
-country: Australia
+country: AU
 tags:
   - Quantum algorithm
   - VQA
