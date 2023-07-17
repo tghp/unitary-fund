@@ -3,7 +3,7 @@ name: NFnet
 year: 2023
 month: 2
 day: 27
-country: USA
+country: US
 tags:
   - quantum systems
   - python
