@@ -3,7 +3,7 @@ name: "Adaptive Quantum Process"
 year: 2022
 month: 9
 day: 26
-country: USA
+country: US
 tags:
   - Machine Learning
   - Quantum
