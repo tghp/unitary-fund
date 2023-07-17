@@ -1,7 +1,7 @@
 ---
 name: Qrack
 year: 2019
-country: USA
+country: US
 tags:
   - simulator
   - C++
