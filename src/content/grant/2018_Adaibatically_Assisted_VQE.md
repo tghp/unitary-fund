@@ -1,7 +1,7 @@
 ---
 name: Adiabatically Assisted Variational Quantum Eigensolvers in Forest
 year: 2018
-country: Spain
+country: ES
 tags:
   - VQE
   - quantum algorithm
