@@ -3,7 +3,7 @@ name: Optimization problems in OpenQAOA
 year: 2023
 month: 1
 day: 23
-country: Germany
+country: DE
 tags:
   - python
   - Quantum Optimization
