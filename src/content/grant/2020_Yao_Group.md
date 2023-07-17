@@ -3,7 +3,7 @@ name: Yao Group
 year: 2020
 month: 5
 day: 15
-country: Hong Kong
+country: HK
 tags:
   - quantum
 ---
