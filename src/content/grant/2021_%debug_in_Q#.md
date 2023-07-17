@@ -3,7 +3,7 @@ name: "%debug in Q#"
 year: 2021
 month: 3
 day: 22
-country: USA
+country: US
 tags:
   - Q#
   - visualization
