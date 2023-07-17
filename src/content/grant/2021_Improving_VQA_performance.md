@@ -3,7 +3,7 @@ name: Improving VQA Performance
 year: 2021
 month: 7
 day: 14
-country: USA
+country: US
 tags:
   - VQA
   - quantum
