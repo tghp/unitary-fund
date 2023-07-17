@@ -3,7 +3,7 @@ name: fullstackquantumcomputation.tech
 year: 2020
 month: 7
 day: 15
-country: USA
+country: US
 tags:
   - quantum education
 ---
