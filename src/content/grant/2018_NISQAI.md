@@ -1,7 +1,7 @@
 ---
 name: NISQAI
 year: 2018
-country: USA
+country: US
 tags:
   - python
   - machine learning
