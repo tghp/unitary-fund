@@ -1,7 +1,7 @@
 ---
 name: QAOA-based Traveling Salesman Solver in Forest
 year: 2018
-country: Poland
+country: PL
 tags: 
   - quantum education
   - python
