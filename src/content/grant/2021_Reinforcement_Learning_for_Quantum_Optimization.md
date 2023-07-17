@@ -3,7 +3,7 @@ name: Reinforcement Learning for Quantum Optimization
 year: 2021
 month: 2
 day: 22
-country: USA
+country: US
 tags:
   - python
   - QML
