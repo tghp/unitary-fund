@@ -3,7 +3,7 @@ name: "Unicorn"
 year: 2022
 month: 9
 day: 26
-country: Austria
+country: AT
 tags:
   - rust
   - quantum algorithms
