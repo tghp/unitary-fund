@@ -3,7 +3,7 @@ name: Know your limits
 year: 2021
 month: 1
 day: 15
-country: Denmark
+country: DK
 tags:
   - software
   - quantum 
