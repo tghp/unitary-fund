@@ -3,7 +3,7 @@ name: TorchQuantum
 year: 2023
 month: 4
 day: 24
-country: USA
+country: US
 tags:
   - python
   - simulator
