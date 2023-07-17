@@ -1,7 +1,7 @@
 ---
 name: QuNetSim
 year: 2020
-country: Germany
+country: DE
 tags:
   - simulator
   - python
