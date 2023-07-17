@@ -3,7 +3,7 @@ name: QRand
 year: 2020
 month: 10
 day: 5
-country: Spain, USA 
+country: ES, US
 tags:
   - python
   - quantum
