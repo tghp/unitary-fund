@@ -3,7 +3,7 @@ name: VeriFodo
 year: 2021
 month: 3
 day: 10
-country: Canada
+country: CA
 tags:
   -  C
   -  cryptography
