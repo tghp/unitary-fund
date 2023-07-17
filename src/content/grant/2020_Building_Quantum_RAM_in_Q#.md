@@ -3,7 +3,7 @@ name: Building and optimizing a library for quantum RAM in Q#
 year: 2020
 month: 6
 day: 23
-country: USA, Canada
+country: US, CA
 tags:
   - Q#
   - microsoft
