@@ -1,7 +1,7 @@
 ---
 name: Qurry
 year: 2018
-country: USA
+country: US
 tags:
   - probability
   - python
