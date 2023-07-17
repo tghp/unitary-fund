@@ -3,7 +3,7 @@ name: InterlinQ
 year: 2021
 month: 1
 day: 11
-country: Germany
+country: DE
 tags:
   - simulator
   - python
