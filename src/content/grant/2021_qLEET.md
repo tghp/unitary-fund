@@ -3,7 +3,7 @@ name: qLEET
 year: 2021
 month: 9
 day: 17
-country: India
+country: IN
 tags:
   - quantum
   - python
