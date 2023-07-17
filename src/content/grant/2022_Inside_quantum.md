@@ -3,7 +3,7 @@ name: "Inside Quantum"
 year: 2022
 month: 3
 day: 28
-country: Germany
+country: DE
 tags:
   - quantum education
   - podcast
