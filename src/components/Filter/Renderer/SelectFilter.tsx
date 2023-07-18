@@ -16,7 +16,19 @@ function getSortedFilterValues(
   filterValues: string[]
 ) {
   if (filterKey === 'country') {
-    return filterValues.sort((a, b) => {
+    const countryFilterValues = new Set<string>();
+
+    for (const countryFilterEntry of filterValues) {
+      if (countryFilterEntry.includes(',')) {
+        for (const country of countryFilterEntry.split(',')) {
+          countryFilterValues.add(country.trim());
+        }
+      } else {
+        countryFilterValues.add(countryFilterEntry);
+      }
+    }
+
+    return [...countryFilterValues].sort((a, b) => {
       const aLabel = getLabel(filterKey, a);
       const bLabel = getLabel(filterKey, b);
 

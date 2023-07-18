@@ -7,11 +7,7 @@ import Content from './Content';
 const grants = await getCollection('grant');
 
 // Define filters, only a maximum of 4 will render
-export const filters: Array<FilterSpec['grant']['keys']> = [
-  'year',
-  'month',
-  'country',
-];
+export const filters: Array<FilterSpec['grant']['keys']> = ['year', 'month', 'country'];
 ---
 
-<Content filters={filters} items={grants} client:load />
+<Content filters={filters} items={grants} client:only />

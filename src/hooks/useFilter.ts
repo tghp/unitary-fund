@@ -41,6 +41,8 @@ export default function useFilter<T extends FilterType>(items: FilterSpec[T]['it
             const filterValue = filter[key as keyof typeof filter];
             const itemDataFilterValue = itemDataCheck[key as keyof typeof itemDataCheck];
 
+            console.log(itemDataFilterValue);
+
             if (typeof filterValue !== 'undefined') {
               if (Array.isArray(filterValue)) {
                 return (
@@ -68,11 +70,17 @@ export default function useFilter<T extends FilterType>(items: FilterSpec[T]['it
                   itemDataFilterValue === +filterValue
                 ) {
                   return true;
-                } else if (
-                  typeof itemDataFilterValue === 'string' &&
-                  itemDataFilterValue === filterValue
-                ) {
-                  return true;
+                } else if (typeof itemDataFilterValue === 'string') {
+                  if (key === 'country') {
+                    console.log(
+                      itemDataFilterValue,
+                      filterValue,
+                      itemDataFilterValue.includes(filterValue)
+                    );
+                    return itemDataFilterValue.includes(filterValue);
+                  } else {
+                    return itemDataFilterValue === filterValue;
+                  }
                 }
               }
             }

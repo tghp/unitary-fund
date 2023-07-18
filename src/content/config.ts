@@ -48,10 +48,10 @@ const blogCollection = defineCollection({
 
 export const grantSchema = z.object({
   name: z.string(),
-  day: z.number(),
-  month: z.number(),
+  day: z.number().optional(),
+  month: z.number().optional(),
   year: z.number(),
-  country: z.enum(ISO_3166_ALPHA_2_CODES),
+  country: z.string().optional(),
   tags: z.array(z.string()).optional(),
 });
 
