@@ -1,6 +1,8 @@
 ---
 name: QAOA Library
 year: 2020
+month: 3
+day: 24
 country: PL
 tags:
   - quantum algorithm
