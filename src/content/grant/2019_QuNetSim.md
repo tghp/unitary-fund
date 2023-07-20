@@ -1,6 +1,8 @@
 ---
 name: QuNetSim
-year: 2020
+year: 2019
+month: 12
+day: 2
 country: DE
 tags:
   - simulator
