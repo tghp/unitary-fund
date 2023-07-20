@@ -1,6 +1,8 @@
 ---
 name: NISQAI
 year: 2018
+month: 9
+day: 8
 country: US
 tags:
   - python
