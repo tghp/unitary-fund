@@ -1,6 +1,8 @@
 ---
 name: zxQentiana
 year: 2019
+month: 6
+day: 4
 country: AT, CH
 tags:
   - Javascript

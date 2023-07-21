@@ -1,6 +1,8 @@
 ---
 name: Quantum Programming Studio
 year: 2018
+month: 1
+day: 15
 country: RS
 tags:
   - python

@@ -1,6 +1,8 @@
 ---
 name: Qurry
 year: 2018
+month: 6
+day: 26
 country: US
 tags:
   - probability

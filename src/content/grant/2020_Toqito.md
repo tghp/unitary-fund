@@ -1,6 +1,8 @@
 ---
 name: Toqito
 year: 2020
+month: 2
+day: 16
 country: CA
 tags:
   - python

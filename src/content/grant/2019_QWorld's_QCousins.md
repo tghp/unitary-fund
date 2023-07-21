@@ -1,6 +1,8 @@
 ---
 name: QWorld's Qcousins
 year: 2019
+month: 10
+day: 21
 country: HU, LV, PL
 tags: 
   - quantum education

@@ -1,6 +1,8 @@
 ---
 name: QAOA-based Traveling Salesman Solver in Forest
 year: 2018
+month: 6
+day: 27
 country: PL
 tags: 
   - quantum education

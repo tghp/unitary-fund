@@ -1,6 +1,8 @@
 ---
 name: Qrack
 year: 2019
+month: 5
+day: 29
 country: US
 tags:
   - simulator
