@@ -10,7 +10,7 @@ It has been already a super busy year with tons of new [grants](https://www.tuto
 ### 🥁 Announcing [unitaryHACK 2021](http://hack2021.unitary.fund/)! 🥁
 
 
-![unitaryHACK](https://www.tutorialspoint.com/logos/unitaryHACK-logo-date.png)
+![unitaryHACK](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842430/nbupxcdy6lbcoggzdapd.png)
 
 
 
