@@ -72,7 +72,7 @@ These projects span a variety of languages such as **Python, Julia, Rust, C++, a
 Project topics span from open hardware and diagnostics (KQCircuits, scqubits) to measurement based quantum computing (Graphix), from quantum error correction (Error Correction Zoo, QECFT book) to compilers (BQSKit, Mitiq), to quantum machine learning (HierarQcal, TorchQuantum, PennyLane, lambeq), from efficient quantum circuit simulators (qrack, Symmer, PyClifford, pauliopt) to analog quantum computing simulators (Bloqade, Pulser) to full-stack SDKs (Qiskit, Amazon Braket SDK, Yao), from projects orchestration and APIs (Covalent, Qiskit Braket Provider) to quantum information and nonlocal games (Toqito), from quantum network simulations (QuNetSim) to open quantum systems (QuTiP).
 
 Of the hackers, 70% thought the challenges were just the right difficulty, with the remaining 30% saying they were too hard.
-44% of hackers said they **will** continue to the projects they hacked on during this event, and an _additional_ 41% of hackers said they would like to continue making contributions if they have time.
+44% of hackers said they **will** continue to contribute to the projects they hacked on during this event, and an _additional_ 41% of hackers said they would like to continue making contributions if they have time.
 An estimated 60% of hackers were making their first contributions to QOSS for this event, with many of them contributing to open source for the first time!
 Congratulations to all for making such awesome contributions, it's really been wonderful to see!
 
