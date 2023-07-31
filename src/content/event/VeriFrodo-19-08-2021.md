@@ -5,6 +5,7 @@ month: 8
 year: 2021
 time: 12PM EST/5PM GMT
 speaker: "Goutam Tamvada"
+image: ik0x5uamssk49hfcbp
 ---
 
 ## About the talk
