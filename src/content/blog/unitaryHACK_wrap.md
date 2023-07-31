@@ -1,11 +1,4 @@
 ---
-title: "Unitary Fund Q2 2023 Update: UF Members, Mitiq and Metriq updates, and new grants"
-author: Will Zeng
-day: 11
-month: 4
-year: 2023
----
----
 title: "Wrapping up unitaryHACK 2023!"
 author: Nate Stemen and Nathan Shammah
 day: 7
