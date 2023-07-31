@@ -8,7 +8,7 @@ year: 2023
 
 Unitary Fund is happy to announce the third edition of **[unitaryHACK](https://unitaryhack.dev/), which will run from May 26th to June 13th, 2023**.
 
-![unitaryHACK](./images/uhack.gif)
+![unitaryHACK](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842150/tvf5ssrooxe25xxziua4.gif)
 
 unitaryHACK differs from the rest of the hackathon-style events in the quantum computing space because **hackers support existing quantum computing projects**.
 In addition hackers get paid for their work while building professional skills such as working on open source projects, and contributing to create a more functional, and featured, quantum computing stack.
