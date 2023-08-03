@@ -17,7 +17,9 @@ Since then, Mitiq has developed at a rate of approximately one release per month
 - A new module (**mitiq.interfaces**), re-organizing all the integrations with other quantum software libraries. In particular, support for **Braket** circuits was recently introduced, in addition to the existing integrations (Cirq, Qiskit, PyQuil).
 
 <!---- ![unitaryHACK](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842757/vb4gypbxm9bslnlr92d1.png) --->
-<img src="https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842757/vb4gypbxm9bslnlr92d1.png" style="width: 70%; height: auto;" />
+<div align="center">
+  <img src="https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842757/vb4gypbxm9bslnlr92d1.png" style="width: 70%; height: auto;" />
+</div>
 
 
   
