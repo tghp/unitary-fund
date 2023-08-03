@@ -12,7 +12,13 @@ We are excited to highlight recent developments in quantum technology research f
 
 ### Quantum Volume
 
-![task 34](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690841822/fc8ygctujm97m1kghfik.png)
+<!--- ![task 34](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690841822/fc8ygctujm97m1kghfik.png) --->
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dcz4ywuer/image/upload/v1690841822/fc8ygctujm97m1kghfik.png" width="80%" />
+</p>
+
+
 
 #### Task description
 
@@ -22,7 +28,11 @@ Quantum volume expresses the maximum size (quantum circuit depth "n" times numbe
 
 According to submissions and results to Metriq, as hardware manufacturers announce their own quantum volume results, the state-of-the-art in quantum volume across the field seems to be growing exponentially, which is heuristically equivalent to linear growth in viable qubits.
 
-![task 34](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690841822/fc8ygctujm97m1kghfik.png)
+<!--- ![task 34](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690841822/fc8ygctujm97m1kghfik.png) --->
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dcz4ywuer/image/upload/v1690841822/fc8ygctujm97m1kghfik.png" width="80%" />
+</p>
 
 #### New developments
 
