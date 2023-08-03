@@ -16,7 +16,11 @@ Since then, Mitiq has developed at a rate of approximately one release per month
 - A new module (**mitiq.cdr**), implementing a learning-based error mitigation method called **[Clifford data regression](https://mitiq.readthedocs.io/en/v0.9.3/examples/cdr_api.html)**.
 - A new module (**mitiq.interfaces**), re-organizing all the integrations with other quantum software libraries. In particular, support for **Braket** circuits was recently introduced, in addition to the existing integrations (Cirq, Qiskit, PyQuil).
 
-![unitaryHACK](https://github.com/tghp/unitary-fund/blob/main/public/images/diagram_mitiq_modules.png)
+<!---- ![unitaryHACK](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842757/vb4gypbxm9bslnlr92d1.png) --->
+<div align="center">
+  <img src="https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842757/vb4gypbxm9bslnlr92d1.png" style="width: 70%; height: auto;" />
+</div>
+
 
   
 >Diagram visualizing the modules of Mitiq. Extracted from [arXiv:2009.04417v2](https://arxiv.org/abs/2009.04417v2).
