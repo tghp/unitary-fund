@@ -11,8 +11,9 @@ It has been already a super busy year with tons of new [grants](https://www.tuto
 
 
 <!--- ![unitaryHACK](https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842430/nbupxcdy6lbcoggzdapd.png) --->
-<img src="https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842430/nbupxcdy6lbcoggzdapd.png" style="width: 70%; height: auto;" />
-
+<div align="center">
+  <img src="https://res.cloudinary.com/dcz4ywuer/image/upload/v1690842430/nbupxcdy6lbcoggzdapd.png" style="width: 70%; height: auto;" />
+</div>
 
 
 
