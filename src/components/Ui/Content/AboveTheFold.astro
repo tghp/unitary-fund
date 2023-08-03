@@ -8,7 +8,7 @@ const { className } = Astro.props;
 
 <div
   class:list={[
-    'md:min-h-[calc(95vh-var(--header-height)-theme(spacing.6))] mt-10 md:mt-0 flex flex-col md:text-lg md:ml-10 ',
+    'md:min-h-above-the-fold mt-10 md:mt-0 flex flex-col md:text-lg md:ml-10 ',
     className,
   ]}>
   <slot />

@@ -202,6 +202,9 @@ module.exports = {
           },
         },
       }),
+      minHeight: {
+        'above-the-fold': 'calc(min(800px, 95vh - var(--header-height) - theme(spacing.6)))',
+      },
       fontWeight: {
         inherit: 'inherit',
       },
