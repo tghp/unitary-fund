@@ -43,9 +43,15 @@ export function GrantsOutput() {
                 'flex flex-wrap gap-4 py-20 z-10',
                 displayBackgroundNumber && 'lg:mt-[-300px]',
               ])}>
-              {grants?.map((grant) => (
-                <GrantItem key={grant.slug} grant={grant} />
-              ))}
+              {grants
+                ?.sort((a, b) => {
+                  const dateA = new Date(a.data.year, (a.data.month || 1) - 1, a.data.day || 1);
+                  const dateB = new Date(b.data.year, (b.data.month || 1) - 1, b.data.day || 1);
+                  return dateA.getTime() - dateB.getTime();
+                })
+                ?.map((grant) => (
+                  <GrantItem key={grant.slug} grant={grant} />
+                ))}
             </ul>
           </div>
         );

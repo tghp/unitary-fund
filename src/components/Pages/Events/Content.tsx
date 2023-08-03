@@ -41,12 +41,23 @@ export default function Content({ events }: ContentProps) {
                   events
                 </>
               )}
-              {(previous ? previousEvents : upcomingEvents)?.map((event) => (
-                <EventItem
-                  key={event.data.title + event.data.day + event.data.month + event.data.year}
-                  event={event}
-                />
-              ))}
+              {(previous ? previousEvents : upcomingEvents)
+                ?.sort((a, b) => {
+                  const dateA = new Date(a.data.year, (a.data.month || 1) - 1, a.data.day || 1);
+                  const dateB = new Date(b.data.year, (b.data.month || 1) - 1, b.data.day || 1);
+
+                  if (previous) {
+                    return dateB.getTime() - dateA.getTime();
+                  } else {
+                    return dateA.getTime() - dateB.getTime();
+                  }
+                })
+                ?.map((event) => (
+                  <EventItem
+                    key={event.data.title + event.data.day + event.data.month + event.data.year}
+                    event={event}
+                  />
+                ))}
             </div>
           </div>
         );
