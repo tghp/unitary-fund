@@ -28,13 +28,18 @@ const navigationCollection = defineCollection({
  * Blog (aka posts)
  */
 
+const tags = z
+  .array(z.string())
+  .optional()
+  .transform((val) => val?.map((tag) => tag.toLowerCase()));
+
 export const blogSchema = z.object({
   title: z.string(),
   author: z.string().optional(),
   day: z.number().or(z.string()),
   month: z.number(),
   year: z.number(),
-  tags: z.array(z.string()).optional(),
+  tags,
 });
 
 const blogCollection = defineCollection({
@@ -52,7 +57,7 @@ export const grantSchema = z.object({
   month: z.number().optional(),
   year: z.number(),
   country: z.string().optional(),
-  tags: z.array(z.string()).optional(),
+  tags,
 });
 
 const grantCollection = defineCollection({

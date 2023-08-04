@@ -46,7 +46,9 @@ export default function TagFilter({ filterKey, filterValues }: SelectFilterProps
     },
   });
 
-  const items = filterValues.filter((item) => !filterValue.includes(item));
+  const items = filterValues
+    .filter((item) => !filterValue.includes(item))
+    .sort((a, b) => a.localeCompare(b, 'en-US'));
 
   const {
     isOpen,
