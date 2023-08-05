@@ -13,8 +13,6 @@ type BlogSliderProps = {
 };
 
 export default function Slider({ posts }: BlogSliderProps) {
-  console.log({ posts });
-
   return !!posts?.length ? (
     <Swiper
       className="w-full"
