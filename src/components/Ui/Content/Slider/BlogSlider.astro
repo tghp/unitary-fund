@@ -1,21 +1,23 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 export interface Props {
   numberOfPosts?: number;
 }
 
-import BlogSlider from './BlogSlider';
+import Slider from './Slider';
 
 const { numberOfPosts = 4 } = Astro.props;
 
 const blogEntries = await getCollection('blog');
 
-const sortedEntries = blogEntries.slice(0, numberOfPosts).sort((a, b) => {
-  const dateA = new Date(`${a.data.year}-${a.data.month}-${a.data.day}`);
-  const dateB = new Date(`${b.data.year}-${b.data.month}-${b.data.day}`);
-  return Number(dateB) - Number(dateA);
-});
+const sortedEntries = blogEntries
+  .sort((a, b) => {
+    const dateA = new Date(a.data.year, (a.data.month || 1) - 1, a.data.day || 1);
+    const dateB = new Date(b.data.year, (b.data.month || 1) - 1, b.data.day || 1);
+    return dateB.getTime() - dateA.getTime();
+  })
+  .slice(0, numberOfPosts);
 ---
 
-<BlogSlider numberOfPosts={numberOfPosts} posts={sortedEntries} client:only />
+<Slider posts={sortedEntries} client:only />

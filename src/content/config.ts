@@ -36,7 +36,7 @@ const tags = z
 export const blogSchema = z.object({
   title: z.string(),
   author: z.string().optional(),
-  day: z.number().or(z.string()),
+  day: z.number().optional(),
   month: z.number(),
   year: z.number(),
   tags,

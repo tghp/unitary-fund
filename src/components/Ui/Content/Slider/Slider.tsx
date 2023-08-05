@@ -9,13 +9,15 @@ import { BlogItem } from '~/components/Pages/Blog/Content/BlogItem';
 import { ReactComponent as ArrowIcon } from '~/assets/svg/arrow.svg';
 
 type BlogSliderProps = {
-  numberOfPosts: number;
   posts: Array<CollectionEntry<'blog'>>;
 };
 
-export default function BlogSlider({ numberOfPosts, posts }: BlogSliderProps) {
+export default function Slider({ posts }: BlogSliderProps) {
+  console.log({ posts });
+
   return !!posts?.length ? (
     <Swiper
+      className="w-full"
       spaceBetween={30}
       slidesPerView={1}
       navigation={{
@@ -32,7 +34,7 @@ export default function BlogSlider({ numberOfPosts, posts }: BlogSliderProps) {
       }}
       modules={[Navigation]}>
       {posts.map((post) => (
-        <SwiperSlide key={post.id} className="self-stretch !h-auto">
+        <SwiperSlide key={post.id} className="swiper-slide !h-auto">
           <BlogItem key={post.id} post={post} className="h-full" />
         </SwiperSlide>
       ))}
