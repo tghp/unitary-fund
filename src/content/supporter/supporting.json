@@ -2,42 +2,41 @@
   "supporters": [
     {
       "title": "Agnosic",
-      "url": "https://www.ibm.com/quantum",
+      "url": "https://agnostiq.ai/",
       "imageId": "agnostiq_jxnqyt"
     },
     {
-      "title": "Dora Hack",
-      "url": "https://www.ibm.com/quantum",
-      "imageId": "dora-hacks_swgug9"
-    },
-    {
       "title": "AWS",
-      "url": "https://www.ibm.com/quantum",
+      "url": "https://aws.amazon.com/braket/",
       "imageId": "aws_rpfxfc"
     },
     {
-      "title": "PASQAL",
-      "url": "https://www.ibm.com/quantum",
-      "imageId": "pasqal_trepre"
-    },
-    {
       "title": "CISCO",
-      "url": "https://www.ibm.com/quantum",
+      "url": "https://www.cisco.com/",
       "imageId": "cisco_tzzvle"
     },
     {
-      "title": "Quanela",
-      "url": "https://www.ibm.com/quantum",
+      "title": "Dora Hacks",
+      "url": "https://dorahacks.io/",
+      "imageId": "dora-hacks_swgug9"
+    },
+    {
+      "title": "Pasqal",
+      "url": "https://www.pasqal.com/",
+      "imageId": "pasqal_trepre"
+    },
+    {
+      "title": "Quandela",
+      "url": "https://www.quandela.com/",
       "imageId": "quandela_hzqy7b"
     },
     {
       "title": "Covalent",
-      "url": "https://www.ibm.com/quantum",
       "imageId": "covalent_tu80ua"
     },
     {
       "title": "qyber",
-      "url": "https://www.ibm.com/quantum",
+      "url": "https://www.qyber.ai/",
       "imageId": "qybar_ju4ip6"
     }
   ]

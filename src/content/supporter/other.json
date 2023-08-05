@@ -2,159 +2,150 @@
   "supporters": [
     {
       "title": "Alphabet X (formerly Google X)",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://x.company/"
     },
     {
       "title": "Atom Computing",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://atom-computing.com/"
     },
     {
       "title": "Boston Consulting Group",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.bcg.com/"
     },
     {
       "title": "Microsoft",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.microsoft.com/en-us/"
     },
     {
       "title": "Cambridge Quantum Computing",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://cambridgequantum.com/"
+    },
+    {
+      "title": "Classiq",
+      "url": "https://www.classiq.io/"
     },
     {
       "title": "IQT Labs",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.iqt.org/labs/"
     },
     {
       "title": "Rigetti",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.rigetti.com/"
     },
     {
       "title": "Zapata Computing",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.zapatacomputing.com/"
     },
     {
       "title": "QCWare",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://qcware.com/"
     },
     {
       "title": "quantumcomputing.com",
-      "url": "https://www.ibm.com/quantum"
+      "url": "http://quantumcomputing.com/"
     },
     {
       "title": "QuEra",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.quera.com/"
     },
     {
       "title": "Riverlane",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.riverlane.com/"
     },
     {
       "title": "Xanadu",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.xanadu.ai/"
     },
     {
       "title": "Strangeworks",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://strangeworks.com/"
     },
     {
       "title": "PLOS",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.plos.org/"
     },
     {
-      "title": "Steve Willis & NYC Quantum Meetup",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Steve Willis &amp; NYC Quantum Meetup",
+      "url": "https://www.meetup.com/New-York-Quantum-Computing-Meetup/"
     },
     {
       "title": "EeroQ",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.eeroq.com/"
     },
     {
       "title": "Q-CTRL",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://q-ctrl.com/"
     },
     {
       "title": "John Hering",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://twitter.com/johnhering"
     },
     {
-      "title": "Jeff Cordova",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Jeff Cordova"
     },
     {
-      "title": "George Umbrarescu",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Nima Alidoust",
+      "url": "https://twitter.com/nalidoust"
     },
     {
-      "title": "Greg Ramsay",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Travis Humble ",
+      "url": "https://www.ornl.gov/staff-profile/travis-s-humble"
     },
     {
-      "title": "Peter Johnson",
-      "url": "https://www.ibm.com/quantum"
+      "title": "George Umbrarescu"
     },
     {
-      "title": "Guillaume Verdon",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Michał Stęchły"
     },
     {
-      "title": "Rishi Sreedhar",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Terrill Frantz"
     },
     {
-      "title": "Travis L. Scholten",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Konstantin Vinogradov"
     },
     {
-      "title": "Amir Ebrahimi",
-      "url": "https://www.ibm.com/quantum"
-    },
-    {
-      "title": "Jens Koch",
-      "url": "https://www.ibm.com/quantum"
-    },
-    {
-      "title": "Christophe Jurczak",
-      "url": "https://www.ibm.com/quantum"
-    },
-    {
-      "title": "Will Zeng",
-      "url": "https://www.ibm.com/quantum"
+      "title": "Jordan Rule",
+      "url": "https://jordanrule.com"
     },
     {
       "title": "Greg Ramsay",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.zapatacomputing.com/team/greg-ramsay/"
     },
     {
       "title": "Peter Johnson",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.zapatacomputing.com/team/peter-johnson/"
     },
     {
       "title": "Guillaume Verdon",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://twitter.com/quantumverd"
     },
     {
       "title": "Rishi Sreedhar",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.linkedin.com/in/rishisr33dhar/"
     },
     {
       "title": "Travis L. Scholten",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://twitter.com/Travis_Sch"
     },
     {
       "title": "Amir Ebrahimi",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.linkedin.com/in/amirebrahimi/"
     },
     {
       "title": "Jens Koch",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://sites.northwestern.edu/koch/"
     },
     {
       "title": "Christophe Jurczak",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://www.linkedin.com/in/christophe-jurczak"
+    },
+    {
+      "title": "Angelo Danducci II",
+      "url": "https://www.linkedin.com/in/angelo-danducci"
     },
     {
       "title": "Will Zeng",
-      "url": "https://www.ibm.com/quantum"
+      "url": "https://twitter.com/wjzeng"
     }
   ]
 }
