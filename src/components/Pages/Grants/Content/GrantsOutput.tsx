@@ -47,7 +47,7 @@ export function GrantsOutput() {
                 ?.sort((a, b) => {
                   const dateA = new Date(a.data.year, (a.data.month || 1) - 1, a.data.day || 1);
                   const dateB = new Date(b.data.year, (b.data.month || 1) - 1, b.data.day || 1);
-                  return dateA.getTime() - dateB.getTime();
+                  return dateB.getTime() - dateA.getTime();
                 })
                 ?.map((grant) => (
                   <GrantItem key={grant.slug} grant={grant} />
