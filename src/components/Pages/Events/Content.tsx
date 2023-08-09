@@ -37,7 +37,7 @@ export default function Content({ events }: ContentProps) {
             <div className="grid lg:grid-cols-2 gap-3">
               {(previous ? previousEvents : upcomingEvents).length === 0 && (
                 <>
-                  There are currently no {previous ? 'previous' : 'upcoming'}
+                  There are currently no {previous ? 'previous ' : 'upcoming '}
                   events
                 </>
               )}
